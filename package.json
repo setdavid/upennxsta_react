@@ -15,7 +15,7 @@
     "redux": "^4.0.5",
     "web-vitals": "^0.2.4"
   },
-  "homepage": "http://setdavid.github.io/upennxsta_react",
+  "homepage": "https://setdavid.github.io/upennxsta_react/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
