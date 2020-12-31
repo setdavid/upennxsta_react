@@ -5,8 +5,8 @@ import Home from "./Routes/Home";
 const MainContent = () => {
     return (
         <React.Fragment>
-            <div id="main-content">
-                <Home/>
+            <div style={{ minHeight: "1000px" }} id="main-content">
+                {/* <Home/> */}
             </div>
         </React.Fragment>
     );

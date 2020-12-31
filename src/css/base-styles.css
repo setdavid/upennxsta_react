@@ -112,31 +112,6 @@ body .text-color-background {
     background-color: var(--text-color);
 }
 
-/********** Footer **********/
-
-#footer {
-    color: white;
-    background-color: var(--theme-color-1);
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.footer-section {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.footer-section>div {
-    width: auto;
-    font-size: 1rem;
-    color: white;
-    padding-top: 7px;
-}
-
-.footer-section a:hover {
-    cursor: pointer;
-}
-
 /********** Jumbotron **********/
 
 .jumbotron-text-container {
@@ -364,4 +339,61 @@ div.fade-in-show {
     .subtext-over-jumbotron {
         font-size: 1rem;
     }
+}
+
+/* Additional Default Bootstrap CSS */
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1, .h1 {
+    font-size: 2.5rem;
+}
+
+h2, .h2 {
+    font-size: 2rem;
+}
+
+h3, .h3 {
+    font-size: 1.75rem;
+}
+
+h4, .h4 {
+    font-size: 1.5rem;
+}
+
+h5, .h5 {
+    font-size: 1.25rem;
+}
+
+h6, .h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+ol, ul, dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ol ol, ul ul, ol ul, ul ol {
+    margin-bottom: 0;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
 }
