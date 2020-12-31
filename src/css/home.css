@@ -1,14 +1,3 @@
-/********** General **********/
-
-:root {
-    --theme-color-1: #004785;
-    --theme-color-2: #057D82;
-    --theme-color-3: #073763;
-    --theme-color-4: #073763;
-    --theme-color-5: #073763;
-    --text-color: #444444;
-}
-
 /********** Jumbotron **********/
 
 .jumbotron-frame {

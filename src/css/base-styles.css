@@ -1,3 +1,21 @@
+/********** General **********/
+
+:root {
+    --theme-color-1: #004785;
+    --theme-color-2: #057D82;
+    --theme-color-3: #073763;
+    --theme-color-4: #073763;
+    --theme-color-5: #073763;
+    --off-white: #f5f5f5;
+    --text-color: #444444;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
 body {
     position: relative;
     left: 0px;
@@ -14,6 +32,7 @@ a {
     color: inherit;
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
 
 a:hover {
@@ -56,16 +75,6 @@ ul>li {
 }
 
 /********** Themes **********/
-
-:root {
-    --theme-color-1: #004785;
-    --theme-color-2: #057D82;
-    --theme-color-3: #073763;
-    --theme-color-4: #073763;
-    --theme-color-5: #073763;
-    --off-white: #f5f5f5;
-    --text-color: #444444;
-}
 
 body .theme-1-text {
     color: var(--theme-color-1);

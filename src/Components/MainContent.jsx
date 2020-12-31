@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./../css/base-styles.css";
 import Home from "./Routes/Home";
 
