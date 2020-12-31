@@ -1,0 +1,155 @@
+body {
+    position: relative;
+    left: 0px;
+    margin-top: 0;
+    /* margin-top: 82px; */
+    overflow-x: hidden;
+    transition-property: left;
+    transition-duration: 0.5s;
+    /*          border: 3px solid red;*/
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.body-no-scroll {
+    /* left: -100%; */
+    overflow-y: hidden;
+}
+
+#main-content {
+    overflow: hidden;
+}
+
+#main-content .container, #main-content .container-fluid {
+    padding-bottom: 50px;
+}
+
+#main-content .row>div {
+    padding-top: 50px;
+}
+
+#main-content .row>div>.row>div {
+    padding-top: 50px;
+}
+
+#main-content .row>div>.row:nth-child(1)>div {
+    padding-top: 0;
+}
+
+.navbar, #nav-slider, #footer {
+    overflow-x: hidden;
+}
+
+ul>li {
+    margin-bottom: 8px;
+    list-style: none;
+}
+
+/********** Themes **********/
+
+root {
+    --theme-color-1: #004785;
+    --theme-color-2: #057D82;
+    --theme-color-3: #073763;
+    --theme-color-4: #073763;
+    --theme-color-5: #073763;
+    --text-color: #444444;
+}
+
+body .theme-1-text {
+    color: var(--theme-color-1);
+}
+
+body .theme-1-background {
+    background-color: var(--theme-color-1);
+}
+
+body .theme-2-text {
+    color: var(--theme-color-2);
+}
+
+body .theme-2-background {
+    background-color: var(--theme-color-2);
+}
+
+body .white-text {
+    color: white;
+}
+
+body .white-background {
+    background-color: white;
+}
+
+body .off-white-background {
+    background-color: var(--off-white);
+}
+
+body .text-color-text {
+    color: var(--text-color);
+}
+
+body .text-color-background {
+    background-color: var(--text-color);
+}
+
+/********** Media Queries **********/
+
+/********** Extra Large devices only **********/
+
+@media (min-width: 1200px) {}
+
+/********** Large devices only **********/
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+/********** Medium devices only **********/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .text-over-jumbotron {
+        font-size: 4rem;
+    }
+    .subtext-over-jumbotron {
+        font-size: 2rem;
+    }
+}
+
+/********** Small devices only **********/
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .navbar-brand, .navbar-brand:hover {
+        font-size: 1.5rem;
+    }
+    .navbar-container {
+        max-width: none;
+    }
+    .text-over-jumbotron {
+        font-size: 3rem;
+    }
+    .subtext-over-jumbotron {
+        font-size: 1rem;
+    }
+}
+
+/********** Extra Small devices only **********/
+
+@media (max-width: 575px) {
+    .navbar-brand, .navbar-brand:hover {
+        font-size: 1.25rem;
+    }
+    .text-over-jumbotron {
+        font-size: 2rem;
+    }
+    .subtext-over-jumbotron {
+        font-size: 1rem;
+    }
+}
