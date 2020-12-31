@@ -57,12 +57,13 @@ ul>li {
 
 /********** Themes **********/
 
-root {
+:root {
     --theme-color-1: #004785;
     --theme-color-2: #057D82;
     --theme-color-3: #073763;
     --theme-color-4: #073763;
     --theme-color-5: #073763;
+    --off-white: #f5f5f5;
     --text-color: #444444;
 }
 
@@ -100,6 +101,208 @@ body .text-color-text {
 
 body .text-color-background {
     background-color: var(--text-color);
+}
+
+/********** Footer **********/
+
+#footer {
+    color: white;
+    background-color: var(--theme-color-1);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-section>div {
+    width: auto;
+    font-size: 1rem;
+    color: white;
+    padding-top: 7px;
+}
+
+.footer-section a:hover {
+    cursor: pointer;
+}
+
+/********** Jumbotron **********/
+
+.jumbotron-text-container {
+    position: relative;
+    min-height: 80vh;
+    height: 80vh;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-over-jumbotron {
+    width: 100vw;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    z-index: 100;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 5rem;
+}
+
+.subtext-over-jumbotron {
+    width: 100%;
+    line-height: 1.2;
+    color: white;
+    text-align: center;
+    z-index: 100;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.jumbotron-frame {
+    min-width: 100%;
+    width: 100%;
+    min-height: 80vh;
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.img-tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 0.3);
+    z-index: 60;
+}
+
+.jumbotron-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/********** Features **********/
+
+.responsive-img {
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blur {
+    opacity: 0.6;
+    filter: blur(2px);
+}
+
+.hide-compress-y {
+    height: 0;
+}
+
+.bobbing-anim {
+    animation-name: bobbing;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes bobbing {
+    0% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+div.fade-in-left {
+    overflow-x: hidden;
+    position: relative;
+    left: -100px;
+    opacity: 0;
+    transition-property: left, opacity;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
+}
+
+div.fade-in-right {
+    overflow-x: hidden;
+    position: relative;
+    left: 100px;
+    opacity: 0;
+    transition-property: left, opacity;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
+}
+
+div.fade-in-up {
+    overflow-x: hidden;
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    transition-property: top, opacity;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
+}
+
+div.fade-in-down {
+    overflow-x: hidden;
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    transition-property: top, opacity;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
+}
+
+div.fade-in-popout {
+    overflow-x: hidden;
+    position: relative;
+    transform: scale(0, 0);
+    transform-origin: top;
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.5, 1);
+}
+
+div.fade-in-show {
+    overflow-x: hidden;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+    transform: scale(1, 1);
 }
 
 /********** Media Queries **********/

@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import Navbar from "./Components/Navbar";
 import Navslider from "./Components/Navslider";
+import MainContent from "./Components/MainContent";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <header className="App-header">
         <Navbar />
         <Navslider />
+        <MainContent />
       </header>
     </div>
   );

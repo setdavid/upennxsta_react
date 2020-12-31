@@ -16,7 +16,7 @@ const Navbar = () => {
     const navsliderOpened = useSelector(state => state.navslider.opened);
 
     return (
-        <div>
+        <React.Fragment>
             <Container fluid className="navbar navbar-expand-md">
                 <Container className="navbar-container">
                     <Row className="navbar-row">
@@ -73,7 +73,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div> */}
-        </div>
+        </React.Fragment>
     );
 }
 

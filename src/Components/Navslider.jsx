@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./../css/navbar.css";
+import "./../css/navslider.css";
 import "./../css/base-styles.css";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -22,7 +22,7 @@ const Navslider = () => {
     };
 
     return (
-        <div>
+        <React.Fragment>
             <div style={navsliderOpened ? openedCSS : closedCSS} id="nav-slider" className="nav-slider list-group list-group-flush">
                 <div id="slider-close-button">
                     <button className="navbar-toggler custom-toggler" type="button" onClick={() => handleSliderToggle(navsliderOpened, dispatch)}>
@@ -35,7 +35,7 @@ const Navslider = () => {
                 >About us</a></div>
                 <div><a href="#/our-works" className="list-group-item list-group-item-action">Our works</a></div>
             </div>
-        </div>
+        </React.Fragment>
     );
 };
 
