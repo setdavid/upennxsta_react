@@ -7,9 +7,17 @@ import { openSlider, closeSlider } from "./../redux/ducks/navslider";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
+export const closeSliderToggle = (dispatch) => {
+    return dispatch(closeSlider());
+};
+
+export const openSliderToggle = (dispatch) => {
+    return dispatch(openSlider());
+};
+
 export const handleSliderToggle = (navsliderOpened, dispatch) => {
     console.log(navsliderOpened);
-    return navsliderOpened ? dispatch(closeSlider()) : dispatch(openSlider());
+    return navsliderOpened ? closeSliderToggle(dispatch) : openSliderToggle(dispatch);
 };
 
 const Navbar = () => {
@@ -35,8 +43,8 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </div>
-                            <GiHamburgerMenu size="2rem" style={{ cursor: "pointer" }} className="navbar-toggler d-block d-md-none" 
-                            onClick={() => handleSliderToggle(navsliderOpened, dispatch)}/>
+                            <GiHamburgerMenu size="2rem" style={{ cursor: "pointer" }} className="navbar-toggler d-block d-md-none"
+                                onClick={() => handleSliderToggle(navsliderOpened, dispatch)} />
                         </div>
                     </div>
                 </div>

@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar />
-        {/* <Navslider />
-        <MainContent /> */}
+        <Navslider />
+        {/* <MainContent /> */}
       </header>
     </div>
   );
