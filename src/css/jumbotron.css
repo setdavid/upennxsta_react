@@ -59,7 +59,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    z-index: 1 !important;
+    z-index: -1 !important;
 }
 
 /********** Medium devices only **********/
