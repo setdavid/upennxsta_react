@@ -1,4 +1,4 @@
-/********** General **********/
+/********** Defaults **********/
 
 :root {
     --theme-color-1: #004785;
@@ -14,6 +14,7 @@ html {
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
+    color: var(--text-color);
 }
 
 body {
@@ -40,6 +41,48 @@ a:hover {
     text-decoration: inherit;
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1, .h1 {
+    font-size: 2.5rem;
+}
+
+h2, .h2 {
+    font-size: 2rem;
+}
+
+h3, .h3 {
+    font-size: 1.75rem;
+}
+
+h4, .h4 {
+    font-size: 1.5rem;
+}
+
+h5, .h5 {
+    font-size: 1.25rem;
+}
+
+h6, .h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/********** General **********/
+
+.text-center {
+    text-align: center !important;
+}
+
 .body-no-scroll {
     /* left: -100%; */
     overflow-y: hidden;
@@ -53,11 +96,7 @@ a:hover {
     padding-bottom: 50px;
 }
 
-#main-content .row>div {
-    padding-top: 50px;
-}
-
-#main-content .row>div>.row>div {
+#main-content .row>div, #main-content .row>div>.row>div {
     padding-top: 50px;
 }
 
@@ -339,61 +378,4 @@ div.fade-in-show {
     .subtext-over-jumbotron {
         font-size: 1rem;
     }
-}
-
-/* Additional Default Bootstrap CSS */
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-h1, .h1 {
-    font-size: 2.5rem;
-}
-
-h2, .h2 {
-    font-size: 2rem;
-}
-
-h3, .h3 {
-    font-size: 1.75rem;
-}
-
-h4, .h4 {
-    font-size: 1.5rem;
-}
-
-h5, .h5 {
-    font-size: 1.25rem;
-}
-
-h6, .h6 {
-    font-size: 1rem;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-}
-
-ol, ul, dl {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-ol ol, ul ul, ol ul, ul ol {
-    margin-bottom: 0;
-}
-
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-    display: block;
 }

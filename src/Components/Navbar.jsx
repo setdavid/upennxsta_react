@@ -1,5 +1,5 @@
 import React from "react";
-import "./../css/bootstrap-grid.css";
+import "./../css/bootstrap-grid.min.css";
 import "./../css/base-styles.css";
 import "./../css/navbar.css";
 import { useDispatch, useSelector } from "react-redux";

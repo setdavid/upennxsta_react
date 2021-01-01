@@ -13,7 +13,7 @@ function App() {
         <Navbar />
         <Navslider />
         <MainContent />
-        <Footer/>
+        <Footer />
       </header>
     </div>
   );
