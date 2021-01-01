@@ -4,6 +4,7 @@ import "./../../css/home.css";
 
 import ResponsiveImg from "./../ResponsiveImg";
 import TextOverImg from "./../TextOverImg";
+import Jumbotron from "./../Jumbotron";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 
@@ -22,7 +23,7 @@ import currentProjectsImg from "./../../img/wall_art1.jpg";
 const Home = () => {
     return (
         <React.Fragment>
-            <div className="jumbotron-text-container container">
+            {/* <div className="jumbotron-text-container container">
                 <div className="text-over-jumbotron fadePassNavbar">
                     COMMUNITY POWERED
                 </div>
@@ -40,7 +41,16 @@ const Home = () => {
             <div className="jumbotron-frame">
                 <div className="slideshow-jumbotron-collage"></div>
                 <div className="img-tint"></div>
-            </div>
+            </div> */}
+            <Jumbotron url={collegeStudentsImg} height="100vh" text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia">
+                <div className="scroll-learn-more fadePassNavbar bobbing-anim">
+                    <a onclick="jsUtils.scrollTo('#container-1')">
+                        Learn more
+                        <br />
+                        <FaAngleDoubleDown size="2rem" />
+                    </a>
+                </div>
+            </Jumbotron>
             <div id="container-1" className="container-fluid">
                 <div className="container">
                     <div className="row">
@@ -169,7 +179,7 @@ const Home = () => {
                     </div>
                     <div className="row">
                         <div className="col-12 col-md-6">
-                            <ResponsiveImg url={currentProjectsImg} minHeight="300px" backgroundSize="cover"/>
+                            <ResponsiveImg url={currentProjectsImg} minHeight="300px" backgroundSize="cover" />
                         </div>
                         <div className="col-12 col-md-6">
                             <h4>Pushing the Community's "12 Demands"</h4>

@@ -2,9 +2,10 @@ import React from "react";
 import "./../css/base-styles.css";
 
 const ResponsiveImg = (props) => {
-    const { url, minHeight, backgroundSize, children, classes } = props;
+    const { url, minHeight, backgroundSize, children, classes, styles } = props;
 
     const cssStyles = {
+        minWidth: "100%",
         width: "100%",
         minHeight: minHeight,
         height: "100%",
@@ -17,7 +18,7 @@ const ResponsiveImg = (props) => {
 
     return (
         <React.Fragment>
-            <div className={classes} style={cssStyles}>
+            <div className={classes} style={{ ...cssStyles, ...styles }}>
                 {children}
             </div>
         </React.Fragment >
