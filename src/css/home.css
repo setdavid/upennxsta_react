@@ -1,15 +1,3 @@
-/********** Jumbotron **********/
-
-.jumbotron-frame {
-    min-height: 100vh;
-    height: 100vh;
-}
-
-.jumbotron-text-container {
-    min-height: 100vh;
-    height: 100vh;
-}
-
 .slideshow-jumbotron-collage {
     position: absolute;
     top: 0;
@@ -57,34 +45,12 @@
 
 /********** Conatiner 1 **********/
 
-#who-we-are-img {
-    /* background-image: url("../img/group_picture1.jpg"); */
-    height: 100%;
-}
-
 #symbol-group {
     margin-top: 40px;
     padding: 1rem 0;
     border-top: 3px solid var(--theme-color-1);
     border-bottom: 3px solid var(--theme-color-1);
 }
-
-/* #main-content #upenn-img {
-    min-height: 150px;
-    background-image: url("../img/upenn-symbol.png");
-    background-size: contain;
-} */
-
-/* #sta-img {
-    min-height: 150px;
-    background-image: url("../img/sta-symbol-trans.png");
-    background-size: contain;
-} */
-
-/* #main-content #times {
-    text-align: center;
-    padding: 0;
-} */
 
 /********** Conatiner 2 **********/
 

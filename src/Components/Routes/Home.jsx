@@ -1,10 +1,10 @@
 import React from "react";
 import "./../../css/base-styles.css";
 import "./../../css/home.css";
+import "./../../css/jumbotron.css";
 
 import ResponsiveImage from "../ResponsiveImage";
 import TextOverImage from "./../TextOverImage";
-import Jumbotron from "./../Jumbotron";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 
@@ -52,10 +52,17 @@ const Home = () => {
                     </a>
                 </div>
             </Jumbotron> */}
-            <div style={{ minWidth: "100vw" }}>
-                <TextOverImage text="Big" subtext="hello" textFont="inherit" textSize="2rem">
-                    <ResponsiveImage url={communityImg} minHeight="300px" backgroundSize="cover" />
+            <div style={{ minWidth: "100vw", position: "relative" }}>
+                <TextOverImage text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" isJumbotron={true}>
+                    <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" />
                 </TextOverImage>
+                <div className="scroll-learn-more fadePassNavbar bobbing-anim">
+                    <a onclick="jsUtils.scrollTo('#container-1')">
+                        Learn more
+                        <br />
+                        <FaAngleDoubleDown size="2rem" />
+                    </a>
+                </div>
             </div>
             <div id="container-1" className="container-fluid">
                 <div className="container">

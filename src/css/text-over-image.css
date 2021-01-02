@@ -1,8 +1,7 @@
-/********** Jumbotron **********/
-
 .text-container {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     overflow: visible;
@@ -12,28 +11,24 @@
     align-items: center;
 }
 
-.text-over {
+.text-over, .subtext-over {
     width: auto;
-    padding: 20px 0;
-    color: white;
-    text-align: center;
-    z-index: 100;
-    font-family: 'EB Garamond', serif;
-    font-weight: normal;
-    font-size: 5rem;
-    max-width: 80%;
-    font-size: 2.5rem;
-    z-index: 10
-}
-
-.subtext-over {
-    width: auto;
-    line-height: 1.2;
+    max-width: 95%;
+    padding: 1rem;
     color: white;
     text-align: center;
     z-index: 10;
+}
+
+.text-over {
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+.subtext-over {
+    line-height: 1.2;
     font-weight: lighter;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .image-frame {
