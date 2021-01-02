@@ -1,7 +1,7 @@
 import React from "react";
 import "./../css/base-styles.css";
 
-const ResponsiveImg = (props) => {
+const ResponsiveImage = (props) => {
     const { url, minHeight, backgroundSize, children, classes, styles } = props;
 
     const cssStyles = {
@@ -13,7 +13,7 @@ const ResponsiveImg = (props) => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: backgroundSize,
-        zIndex: "1000"
+        zIndex: "-1"
     };
 
     return (
@@ -25,4 +25,4 @@ const ResponsiveImg = (props) => {
     );
 }
 
-export default ResponsiveImg;
+export default ResponsiveImage;

@@ -1,10 +1,9 @@
 import React from "react";
 import "./../css/base-styles.css";
-import "./../css/jumbotron.css";
-import ResponsiveImage from "./ResponsiveImage";
+import ResponsiveImg from "./ResponsiveImage";
 
-const Jumbotron = (props) => {
-    const { url, height, text, subtext, children } = props;
+const Slideshow = (props) => {
+    const { urls, height, type, children } = props;
 
     const heightCSS = {
         height: height,
@@ -29,4 +28,4 @@ const Jumbotron = (props) => {
     );
 }
 
-export default Jumbotron;
+export default Slideshow;
