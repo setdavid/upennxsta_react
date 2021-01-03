@@ -24,31 +24,29 @@ const Navbar = () => {
     const navsliderOpened = useSelector(state => state.navslider.opened);
 
     return (
-        <React.Fragment>
-            <nav className="navbar navbar-expand-md container-fluid d-flex align-items-center">
-                <div className="navbar-container container">
-                    <div className="row navbar-row">
-                        <div className="navbar-col col-12 d-flex justify-content-between align-items-center">
-                            <div className="navbar-brand-container d-flex align-items-center">
-                                <Link to={`${defaultLocation}/`} className="navbar-brand h1">UPENN&nbsp;&times;&nbsp;STA</Link>
-                            </div>
-                            <div className="d-none d-md-block">
-                                <div className="navTo-group d-flex align-items-center">
-                                    <div>
-                                        <Link to={`${defaultLocation}/about-us`}>About us</Link>
-                                    </div>
-                                    <div>
-                                        <a href="#/our-works"> Our works</a>
-                                    </div>
+        <nav className="navbar navbar-expand-md container-fluid d-flex align-items-center">
+            <div className="navbar-container container">
+                <div className="row navbar-row">
+                    <div className="navbar-col col-12 d-flex justify-content-between align-items-center">
+                        <div className="navbar-brand-container d-flex align-items-center">
+                            <Link to={`${defaultLocation}/`} className="navbar-brand h1">UPENN&nbsp;&times;&nbsp;STA</Link>
+                        </div>
+                        <div className="d-none d-md-block">
+                            <div className="navTo-group d-flex align-items-center">
+                                <div>
+                                    <Link to={`${defaultLocation}/about-us`}>About us</Link>
+                                </div>
+                                <div>
+                                    <a href="#/our-works"> Our works</a>
                                 </div>
                             </div>
-                            <GiHamburgerMenu size="2rem" style={{ cursor: "pointer" }} className="navbar-toggler d-block d-md-none"
-                                onClick={() => handleSliderToggle(navsliderOpened, dispatch)} />
                         </div>
+                        <GiHamburgerMenu size="2rem" style={{ cursor: "pointer" }} className="navbar-toggler d-block d-md-none"
+                            onClick={() => handleSliderToggle(navsliderOpened, dispatch)} />
                     </div>
                 </div>
-            </nav>
-        </React.Fragment>
+            </div>
+        </nav>
     );
 }
 

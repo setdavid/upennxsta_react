@@ -16,11 +16,9 @@ const ResponsiveImage = (props) => {
     };
 
     return (
-        <React.Fragment>
-            <div className={classes} style={{ ...cssStyles, ...styles }}>
-                {children}
-            </div>
-        </React.Fragment >
+        <div className={classes} style={{ ...cssStyles, ...styles }}>
+            {children}
+        </div>
     );
 }
 

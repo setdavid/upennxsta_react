@@ -11,6 +11,10 @@
     font-size: 2rem !important;
 }
 
+.fixed-background div {
+    background-attachment: fixed;
+}
+
 /********** Medium devices only **********/
 
 @media (min-width: 768px) and (max-width: 991px) {

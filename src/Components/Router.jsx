@@ -8,15 +8,13 @@ export const defaultLocation = "/upennxsta_react";
 
 const Router = () => {
     return (
-        <React.Fragment>
-            <Switch>
-                <Route exact path={`${defaultLocation}/`} component={Home} />
-                <Route exact path={`${defaultLocation}/about-us`} component={AboutUs} />
-                <Route exact path={`${defaultLocation}/our-works`} component={Home} />
-                <Route exact path={`${defaultLocation}/recent-updates`} component={Home} />
-                <Route exact path={`${defaultLocation}/contact-us`} component={Home} />
-            </Switch>
-        </React.Fragment>
+        <Switch>
+            <Route exact path={`${defaultLocation}/`} component={Home} />
+            <Route exact path={`${defaultLocation}/about-us`} component={AboutUs} />
+            <Route exact path={`${defaultLocation}/our-works`} component={Home} />
+            <Route exact path={`${defaultLocation}/recent-updates`} component={Home} />
+            <Route exact path={`${defaultLocation}/contact-us`} component={Home} />
+        </Switch>
     );
 }
 

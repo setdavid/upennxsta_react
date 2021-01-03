@@ -2,6 +2,8 @@ import React from "react";
 
 import ResponsiveImage from "../ResponsiveImage";
 import TextOverImage from "./../TextOverImage";
+import Slideshow from "./../Slideshow";
+import Jumbotron from "./../Jumbotron";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 
@@ -22,9 +24,14 @@ const Home = (props) => {
     return (
         <React.Fragment>
             <div style={{ minWidth: "100vw", position: "relative" }}>
-                <TextOverImage text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" isJumbotron={true}>
+                {/* <TextOverImage text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" isJumbotron={true}>
                     <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" />
-                </TextOverImage>
+                    <Slideshow urls={[whoWeAreImg, parentsImg]} minHeight="100vh" />
+                </TextOverImage> */}
+                <Jumbotron text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia">
+                    {/* <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" /> */}
+                    <Slideshow urls={[whoWeAreImg, parentsImg]} minHeight="100vh" />
+                </Jumbotron>
                 <div className="scroll-learn-more fadePassNavbar bobbing-anim">
                     <a onclick="jsUtils.scrollTo('#container-1')">
                         Learn more
@@ -42,7 +49,8 @@ const Home = (props) => {
                     </div>
                     <div className="row">
                         <div className="col-12 col-md-6 order-md-2">
-                            <ResponsiveImage url={whoWeAreImg} minHeight="300px" backgroundSize="cover" />
+                            {/* <ResponsiveImage url={whoWeAreImg} minHeight="300px" backgroundSize="cover" /> */}
+                            <Slideshow urls={[whoWeAreImg, parentsImg]} minHeight="300px" />
                         </div>
                         <div className="col-12 col-md-6 order-md-1">
                             <div className="row">
@@ -81,36 +89,36 @@ const Home = (props) => {
                     </div>
                     </div>
                     <div id="we-are-1" className="we-are row">
-                        <div className="col-12 col-md-4 white-text">
+                        <div className="col-12 col-md-4">
                             <TextOverImage text="Middle Schoolers" textFont="inherit" textSize="2rem">
                                 <ResponsiveImage url={middleSchoolersImg} minHeight="300px" backgroundSize="cover" />
                             </TextOverImage>
                         </div>
-                        <div className="col-12 col-md-4 white-text">
+                        <div className="col-12 col-md-4">
                             <TextOverImage text="High Schoolers" textFont="inherit" textSize="2rem">
                                 <ResponsiveImage url={collegeStudentsImg} minHeight="300px" backgroundSize="cover" />
                             </TextOverImage>
                         </div>
-                        <div className="col-12 col-md-4 white-text">
+                        <div className="col-12 col-md-4">
                             <TextOverImage text="College Students" textFont="inherit" textSize="2rem">
                                 <ResponsiveImage url={collegeStudentsImg} minHeight="300px" backgroundSize="cover" />
                             </TextOverImage>
                         </div>
                     </div>
                     <div id="we-are-2" className="we-are row">
-                        <div className="col-12 col-md-4 white-text">
+                        <div className="col-12 col-md-4">
                             <TextOverImage text="Educators" textFont="inherit" textSize="2rem">
                                 <ResponsiveImage url={educatorsImg} minHeight="300px" backgroundSize="cover" />
                             </TextOverImage>
                         </div>
-                        <div className="col-12 col-md-4 white-text">
+                        <div className="col-12 col-md-4">
                             <TextOverImage text="Parents" textFont="inherit" textSize="2rem">
                                 <ResponsiveImage url={parentsImg} minHeight="300px" backgroundSize="cover" />
                             </TextOverImage>
                         </div>
                     </div>
                     <div id="we-are-3" className="we-are row">
-                        <div className="col-12 col-md-4 white-text">
+                        <div className="col-12 col-md-4">
                             <TextOverImage text="A Community" textFont="inherit" textSize="2rem">
                                 <ResponsiveImage url={communityImg} minHeight="300px" backgroundSize="cover" />
                             </TextOverImage>
