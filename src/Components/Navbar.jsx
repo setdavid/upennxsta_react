@@ -1,9 +1,8 @@
 import React from "react";
-import "./../css/bootstrap-grid.min.css";
-import "./../css/base-styles.css";
-import "./../css/navbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { openSlider, closeSlider } from "./../redux/ducks/navslider";
+import { Link } from "react-router-dom";
+import { defaultLocation } from "./Router";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -31,12 +30,12 @@ const Navbar = () => {
                     <div className="row navbar-row">
                         <div className="navbar-col col-12 d-flex justify-content-between align-items-center">
                             <div className="navbar-brand-container d-flex align-items-center">
-                                <a className="navbar-brand h1" href="#/home">UPENN&nbsp;&times;&nbsp;STA</a>
+                                <Link to={`${defaultLocation}/`} className="navbar-brand h1">UPENN&nbsp;&times;&nbsp;STA</Link>
                             </div>
                             <div className="d-none d-md-block">
                                 <div className="navTo-group d-flex align-items-center">
                                     <div>
-                                        <a href="#/about-us">About us</a>
+                                        <Link to={`${defaultLocation}/about-us`}>About us</Link>
                                     </div>
                                     <div>
                                         <a href="#/our-works"> Our works</a>

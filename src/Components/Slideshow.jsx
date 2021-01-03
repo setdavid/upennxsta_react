@@ -1,5 +1,4 @@
 import React from "react";
-import "./../css/base-styles.css";
 import ResponsiveImg from "./ResponsiveImage";
 
 const Slideshow = (props) => {

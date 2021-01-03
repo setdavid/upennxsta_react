@@ -1,7 +1,4 @@
 import React from "react";
-import "./../css/base-styles.css";
-import "./../css/text-over-image.css";
-import "./../css/jumbotron.css";
 
 const TextOverImage = (props) => {
     const { text, subtext, textFont, subtextFont, textSize, subtextSize, isJumbotron, children } = props;

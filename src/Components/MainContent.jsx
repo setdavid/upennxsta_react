@@ -1,12 +1,11 @@
 import React from "react";
-import "./../css/base-styles.css";
-import Home from "./Routes/Home";
+import Router from "./Router";
 
 const MainContent = () => {
     return (
         <React.Fragment>
             <div id="main-content">
-                <Home />
+                <Router />
             </div>
         </React.Fragment>
     );

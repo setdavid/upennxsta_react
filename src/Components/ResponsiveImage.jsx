@@ -1,5 +1,4 @@
 import React from "react";
-import "./../css/base-styles.css";
 
 const ResponsiveImage = (props) => {
     const { url, minHeight, backgroundSize, children, classes, styles } = props;

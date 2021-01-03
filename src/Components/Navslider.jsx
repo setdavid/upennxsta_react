@@ -1,6 +1,4 @@
 import React from "react";
-import "./../css/base-styles.css";
-import "./../css/navslider.css";
 import { useSelector, useDispatch } from "react-redux";
 import { handleSliderToggle } from "./Navbar";
 

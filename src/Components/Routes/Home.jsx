@@ -1,13 +1,9 @@
 import React from "react";
-import "./../../css/base-styles.css";
-import "./../../css/home.css";
-import "./../../css/jumbotron.css";
 
 import ResponsiveImage from "../ResponsiveImage";
 import TextOverImage from "./../TextOverImage";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
-
 
 import whoWeAreImg from "./../../img/group_picture1.jpg";
 import upennImg from "./../../img/upenn-symbol.png";
@@ -20,38 +16,11 @@ import educatorsImg from "./../../img/educators1.JPG";
 import communityImg from "./../../img/park_group1.jpg";
 import currentProjectsImg from "./../../img/wall_art1.jpg";
 
-const Home = () => {
+const Home = (props) => {
+    console.log(props);
+
     return (
         <React.Fragment>
-            {/* <div className="jumbotron-text-container container">
-                <div className="text-over-jumbotron fadePassNavbar">
-                    COMMUNITY POWERED
-                </div>
-                <div className="subtext-over-jumbotron fadePassNavbar">
-                    A community based research group centered in Philadelphia
-                </div>
-                <div className="scroll-learn-more fadePassNavbar bobbing-anim">
-                    <a onclick="jsUtils.scrollTo('#container-1')">
-                        Learn more
-                        <br />
-                        <FaAngleDoubleDown size="2rem" />
-                    </a>
-                </div>
-            </div>
-            <div className="jumbotron-frame">
-                <div className="slideshow-jumbotron-collage"></div>
-                <div className="img-tint"></div>
-            </div> */}
-
-            {/* <Jumbotron url={collegeStudentsImg} height="100vh" text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia">
-                <div className="scroll-learn-more fadePassNavbar bobbing-anim">
-                    <a onclick="jsUtils.scrollTo('#container-1')">
-                        Learn more
-                        <br />
-                        <FaAngleDoubleDown size="2rem" />
-                    </a>
-                </div>
-            </Jumbotron> */}
             <div style={{ minWidth: "100vw", position: "relative" }}>
                 <TextOverImage text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" isJumbotron={true}>
                     <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" />
