@@ -29,6 +29,7 @@ const Navbar = () => {
 
     const navbarTransparentCSS = {
         backgroundColor: "transparent",
+        boxShadow: "none",
         color: "white"
     };
 
