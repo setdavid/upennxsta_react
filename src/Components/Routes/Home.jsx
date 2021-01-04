@@ -7,6 +7,12 @@ import Jumbotron from "./../Jumbotron";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 
+import slideshow1 from "./../../img/group_picture2.jpg";
+import slideshow2 from "./../../img/group_meeting1.jpg";
+import slideshow3 from "./../../img/group_picture3.jpg";
+import slideshow4 from "./../../img/group_meeting2.jpg";
+
+
 import whoWeAreImg from "./../../img/group_picture1.jpg";
 import upennImg from "./../../img/upenn-symbol.png";
 import staImg from "./../../img/sta-symbol-trans.png";
@@ -29,7 +35,7 @@ const Home = (props) => {
                 </TextOverImage> */}
             <Jumbotron text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" height="100vh" >
                 {/* <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" /> */}
-                <Slideshow urls={[whoWeAreImg, parentsImg]} minHeight="100vh" />
+                <Slideshow urls={[slideshow1, slideshow2, slideshow3, slideshow4]} minHeight="100vh" auto />
                 <div className="scroll-learn-more fadePassNavbar bobbing-anim">
                     <a onclick="jsUtils.scrollTo('#container-1')">
                         Learn more
@@ -48,7 +54,7 @@ const Home = (props) => {
                     <div className="row">
                         <div className="col-12 col-md-6 order-md-2">
                             {/* <ResponsiveImage url={whoWeAreImg} minHeight="300px" backgroundSize="cover" /> */}
-                            <Slideshow urls={[whoWeAreImg, parentsImg]} minHeight="300px" />
+                            <ResponsiveImage url={whoWeAreImg} minHeight="300px" backgroundSize="cover" />
                         </div>
                         <div className="col-12 col-md-6 order-md-1">
                             <div className="row">
