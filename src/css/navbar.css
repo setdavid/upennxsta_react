@@ -30,7 +30,7 @@
 }
 
 .navbar-brand-container {
-    color: var(--text-color);
+    color: inherit;
     transition-property: color;
     transition-duration: 0.5s;
 }
@@ -48,7 +48,7 @@
 .navTo-group>div {
     padding-left: 17px;
     padding-right: 17px;
-    color: var(--text-color);
+    color: inherit;
     font-size: 1rem;
     font-weight: 600;
     transition-property: color;
@@ -65,45 +65,8 @@
     /* font-size: 1.2rem; */
 }
 
-.navbar .dropdown-menu {
-    top: 109%;
-    right: 0;
-    color: white;
-    background-color: var(--text-color);
-    border: none;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-    transition-property: color, background-color;
-    transition-duration: 0.5s;
-}
-
-.navbar .dropdown-item {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    color: inherit;
-}
-
-.navbar .dropdown-item:nth-child(1) {
-    font-weight: 700;
-}
-
-.navbar .dropdown-item:hover {
-    color: var(--text-color);
-    background-color: white;
-}
-
-body .navbar .navbar-dropdown-transparent {
-    color: var(--text-color);
-    background-color: rgb(255, 255, 255, 0.8);
-}
-
-body .navbar .navbar-dropdown-item-transparent:hover {
-    color: white;
-    background-color: rgb(68, 68, 68, 0.8);
-}
-
 .navbar .navbar-toggler {
-    color: var(--text-color);
+    color: inherit;
     transition-property: color;
     transition-duration: 0.5s;
 }
@@ -113,11 +76,6 @@ body .navbar-transparent {
     background-color: rgb(0, 0, 0, 0);
     box-shadow: 0 0;
 }
-
-/* body .navbar-item-transparent {
-    color: white;
-    border-color: white !important;
-} */
 
 /********** Media Queries **********/
 

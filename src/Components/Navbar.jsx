@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { openSlider, closeSlider } from "./../redux/ducks/navslider";
 import { Link } from "react-router-dom";
@@ -25,8 +25,24 @@ const Navbar = () => {
     const dispatch = useDispatch();
     const navsliderOpened = useSelector(state => state.navslider.opened);
 
+    const [transparent, setTransparent] = useState(true);
+
+    const navbarTransparentCSS = {
+        backgroundColor: "transparent",
+        color: "white"
+    };
+
+    let finalCSS = {
+        minHeight: navbarHeight,
+        height: navbarHeight
+    };
+
+    if (transparent) {
+        finalCSS = { ...finalCSS, ...navbarTransparentCSS };
+    }
+
     return (
-        <nav style={{ minHeight: navbarHeight, height: navbarHeight }} className="navbar navbar-expand-md container-fluid d-flex align-items-center">
+        <nav style={finalCSS} className="navbar navbar-expand-md container-fluid d-flex align-items-center">
             <div className="navbar-container container">
                 <div className="row navbar-row">
                     <div className="navbar-col col-12 d-flex justify-content-between align-items-center">
