@@ -6,6 +6,8 @@ import { defaultLocation } from "./Router";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
+export const navbarHeight = "82px";
+
 export const closeSliderToggle = (dispatch) => {
     return dispatch(closeSlider());
 };
@@ -24,7 +26,7 @@ const Navbar = () => {
     const navsliderOpened = useSelector(state => state.navslider.opened);
 
     return (
-        <nav className="navbar navbar-expand-md container-fluid d-flex align-items-center">
+        <nav style={{ minHeight: navbarHeight, height: navbarHeight }} className="navbar navbar-expand-md container-fluid d-flex align-items-center">
             <div className="navbar-container container">
                 <div className="row navbar-row">
                     <div className="navbar-col col-12 d-flex justify-content-between align-items-center">

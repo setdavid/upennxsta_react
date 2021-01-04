@@ -23,15 +23,13 @@ const Home = (props) => {
 
     return (
         <React.Fragment>
-            <div style={{ minWidth: "100vw", position: "relative" }}>
-                {/* <TextOverImage text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" isJumbotron={true}>
+            {/* <TextOverImage text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" isJumbotron={true}>
                     <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" />
                     <Slideshow urls={[whoWeAreImg, parentsImg]} minHeight="100vh" />
                 </TextOverImage> */}
-                <Jumbotron text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia">
-                    {/* <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" /> */}
-                    <Slideshow urls={[whoWeAreImg, parentsImg]} minHeight="100vh" />
-                </Jumbotron>
+            <Jumbotron text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" height="100vh" >
+                {/* <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" /> */}
+                <Slideshow urls={[whoWeAreImg, parentsImg]} minHeight="100vh" />
                 <div className="scroll-learn-more fadePassNavbar bobbing-anim">
                     <a onclick="jsUtils.scrollTo('#container-1')">
                         Learn more
@@ -39,7 +37,7 @@ const Home = (props) => {
                         <FaAngleDoubleDown size="2rem" />
                     </a>
                 </div>
-            </div>
+            </Jumbotron>
             <div id="container-1" className="container-fluid">
                 <div className="container">
                     <div className="row">

@@ -8,10 +8,10 @@ const TextOverImage = (props) => {
             <div className="img-tint" />
             {children}
             <div className="text-container">
-                <div style={{ fontFamily: textFont, fontSize: textSize }} className={`text-over ${isJumbotron ? "text-over-jumbotron" : ""}`}>
+                <div style={{ fontFamily: textFont, fontSize: textSize }} className={`text-over ${isJumbotron && "text-over-jumbotron"}`}>
                     {text}
                 </div>
-                <div style={{ fontFamily: subtextFont, fontSize: subtextSize }} className={`subtext-over ${isJumbotron ? "subtext-over-jumbotron" : ""}`}>
+                <div style={{ fontFamily: subtextFont, fontSize: subtextSize }} className={`subtext-over ${isJumbotron && "subtext-over-jumbotron"}`}>
                     {subtext}
                 </div>
             </div>

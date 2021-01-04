@@ -2,7 +2,20 @@ import React, { useEffect } from "react";
 import ResponsiveImage from "./ResponsiveImage";
 
 const Slideshow = (props) => {
-    const { urls, minHeight, type, children } = props;
+    const { urls, minHeight, auto, children } = props;
+
+    const autoTimer = null;
+    const interval = 500;
+    const currImage = 0;
+
+    useEffect(() => {
+        if (auto) {
+            autoTimer = setInterval(() => {
+                nextImage();
+            }, interval);
+        }
+        return ((auto) && (autoTimer != null) && (clearInterval(autoTimer)));
+    }, []);
 
     const imageCSS = {
         position: "absolute",
@@ -18,7 +31,7 @@ const Slideshow = (props) => {
         left: "0",
         minWidth: "100%",
         width: "100%",
-        minHeight: "100%",
+        minHeight: minHeight,
         height: "100%",
         padding: "0",
         margin: "0",
@@ -46,6 +59,10 @@ const Slideshow = (props) => {
             }
         };
     }
+
+    const nextImage = () => {
+
+    };
 
     return (
         <div style={slideshowCSS}>
