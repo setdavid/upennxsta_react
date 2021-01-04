@@ -1,9 +1,9 @@
 import React from "react";
 
-import ResponsiveImage from "../ResponsiveImage";
-import TextOverImage from "./../TextOverImage";
-import Slideshow from "./../Slideshow";
-import Jumbotron from "./../Jumbotron";
+import ResponsiveImage from "../Features/ResponsiveImage";
+import TextOverImage from "../Features/TextOverImage";
+import Slideshow from "../Features/Slideshow";
+import Jumbotron from "../Features/Jumbotron";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 

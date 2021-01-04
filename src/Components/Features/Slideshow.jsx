@@ -13,16 +13,8 @@ const Slideshow = (props) => {
 
         const setWidth = "30%";
 
-        const scrollButtonsCSS = {
-            minHeight: "100%",
-            height: "100%",
-            width: setWidth,
-            color: "white",
-            zIndex: "100"
-        };
-
         return (
-            <div style={scrollButtonsCSS} className={`d-flex align-items-center justify-content-${leftButton ? "start" : "end"}`}>
+            <div style={{ width: setWidth }} className={`slideshow-scroll-button d-flex align-items-center justify-content-${leftButton ? "start" : "end"}`}>
                 {leftButton ? <IoChevronBackCircleSharp onClick={leftButton ? prevImage : nextImage} size={setWidth} /> : <IoChevronForwardCircleSharp onClick={leftButton ? prevImage : nextImage} size={setWidth} />}
             </div>
         );
@@ -78,29 +70,6 @@ const Slideshow = (props) => {
         clearTimeout(autoTimer);
     };
 
-    const imageCSS = {
-        position: "absolute",
-        top: "0",
-        left: "0",
-        opacity: "0.5",
-        transitionProperty: "opacity",
-        transitionDuration: auto ? "2s" : "0.5s",
-        zIndex: "-1"
-    };
-
-    const slideshowCSS = {
-        position: "relative",
-        top: "0",
-        left: "0",
-        minWidth: "100%",
-        width: "100%",
-        minHeight: minHeight,
-        height: "100%",
-        padding: "0",
-        margin: "0",
-        overflow: "hidden"
-    };
-
     const prepImages = () => {
         if (urls && urls.length > 0 && images.length > 0) {
             let index = 0;
@@ -108,15 +77,18 @@ const Slideshow = (props) => {
             return urls.map(url => {
                 const key = index;
 
-                let updateImageCSS = { ...imageCSS, opacity: images[index].opacity };
+                let imageCSS = {
+                    transitionDuration: auto ? "2s" : "0.5s",
+                    opacity: images[index].opacity
+                };
 
                 if (index == 0) {
-                    updateImageCSS = { ...updateImageCSS, position: "relative" };
+                    imageCSS = { ...imageCSS, position: "relative" };
                 }
 
                 index += 1;
 
-                return <ResponsiveImage key={key} url={url} minHeight={minHeight} backgroundSize="cover" styles={updateImageCSS} />
+                return <ResponsiveImage key={key} url={url} minHeight={minHeight} backgroundSize="cover" styles={imageCSS} classes="slideshow-image" />
             });
         };
     }
@@ -152,10 +124,10 @@ const Slideshow = (props) => {
     };
 
     return (
-        <div style={slideshowCSS} className="d-flex align-items-center">
-            {prepImages()}
-            {!auto && prepScrollButtons()}
-        </div>
+        <div style={{ minHeight: minHeight }} className="slideshow d-flex align-items-center" >
+            { prepImages()}
+            { !auto && prepScrollButtons()}
+        </div >
     );
 }
 

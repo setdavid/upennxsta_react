@@ -5,16 +5,18 @@ import "./css/bootstrap-grid.min.css";
 import "./css/base-styles.css";
 
 //Primary page components CSS
-import "./css/navbar.css";
-import "./css/navslider.css";
-import "./css/footer.css";
+import "./Components/Navbar.css";
+import "./Components/Navslider.css";
+import "./Components/Footer.css";
 
 //Feature components CSS
-import "./css/text-over-image.css";
-import "./css/jumbotron.css";
+import "./Components/Features/ResponsiveImage.css";
+import "./Components/Features/TextOverImage.css";
+import "./Components/Features/Jumbotron.css";
+import "./Components/Features/Slideshow.css";
 
 //Route components CSS
-import "./css/home.css";
+import "./Components/Routes/Home.css";
 
 import Navbar from "./Components/Navbar";
 import Navslider from "./Components/Navslider";
