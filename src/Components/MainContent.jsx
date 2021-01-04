@@ -1,11 +1,14 @@
 import React from "react";
 import Router from "./Router";
+import { navbarHeight } from "./Navbar";
+
+export const addMarginTop = false;
 
 const MainContent = () => {
     return (
-        <div id="main-content">
+        <div style={addMarginTop ? { marginTop: navbarHeight } : {}} id="main-content" >
             <Router />
-        </div>
+        </div >
     );
 }
 

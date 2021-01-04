@@ -1,9 +1,10 @@
 import React from "react";
 import TextOverImage from "./TextOverImage";
 import { navbarHeight } from "./Navbar";
+import { addMarginTop } from "./MainContent";
 
 const Jumbotron = (props) => {
-    const { text, subtext, children, height, addMarginTop } = props;
+    const { text, subtext, children, height } = props;
 
     const jumbotronCSS = {
         position: "relative",
@@ -19,7 +20,6 @@ const Jumbotron = (props) => {
     };
 
     const addMarginTopCSS = {
-        marginTop: navbarHeight,
         minHeight: `calc(${height} - ${navbarHeight})`,
         height: `calc(${height} - ${navbarHeight})`
     };
@@ -27,7 +27,7 @@ const Jumbotron = (props) => {
     let finalCSS = { ...jumbotronCSS };
 
     if (addMarginTop) {
-        finalCSS = { ...jumbotronCSS, ...addMarginTopCSS};
+        finalCSS = { ...jumbotronCSS, ...addMarginTopCSS };
     }
 
     return (
