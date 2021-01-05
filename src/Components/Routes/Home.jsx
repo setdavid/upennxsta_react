@@ -4,6 +4,7 @@ import ResponsiveImage from "../Features/ResponsiveImage";
 import TextOverImage from "../Features/TextOverImage";
 import Slideshow from "../Features/Slideshow";
 import Jumbotron from "../Features/Jumbotron";
+import FadePassNavbar from "../Features/FadePassNavbar";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 
@@ -36,13 +37,13 @@ const Home = (props) => {
             <Jumbotron text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" height="100vh" >
                 {/* <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" /> */}
                 <Slideshow urls={[slideshow1, slideshow2, slideshow3, slideshow4]} minHeight="100vh" auto />
-                <div className="scroll-learn-more fadePassNavbar bobbing-anim">
+                <FadePassNavbar classes="scroll-learn-more fadePassNavbar bobbing-anim">
                     <a onclick="jsUtils.scrollTo('#container-1')">
                         Learn more
                         <br />
                         <FaAngleDoubleDown size="2rem" />
                     </a>
-                </div>
+                </FadePassNavbar>
             </Jumbotron>
             <div id="container-1" className="container-fluid">
                 <div className="container">
@@ -147,7 +148,7 @@ const Home = (props) => {
                         educational experiences as students of color. --> */}
                                 </p>
                                 <div>
-                                    <a href="#/about-us">Learn more</a>
+                                    <a>Learn more</a>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +160,7 @@ const Home = (props) => {
                                 <p>Many members of our group have published pieces in academic journals.
                                 </p>
                                 <div>
-                                    <a href="#/publications">Learn more</a>
+                                    <a>Learn more</a>
                                 </div>
                             </div>
                         </div>
@@ -171,7 +172,7 @@ const Home = (props) => {
                                 <p>Our group has presented various research projects at several conferences.
                                 </p>
                                 <div>
-                                    <a href="#/conferences">Learn more</a>
+                                    <a>Learn more</a>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +192,7 @@ const Home = (props) => {
                         </div>
                         <div className="col-12 col-md-6">
                             <h4>Pushing the Community's "12 Demands"</h4>
-                            <p>After the creation of the community's <a href="">"12 Demands"</a>, we compressed the 12
+                            <p>After the creation of the community's <a>"12 Demands"</a>, we compressed the 12
                     items into three specific topics that our research group can feasibly pursue: </p>
                             <ul>
                                 <li>AP Classes</li>

@@ -12,8 +12,8 @@ const Jumbotron = (props) => {
     };
 
     const addMarginTopCSS = {
-        minHeight: `calc(${height} - ${navbarHeight})`,
-        height: `calc(${height} - ${navbarHeight})`
+        minHeight: `calc(${height} - ${navbarHeight}px)`,
+        height: `calc(${height} - ${navbarHeight}px)`
     };
 
     let finalCSS = { ...jumbotronCSS };
@@ -24,7 +24,7 @@ const Jumbotron = (props) => {
 
     return (
         <div style={finalCSS} className="fixed-background jumbotron">
-            <TextOverImage text={text} subtext={subtext} isJumbotron={true}>
+            <TextOverImage text={text} subtext={subtext} isJumbotron={true} fadePassNavbar>
                 {children}
             </TextOverImage>
         </div>

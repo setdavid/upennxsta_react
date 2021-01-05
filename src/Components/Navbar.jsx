@@ -6,7 +6,7 @@ import { defaultLocation } from "./Router";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export const navbarHeight = "82px";
+export const navbarHeight = 82;
 
 export const closeSliderToggle = (dispatch) => {
     return dispatch(closeSlider());

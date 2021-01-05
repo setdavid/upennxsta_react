@@ -1,19 +1,29 @@
 import React from "react";
+import FadePassNavbar from "./FadePassNavbar";
 
 const TextOverImage = (props) => {
-    const { text, subtext, textFont, subtextFont, textSize, subtextSize, isJumbotron, children } = props;
+    const { text, subtext, textFont, subtextFont, textSize, subtextSize, isJumbotron, fadePassNavbar, children } = props;
+
+    const textArea = (
+        <div style={{ fontFamily: textFont, fontSize: textSize }} className={`text-over ${isJumbotron && "text-over-jumbotron"}`}>
+            {text}
+        </div>
+    );
+
+    const subtextArea = (
+        <div style={{ fontFamily: subtextFont, fontSize: subtextSize }} className={`subtext-over ${isJumbotron && "subtext-over-jumbotron"}`}>
+            {subtext}
+        </div>
+    );
+
 
     return (
         <div className="image-frame">
             <div className="img-tint" />
             {children}
             <div className="text-container">
-                <div style={{ fontFamily: textFont, fontSize: textSize }} className={`text-over ${isJumbotron && "text-over-jumbotron"}`}>
-                    {text}
-                </div>
-                <div style={{ fontFamily: subtextFont, fontSize: subtextSize }} className={`subtext-over ${isJumbotron && "subtext-over-jumbotron"}`}>
-                    {subtext}
-                </div>
+                {fadePassNavbar ? <FadePassNavbar>{textArea}</FadePassNavbar> : textArea}
+                {fadePassNavbar ? <FadePassNavbar>{subtextArea}</FadePassNavbar> : subtextArea}
             </div>
         </div>
     );

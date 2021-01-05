@@ -8,7 +8,7 @@
     color: var(--text-color);
     font-size: 2rem;
     box-shadow: 0px 1px 15px #646464;
-    z-index: 1000;
+    z-index: 100000;
     background-color: white;
     transition-property: color, background-color;
     transition-duration: 0.5s;

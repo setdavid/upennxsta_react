@@ -1,34 +1,3 @@
-/* .slideshow-jumbotron-collage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-.slideshow-jumbotron-collage>div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    opacity: 1;
-    transition-property: opacity;
-} */
-
 .scroll-learn-more {
     overflow: hidden;
     position: absolute;

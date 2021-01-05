@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ResponsiveImage from "./ResponsiveImage";
 
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { IoChevronBackCircleSharp, IoChevronForwardCircleSharp } from "react-icons/io5";
 
 const Slideshow = (props) => {
@@ -20,9 +19,8 @@ const Slideshow = (props) => {
         );
     };
 
-    let autoTimer = null;
     const interval = 6000;
-    let initialImages = new Array();
+    let initialImages = [];
 
     if (urls && urls.length > 0) {
         for (let i = 0; i < urls.length; i++) {
@@ -37,13 +35,13 @@ const Slideshow = (props) => {
         for (let i = 0; i < initialImages.length; i++) {
             if (i + 1 < initialImages.length) {
                 initialImages[i].next = initialImages[i + 1];
-            } else if (i + 1 == initialImages.length) {
+            } else if (i + 1 === initialImages.length) {
                 initialImages[i].next = initialImages[0];
             }
 
             if (i - 1 >= 0) {
                 initialImages[i].prev = initialImages[i - 1];
-            } else if (i - 1 == -1) {
+            } else if (i - 1 === -1) {
                 initialImages[i].prev = initialImages[initialImages.length - 1];
             }
         }
@@ -55,6 +53,8 @@ const Slideshow = (props) => {
     const [currImage, setCurrImage] = useState(0);
 
     useEffect(() => {
+        let autoTimer = null;
+
         if (urls && urls.length > 0 && images.length > 0) {
             if (auto) {
                 autoTimer = setTimeout(() => {
@@ -63,11 +63,11 @@ const Slideshow = (props) => {
             }
         }
 
-        return (() => (auto) && (autoTimer != null) && (unmount()));
+        return (() => (auto) && (autoTimer != null) && (unmount(autoTimer)));
     }, [images]);
 
-    const unmount = () => {
-        clearTimeout(autoTimer);
+    const unmount = (timer) => {
+        clearTimeout(timer);
     };
 
     const prepImages = () => {
@@ -82,7 +82,7 @@ const Slideshow = (props) => {
                     opacity: images[index].opacity
                 };
 
-                if (index == 0) {
+                if (index === 0) {
                     imageCSS = { ...imageCSS, position: "relative" };
                 }
 
@@ -127,6 +127,7 @@ const Slideshow = (props) => {
         <div style={{ minHeight: minHeight }} className="slideshow d-flex align-items-center" >
             { prepImages()}
             { !auto && prepScrollButtons()}
+            {children}
         </div >
     );
 }

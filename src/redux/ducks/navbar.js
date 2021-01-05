@@ -27,5 +27,5 @@ export default (state = initialState, action) => {
             return { ...state, opened: false };
         default:
             return state;
-    }
-}
+    };
+};

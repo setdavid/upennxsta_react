@@ -19,7 +19,7 @@ const initialState = {
     opened: false
 };
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
         case OPEN_SLIDER:
             return { ...state, opened: true };
@@ -27,5 +27,7 @@ export default (state = initialState, action) => {
             return { ...state, opened: false };
         default:
             return state;
-    }
-}
+    };
+};
+
+export default reducer;

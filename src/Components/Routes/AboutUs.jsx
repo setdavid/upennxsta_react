@@ -5,7 +5,7 @@ const AboutUs = (props) => {
 
     return (
         <React.Fragment>
-            <div>about us hellow</div>
+            <div style={{height: "1000vh"}}>about us hellow</div>
         </React.Fragment>
     );
 }
