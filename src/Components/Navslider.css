@@ -17,7 +17,7 @@
     opacity: 0;
     transition-property: width, opacity;
     transition-duration: 0.5s;
-    z-index: 1000;
+    z-index: 11000;
 }
 
 .nav-slider .nav-slider-item {
