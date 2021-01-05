@@ -29,7 +29,7 @@ const FadePassNavbar = (props) => {
     }, []);
 
     return (
-        <div style={styles} className={classes} ref={elemRef} style={{ zIndex: "1000", transition: "opacity 0.01s", opacity: `${opacity}` }}>
+        <div style={styles} className={`${classes ? classes : ""}`} ref={elemRef} style={{ zIndex: "1000", transition: "opacity 0.01s", opacity: `${opacity}` }}>
             {children}
         </div >
     );
