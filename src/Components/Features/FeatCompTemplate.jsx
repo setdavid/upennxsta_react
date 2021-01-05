@@ -4,7 +4,7 @@ const FeatCompTemplate = (props) => {
     const { styles, classes, children } = props;
 
     return (
-        <div style={{ ...styles }} className={`${classes}`} >
+        <div style={{ ...styles }} className={`${classes ? classes : ""}`} >
             {children}
         </div>
     );

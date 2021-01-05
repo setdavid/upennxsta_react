@@ -10,7 +10,7 @@ const ResponsiveImage = (props) => {
     };
 
     return (
-        <div style={{ ...cssStyles, ...styles }} className={`${classes} ${roundedCorners ? "rounded-corners" : ""} responsive-image`} >
+        <div style={{ ...cssStyles, ...styles }} className={`${classes ? classes : ""} ${roundedCorners ? "rounded-corners" : ""} responsive-image`} >
             {children}
         </div>
     );

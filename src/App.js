@@ -3,6 +3,7 @@ import React from "react";
 //Essential CSS
 import "./css/bootstrap-grid.min.css";
 import "./css/base-styles.css";
+import "./css/transition-group.css"
 
 //Primary page components CSS
 import "./Components/Navbar.css";
