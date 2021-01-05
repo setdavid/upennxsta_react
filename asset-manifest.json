@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/upennxsta_react/static/css/main.29f08306.chunk.css",
+    "main.css": "/upennxsta_react/static/css/main.945f0ad9.chunk.css",
     "main.js": "/upennxsta_react/static/js/main.837bdbcb.chunk.js",
     "main.js.map": "/upennxsta_react/static/js/main.837bdbcb.chunk.js.map",
     "runtime-main.js": "/upennxsta_react/static/js/runtime-main.2558f8d5.js",
@@ -10,7 +10,7 @@
     "static/js/3.76dbc967.chunk.js": "/upennxsta_react/static/js/3.76dbc967.chunk.js",
     "static/js/3.76dbc967.chunk.js.map": "/upennxsta_react/static/js/3.76dbc967.chunk.js.map",
     "index.html": "/upennxsta_react/index.html",
-    "static/css/main.29f08306.chunk.css.map": "/upennxsta_react/static/css/main.29f08306.chunk.css.map",
+    "static/css/main.945f0ad9.chunk.css.map": "/upennxsta_react/static/css/main.945f0ad9.chunk.css.map",
     "static/js/2.5c31db19.chunk.js.LICENSE.txt": "/upennxsta_react/static/js/2.5c31db19.chunk.js.LICENSE.txt",
     "static/media/college-students.1088feda.jpg": "/upennxsta_react/static/media/college-students.1088feda.jpg",
     "static/media/educators1.3427b4cf.JPG": "/upennxsta_react/static/media/educators1.3427b4cf.JPG",
@@ -29,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.2558f8d5.js",
     "static/js/2.5c31db19.chunk.js",
-    "static/css/main.29f08306.chunk.css",
+    "static/css/main.945f0ad9.chunk.css",
     "static/js/main.837bdbcb.chunk.js"
   ]
 }
