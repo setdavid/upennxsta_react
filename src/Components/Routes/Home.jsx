@@ -25,6 +25,16 @@ import educatorsImg from "./../../img/educators1.JPG";
 import communityImg from "./../../img/park_group1.jpg";
 import currentProjectsImg from "./../../img/wall_art1.jpg";
 
+const WeAreCards = (props) => {
+    const { text, url } = props;
+
+    return (
+        <TextOverImage text={text} textFont="inherit" textSize="2rem" roundedCorners>
+            <ResponsiveImage url={url} minHeight="300px" backgroundSize="cover" />
+        </TextOverImage>
+    );
+};
+
 const Home = (props) => {
     console.log(props);
 
@@ -55,7 +65,7 @@ const Home = (props) => {
                     <div className="row">
                         <div className="col-12 col-md-6 order-md-2">
                             {/* <ResponsiveImage url={whoWeAreImg} minHeight="300px" backgroundSize="cover" /> */}
-                            <ResponsiveImage url={whoWeAreImg} minHeight="300px" backgroundSize="cover" />
+                            <ResponsiveImage url={whoWeAreImg} minHeight="300px" backgroundSize="cover" roundedCorners />
                         </div>
                         <div className="col-12 col-md-6 order-md-1">
                             <div className="row">
@@ -95,38 +105,26 @@ const Home = (props) => {
                     </div>
                     <div id="we-are-1" className="we-are row">
                         <div className="col-12 col-md-4">
-                            <TextOverImage text="Middle Schoolers" textFont="inherit" textSize="2rem">
-                                <ResponsiveImage url={middleSchoolersImg} minHeight="300px" backgroundSize="cover" />
-                            </TextOverImage>
+                            <WeAreCards text="Middle Schoolers" url={middleSchoolersImg} />
                         </div>
                         <div className="col-12 col-md-4">
-                            <TextOverImage text="High Schoolers" textFont="inherit" textSize="2rem">
-                                <ResponsiveImage url={collegeStudentsImg} minHeight="300px" backgroundSize="cover" />
-                            </TextOverImage>
+                            <WeAreCards text="High Schoolers" url={collegeStudentsImg} />
                         </div>
                         <div className="col-12 col-md-4">
-                            <TextOverImage text="College Students" textFont="inherit" textSize="2rem">
-                                <ResponsiveImage url={collegeStudentsImg} minHeight="300px" backgroundSize="cover" />
-                            </TextOverImage>
+                            <WeAreCards text="College Students" url={collegeStudentsImg} />
                         </div>
                     </div>
                     <div id="we-are-2" className="we-are row">
                         <div className="col-12 col-md-4">
-                            <TextOverImage text="Educators" textFont="inherit" textSize="2rem">
-                                <ResponsiveImage url={educatorsImg} minHeight="300px" backgroundSize="cover" />
-                            </TextOverImage>
+                            <WeAreCards text="Educators" url={educatorsImg} />
                         </div>
                         <div className="col-12 col-md-4">
-                            <TextOverImage text="Parents" textFont="inherit" textSize="2rem">
-                                <ResponsiveImage url={parentsImg} minHeight="300px" backgroundSize="cover" />
-                            </TextOverImage>
+                            <WeAreCards text="Parents" url={parentsImg} />
                         </div>
                     </div>
                     <div id="we-are-3" className="we-are row">
                         <div className="col-12 col-md-4">
-                            <TextOverImage text="A Community" textFont="inherit" textSize="2rem">
-                                <ResponsiveImage url={communityImg} minHeight="300px" backgroundSize="cover" />
-                            </TextOverImage>
+                            <WeAreCards text="A Community" url={communityImg} />
                         </div>
                     </div>
                 </div>
@@ -135,7 +133,7 @@ const Home = (props) => {
                 <div id="container-3" className="container">
                     <div className="row">
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
-                            <div className="off-white-background">
+                            <div className="off-white-background rounded-corners">
                                 <FaUsers size="4rem" />
                                 <br />
                                 <h4>Learn more about us</h4>
@@ -153,7 +151,7 @@ const Home = (props) => {
                             </div>
                         </div>
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
-                            <div className="off-white-background">
+                            <div className="off-white-background rounded-corners">
                                 <FaBook size="4rem" />
                                 <br />
                                 <h4>Publications</h4>
@@ -165,7 +163,7 @@ const Home = (props) => {
                             </div>
                         </div>
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
-                            <div className="off-white-background">
+                            <div className="off-white-background rounded-corners">
                                 <FaChalkboardTeacher size="4rem" />
                                 <br />
                                 <h4>Conferences</h4>

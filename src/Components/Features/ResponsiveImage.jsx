@@ -1,7 +1,7 @@
 import React from "react";
 
 const ResponsiveImage = (props) => {
-    const { url, minHeight, backgroundSize, children, classes, styles } = props;
+    const { url, minHeight, backgroundSize, roundedCorners, children, classes, styles } = props;
 
     const cssStyles = {
         minHeight: minHeight,
@@ -10,7 +10,7 @@ const ResponsiveImage = (props) => {
     };
 
     return (
-        <div className={`${classes} responsive-image`} style={{ ...cssStyles, ...styles }}>
+        <div className={`${classes} ${roundedCorners ? "rounded-corners" : ""} responsive-image`} style={{ ...cssStyles, ...styles }}>
             {children}
         </div>
     );

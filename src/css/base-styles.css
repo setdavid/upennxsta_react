@@ -157,6 +157,10 @@ body .text-color-background {
     filter: blur(2px);
 }
 
+.rounded-corners {
+    border-radius: 5%;
+}
+
 .hide-compress-y {
     height: 0;
 }
