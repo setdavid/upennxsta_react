@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/upennxsta_react/static/css/main.90dc5159.chunk.css",
-    "main.js": "/upennxsta_react/static/js/main.0a5f40f9.chunk.js",
-    "main.js.map": "/upennxsta_react/static/js/main.0a5f40f9.chunk.js.map",
-    "runtime-main.js": "/upennxsta_react/static/js/runtime-main.2558f8d5.js",
-    "runtime-main.js.map": "/upennxsta_react/static/js/runtime-main.2558f8d5.js.map",
-    "static/js/2.5c31db19.chunk.js": "/upennxsta_react/static/js/2.5c31db19.chunk.js",
-    "static/js/2.5c31db19.chunk.js.map": "/upennxsta_react/static/js/2.5c31db19.chunk.js.map",
-    "static/js/3.76dbc967.chunk.js": "/upennxsta_react/static/js/3.76dbc967.chunk.js",
-    "static/js/3.76dbc967.chunk.js.map": "/upennxsta_react/static/js/3.76dbc967.chunk.js.map",
+    "main.js": "/upennxsta_react/static/js/main.d8a5dfed.chunk.js",
+    "main.js.map": "/upennxsta_react/static/js/main.d8a5dfed.chunk.js.map",
+    "runtime-main.js": "/upennxsta_react/static/js/runtime-main.80e50faf.js",
+    "runtime-main.js.map": "/upennxsta_react/static/js/runtime-main.80e50faf.js.map",
+    "static/js/2.029070a4.chunk.js": "/upennxsta_react/static/js/2.029070a4.chunk.js",
+    "static/js/2.029070a4.chunk.js.map": "/upennxsta_react/static/js/2.029070a4.chunk.js.map",
+    "static/js/3.d947ca0e.chunk.js": "/upennxsta_react/static/js/3.d947ca0e.chunk.js",
+    "static/js/3.d947ca0e.chunk.js.map": "/upennxsta_react/static/js/3.d947ca0e.chunk.js.map",
     "index.html": "/upennxsta_react/index.html",
     "static/css/main.90dc5159.chunk.css.map": "/upennxsta_react/static/css/main.90dc5159.chunk.css.map",
-    "static/js/2.5c31db19.chunk.js.LICENSE.txt": "/upennxsta_react/static/js/2.5c31db19.chunk.js.LICENSE.txt",
+    "static/js/2.029070a4.chunk.js.LICENSE.txt": "/upennxsta_react/static/js/2.029070a4.chunk.js.LICENSE.txt",
     "static/media/college-students.1088feda.jpg": "/upennxsta_react/static/media/college-students.1088feda.jpg",
     "static/media/educators1.3427b4cf.JPG": "/upennxsta_react/static/media/educators1.3427b4cf.JPG",
     "static/media/group_meeting1.11a35870.jpg": "/upennxsta_react/static/media/group_meeting1.11a35870.jpg",
@@ -27,9 +27,9 @@
     "static/media/wall_art1.226610db.jpg": "/upennxsta_react/static/media/wall_art1.226610db.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2558f8d5.js",
-    "static/js/2.5c31db19.chunk.js",
+    "static/js/runtime-main.80e50faf.js",
+    "static/js/2.029070a4.chunk.js",
     "static/css/main.90dc5159.chunk.css",
-    "static/js/main.0a5f40f9.chunk.js"
+    "static/js/main.d8a5dfed.chunk.js"
   ]
 }
