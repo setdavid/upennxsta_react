@@ -4,7 +4,7 @@ import ResponsiveImage from "./ResponsiveImage";
 import { IoChevronBackCircleSharp, IoChevronForwardCircleSharp } from "react-icons/io5";
 
 const Slideshow = (props) => {
-    const { urls, minHeight, auto, children } = props;
+    const { urls, minHeight, auto, styles, classes, children } = props;
 
     //Subcomponent
     const ScrollButtons = (props) => {
@@ -124,7 +124,7 @@ const Slideshow = (props) => {
     };
 
     return (
-        <div style={{ minHeight: minHeight }} className="slideshow d-flex align-items-center" >
+        <div style={{ ...styles, minHeight: minHeight }} className={`${classes} slideshow d-flex align-items-center`} >
             { prepImages()}
             { !auto && prepScrollButtons()}
             {children}

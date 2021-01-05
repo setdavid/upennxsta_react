@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { navbarHeight } from "../Navbar";
 
 const FadePassNavbar = (props) => {
-    const { classes, children } = props;
+    const { styles, classes, children } = props;
     const elemRef = useRef();
 
     const [opacity, setOpacity] = useState(1);
@@ -29,7 +29,7 @@ const FadePassNavbar = (props) => {
     }, []);
 
     return (
-        <div className={classes} ref={elemRef} style={{ zIndex: "1000", transition: "opacity 0.01s", opacity: `${opacity}` }}>
+        <div style={styles} className={classes} ref={elemRef} style={{ zIndex: "1000", transition: "opacity 0.01s", opacity: `${opacity}` }}>
             {children}
         </div >
     );

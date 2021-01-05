@@ -5,6 +5,7 @@ import TextOverImage from "../Features/TextOverImage";
 import Slideshow from "../Features/Slideshow";
 import Jumbotron from "../Features/Jumbotron";
 import FadePassNavbar from "../Features/FadePassNavbar";
+import ColoredCard from "../Features/ColoredCard";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 
@@ -133,7 +134,7 @@ const Home = (props) => {
                 <div id="container-3" className="container">
                     <div className="row">
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
-                            <div className="off-white-background rounded-corners">
+                            <ColoredCard roundedCorners >
                                 <FaUsers size="4rem" />
                                 <br />
                                 <h4>Learn more about us</h4>
@@ -148,10 +149,10 @@ const Home = (props) => {
                                 <div>
                                     <a>Learn more</a>
                                 </div>
-                            </div>
+                            </ColoredCard>
                         </div>
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
-                            <div className="off-white-background rounded-corners">
+                            <ColoredCard roundedCorners>
                                 <FaBook size="4rem" />
                                 <br />
                                 <h4>Publications</h4>
@@ -160,10 +161,10 @@ const Home = (props) => {
                                 <div>
                                     <a>Learn more</a>
                                 </div>
-                            </div>
+                            </ColoredCard>
                         </div>
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
-                            <div className="off-white-background rounded-corners">
+                            <ColoredCard roundedCorners>
                                 <FaChalkboardTeacher size="4rem" />
                                 <br />
                                 <h4>Conferences</h4>
@@ -172,7 +173,7 @@ const Home = (props) => {
                                 <div>
                                     <a>Learn more</a>
                                 </div>
-                            </div>
+                            </ColoredCard>
                         </div>
                     </div>
                 </div>
@@ -186,7 +187,7 @@ const Home = (props) => {
                     </div>
                     <div className="row">
                         <div className="col-12 col-md-6">
-                            <ResponsiveImage url={currentProjectsImg} minHeight="300px" backgroundSize="cover" />
+                            <ResponsiveImage url={currentProjectsImg} minHeight="300px" backgroundSize="cover" roundedCorners />
                         </div>
                         <div className="col-12 col-md-6">
                             <h4>Pushing the Community's "12 Demands"</h4>

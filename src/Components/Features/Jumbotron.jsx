@@ -4,7 +4,7 @@ import { navbarHeight } from "../Navbar";
 import { addMarginTop } from "../MainContent";
 
 const Jumbotron = (props) => {
-    const { text, subtext, children, height } = props;
+    const { text, subtext, height, styles, classes, children } = props;
 
     const jumbotronCSS = {
         minHeight: height,
@@ -23,7 +23,7 @@ const Jumbotron = (props) => {
     }
 
     return (
-        <div style={finalCSS} className="fixed-background jumbotron">
+        <div style={{ ...finalCSS, ...styles }} className={`${classes} fixed-background jumbotron`}>
             <TextOverImage text={text} subtext={subtext} isJumbotron={true} fadePassNavbar>
                 {children}
             </TextOverImage>
