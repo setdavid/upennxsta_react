@@ -18,7 +18,7 @@ const TextOverImage = (props) => {
 
 
     return (
-        <div style={styles} className={`image-frame ${classes} ${roundedCorners ? "rounded-corners" : ""}`}>
+        <div style={styles} className={`image-frame ${classes ? classes : ""} ${roundedCorners ? "rounded-corners" : ""}`}>
             <div className="img-tint" />
             {children}
             <div className="text-container">

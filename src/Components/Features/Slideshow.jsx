@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ResponsiveImage from "./ResponsiveImage";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import { IoChevronBackCircleSharp, IoChevronForwardCircleSharp } from "react-icons/io5";
 
@@ -20,98 +21,71 @@ const Slideshow = (props) => {
     };
 
     const interval = 6000;
-    let initialImages = [];
+    const transitionLength = 500;
+    const autoTransitionLength = 2000;
+    let initialization = [];
 
     if (urls && urls.length > 0) {
         for (let i = 0; i < urls.length; i++) {
-            initialImages[i] = {
-                index: i,
-                opacity: 0,
+            initialization[i] = {
+                id: i,
+                url: urls[i],
                 prev: null,
                 next: null
             };
         }
 
-        for (let i = 0; i < initialImages.length; i++) {
-            if (i + 1 < initialImages.length) {
-                initialImages[i].next = initialImages[i + 1];
-            } else if (i + 1 === initialImages.length) {
-                initialImages[i].next = initialImages[0];
+        for (let i = 0; i < initialization.length; i++) {
+            if (i + 1 < initialization.length) {
+                initialization[i].next = initialization[i + 1];
+            } else if (i + 1 === initialization.length) {
+                initialization[i].next = initialization[0];
             }
 
             if (i - 1 >= 0) {
-                initialImages[i].prev = initialImages[i - 1];
+                initialization[i].prev = initialization[i - 1];
             } else if (i - 1 === -1) {
-                initialImages[i].prev = initialImages[initialImages.length - 1];
+                initialization[i].prev = initialization[initialization.length - 1];
             }
         }
-
-        initialImages[0].opacity = 1;
     }
 
-    const [images, setImages] = useState(initialImages);
+    const images = useRef(initialization);
     const [currImage, setCurrImage] = useState(0);
 
     useEffect(() => {
         let autoTimer = null;
 
-        if (urls && urls.length > 0 && images.length > 0) {
+        if (urls && urls.length > 0 && images.current.length > 0) {
             if (auto) {
                 autoTimer = setTimeout(() => {
+                    console.log("next");
                     nextImage();
                 }, interval);
             }
         }
 
         return (() => (auto) && (autoTimer != null) && (unmount(autoTimer)));
-    }, [images]);
+    }, [currImage]);
 
     const unmount = (timer) => {
+        console.log("unmount");
         clearTimeout(timer);
     };
 
-    const prepImages = () => {
-        if (urls && urls.length > 0 && images.length > 0) {
-            let index = 0;
-
-            return urls.map(url => {
-                const key = index;
-
-                let imageCSS = {
-                    transitionDuration: auto ? "2s" : "0.5s",
-                    opacity: images[index].opacity
-                };
-
-                if (index === 0) {
-                    imageCSS = { ...imageCSS, position: "relative" };
-                }
-
-                index += 1;
-
-                return <ResponsiveImage key={key} url={url} minHeight={minHeight} backgroundSize="cover" styles={imageCSS} classes="slideshow-image" />
-            });
+    const prepImage = () => {
+        if (urls && urls.length > 0 && images.current.length > 0) {
+            return <ResponsiveImage styles={{ transitionDuration: `${auto ? autoTransitionLength : transitionLength}ms` }} url={images.current[currImage].url} minHeight={minHeight} backgroundSize="cover" classes="slideshow-image" />
         };
-    }
+    };
 
     const nextImage = () => {
-        let newImages = [...images];
-
-        newImages[currImage].opacity = 0;
-        newImages[currImage].next.opacity = 1;
-
-        setCurrImage(newImages[currImage].next.index);
-        setImages(newImages);
+        console.log("next image");
+        setCurrImage(images.current[currImage].next.id);
     };
 
     const prevImage = () => {
-        let newImages = [...images];
-
-        newImages[currImage].opacity = 0;
-        newImages[currImage].prev.opacity = 1;
-
-        setCurrImage(newImages[currImage].prev.index);
-
-        setImages(newImages);
+        setCurrImage(images.current[currImage].prev.id);
     };
 
     const prepScrollButtons = () => {
@@ -124,9 +98,13 @@ const Slideshow = (props) => {
     };
 
     return (
-        <div style={{ ...styles, minHeight: minHeight }} className={`${classes} slideshow d-flex align-items-center`} >
-            { prepImages()}
-            { !auto && prepScrollButtons()}
+        <div style={{ ...styles, minHeight: minHeight }} className={`${classes ? classes : ""} slideshow d-flex align-items-center`} >
+            <TransitionGroup>
+                <CSSTransition key={images.current[currImage].id} timeout={auto ? autoTransitionLength : transitionLength} classNames="fade" unmountOnExit>
+                    {prepImage()}
+                </CSSTransition>
+            </TransitionGroup>
+            {!auto && prepScrollButtons()}
             {children}
         </div >
     );

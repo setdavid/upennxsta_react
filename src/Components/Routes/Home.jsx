@@ -66,7 +66,7 @@ const Home = (props) => {
                     <div className="row">
                         <div className="col-12 col-md-6 order-md-2">
                             {/* <ResponsiveImage url={whoWeAreImg} minHeight="300px" backgroundSize="cover" roundedCorners /> */}
-                            <Slideshow urls={[slideshow1, slideshow2, slideshow3, slideshow4]} minHeight="100vh" />
+                            <Slideshow urls={[slideshow1, slideshow2, slideshow3, slideshow4]} minHeight="300px" />
                         </div>
                         <div className="col-12 col-md-6 order-md-1">
                             <div className="row">

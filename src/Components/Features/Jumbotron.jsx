@@ -23,7 +23,7 @@ const Jumbotron = (props) => {
     }
 
     return (
-        <div style={{ ...finalCSS, ...styles }} className={`${classes} fixed-background jumbotron`}>
+        <div style={{ ...finalCSS, ...styles }} className={`${classes ? classes : ""} fixed-background jumbotron`}>
             <TextOverImage text={text} subtext={subtext} isJumbotron={true} fadePassNavbar>
                 {children}
             </TextOverImage>
