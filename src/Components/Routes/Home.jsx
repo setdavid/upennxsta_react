@@ -7,6 +7,7 @@ import Jumbotron from "../Features/Jumbotron";
 import FadePassNavbar from "../Features/FadePassNavbar";
 import ColoredCard from "../Features/ColoredCard";
 import RoundedButton from "../Features/RoundedButton";
+import { scrollTo } from "../Features/tools";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 import { RiArrowRightSLine } from "react-icons/ri";
@@ -50,11 +51,11 @@ const Home = (props) => {
                 {/* <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" /> */}
                 <Slideshow urls={[slideshow1, slideshow2, slideshow3, slideshow4]} minHeight="100vh" auto />
                 <FadePassNavbar classes="scroll-learn-more fadePassNavbar bobbing-anim">
-                    <a onclick="jsUtils.scrollTo('#container-1')">
+                    <div style={{ cursor: "pointer" }} onClick={() => scrollTo("#container-1")}>
                         Learn more
                         <br />
                         <FaAngleDoubleDown size="2rem" />
-                    </a>
+                    </div>
                 </FadePassNavbar>
             </Jumbotron>
             <div id="container-1" className="container-fluid">
