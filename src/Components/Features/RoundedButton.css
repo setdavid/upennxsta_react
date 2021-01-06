@@ -1,0 +1,25 @@
+.rounded-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme-color-2);
+    color: white;
+    font-weight: 500;
+    border-radius: 1000vh;
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
+
+/* #container-3 .off-white-background div {
+    margin-top: 30px;
+    padding: 10px 10px 10px 10px;
+}
+
+#container-3 .off-white-background div a {
+    border: 3px solid var(--theme-color-2);
+    background-color: rgb(5, 125, 130, 0.3);
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 10px 10px 10px 10px;
+} */

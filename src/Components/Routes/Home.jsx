@@ -6,8 +6,10 @@ import Slideshow from "../Features/Slideshow";
 import Jumbotron from "../Features/Jumbotron";
 import FadePassNavbar from "../Features/FadePassNavbar";
 import ColoredCard from "../Features/ColoredCard";
+import RoundedButton from "../Features/RoundedButton";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
+import { RiArrowRightSLine } from "react-icons/ri";
 
 import slideshow1 from "./../../img/group_picture2.jpg";
 import slideshow2 from "./../../img/group_meeting1.jpg";
@@ -145,9 +147,9 @@ const Home = (props) => {
                         <!-- Many community members are immigrant families with hopes that their children receive good
                         educational experiences as students of color. --> */}
                                 </p>
-                                <div>
-                                    <a>Learn more</a>
-                                </div>
+                                <RoundedButton>
+                                    Learn more&nbsp;<RiArrowRightSLine size="1.5rem" />
+                                </RoundedButton>
                             </ColoredCard>
                         </div>
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
@@ -157,9 +159,9 @@ const Home = (props) => {
                                 <h4>Publications</h4>
                                 <p>Many members of our group have published pieces in academic journals.
                                 </p>
-                                <div>
-                                    <a>Learn more</a>
-                                </div>
+                                <RoundedButton>
+                                    Learn more&nbsp;<RiArrowRightSLine size="1.5rem" />
+                                </RoundedButton>
                             </ColoredCard>
                         </div>
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
@@ -169,9 +171,9 @@ const Home = (props) => {
                                 <h4>Conferences</h4>
                                 <p>Our group has presented various research projects at several conferences.
                                 </p>
-                                <div>
-                                    <a>Learn more</a>
-                                </div>
+                                <RoundedButton>
+                                    Learn more&nbsp;<RiArrowRightSLine size="1.5rem" />
+                                </RoundedButton>
                             </ColoredCard>
                         </div>
                     </div>

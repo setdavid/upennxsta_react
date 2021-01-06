@@ -15,6 +15,8 @@ import "./Components/Features/ResponsiveImage.css";
 import "./Components/Features/TextOverImage.css";
 import "./Components/Features/Jumbotron.css";
 import "./Components/Features/Slideshow.css";
+import "./Components/Features/ColoredCard.css";
+import "./Components/Features/RoundedButton.css"
 
 //Route components CSS
 import "./Components/Routes/Home.css";
