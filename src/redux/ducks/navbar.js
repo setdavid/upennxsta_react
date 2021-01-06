@@ -1,31 +1,33 @@
-const OPEN_SLIDER = "open_slider";
-const CLOSE_SLIDER = "close_slider";
+const TRANSPARENTIZE_NAVBAR = "transparentize_navbar";
+const FILL_NAVBAR = "fill_navbar";
 
-export const openSlider = () => ({
-    type: OPEN_SLIDER,
+export const transparentizeNavbar = () => ({
+    type: TRANSPARENTIZE_NAVBAR,
     payload: {
 
     }
 });
 
-export const closeSlider = () => ({
-    type: CLOSE_SLIDER,
+export const fillNavbar = () => ({
+    type: FILL_NAVBAR,
     payload: {
 
     }
 });
 
 const initialState = {
-    opened: false
+    transparent: false
 };
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case OPEN_SLIDER:
-            return { ...state, opened: true };
-        case CLOSE_SLIDER:
-            return { ...state, opened: false };
+        case TRANSPARENTIZE_NAVBAR:
+            return { ...state, transparent: true };
+        case FILL_NAVBAR:
+            return { ...state, transparent: false };
         default:
             return state;
     };
 };
+
+export default reducer;

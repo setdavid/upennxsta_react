@@ -24,8 +24,7 @@ export const handleSliderToggle = (navsliderOpened, dispatch) => {
 const Navbar = () => {
     const dispatch = useDispatch();
     const navsliderOpened = useSelector(state => state.navslider.opened);
-
-    const [transparent, setTransparent] = useState(true);
+    const transparent = useSelector(state => state.navbar.transparent);
 
     const navbarTransparentCSS = {
         backgroundColor: "transparent",

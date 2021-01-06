@@ -2,6 +2,7 @@ import React from "react";
 import TextOverImage from "./TextOverImage";
 import { navbarHeight } from "../Navbar";
 import { addMarginTop } from "../MainContent";
+import SetNavbarTrans from "./SetNavbarTrans";
 
 const Jumbotron = (props) => {
     const { text, subtext, height, styles, classes, children } = props;
@@ -24,9 +25,11 @@ const Jumbotron = (props) => {
 
     return (
         <div style={{ ...finalCSS, ...styles }} className={`${classes ? classes : ""} fixed-background jumbotron`}>
-            <TextOverImage text={text} subtext={subtext} isJumbotron={true} fadePassNavbar>
-                {children}
-            </TextOverImage>
+            <SetNavbarTrans>
+                <TextOverImage text={text} subtext={subtext} isJumbotron={true} fadePassNavbar>
+                    {children}
+                </TextOverImage>
+            </SetNavbarTrans>
         </div>
     );
 }
