@@ -8,7 +8,6 @@ import Home from "./Routes/Home";
 import AboutUs from "./Routes/AboutUs";
 import WhatWeveDone from "./Routes/WhatWeveDone";
 import RecentUpdates from "./Routes/RecentUpdates";
-import ContactUs from "./Routes/ContactUs";
 
 export const defaultLocation = "/upennxsta_react";
 
@@ -26,7 +25,6 @@ const Router = () => {
             <Route exact path={`${defaultLocation}/about-us`} component={AboutUs} />
             <Route exact path={`${defaultLocation}/what-weve-done`} component={WhatWeveDone} />
             <Route exact path={`${defaultLocation}/recent-updates`} component={RecentUpdates} />
-            <Route exact path={`${defaultLocation}/contact-us`} component={ContactUs} />
         </Switch>
     );
 }
