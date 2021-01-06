@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { handleSliderToggle } from "./Navbar";
+import { defaultLocation } from "./Router";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -25,13 +27,16 @@ const Navslider = () => {
                     onClick={() => handleSliderToggle(navsliderOpened, dispatch)} />
             </div>
             <div className="nav-slider-item">
-                <a href="#/home" style={{ fontWeight: 500, fontSize: "1.5rem" }}>UPENN&nbsp;&times;&nbsp;STA</a>
+                <Link style={{ fontWeight: 500, fontSize: "1.5rem" }} to={`${defaultLocation}/`}>UPENN&nbsp;&times;&nbsp;STA</Link>
             </div>
             <div className="nav-slider-item">
-                <a href="#/about-us">About us</a>
+                <Link to={`${defaultLocation}/about-us`}>About Us</Link>
             </div>
             <div className="nav-slider-item">
-                <a href="#/our-works">Our works</a>
+                <Link to={`${defaultLocation}/what-weve-done`}>What We've Done</Link>
+            </div>
+            <div className="nav-slider-item">
+                <Link to={`${defaultLocation}/recent-updates`}>Recent Updates</Link>
             </div>
         </div>
     );

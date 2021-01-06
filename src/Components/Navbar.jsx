@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { openSlider, closeSlider } from "./../redux/ducks/navslider";
 import { Link } from "react-router-dom";
@@ -52,10 +52,13 @@ const Navbar = () => {
                         <div className="d-none d-md-block">
                             <div className="navTo-group d-flex align-items-center">
                                 <div>
-                                    <Link to={`${defaultLocation}/about-us`}>About us</Link>
+                                    <Link to={`${defaultLocation}/about-us`}>About Us</Link>
                                 </div>
                                 <div>
-                                    <a href="#/our-works"> Our works</a>
+                                    <Link to={`${defaultLocation}/what-weve-done`}>What We've Done</Link>
+                                </div>
+                                <div>
+                                    <Link to={`${defaultLocation}/recent-updates`}>Recent Updates</Link>
                                 </div>
                             </div>
                         </div>

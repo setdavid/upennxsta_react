@@ -69,7 +69,7 @@ const Slideshow = (props) => {
     }, [currImage]);
 
     const unmount = (timer) => {
-        console.log("unmount");
+        console.log("auto slideshow image unmount");
         clearTimeout(timer);
     };
 
@@ -100,7 +100,7 @@ const Slideshow = (props) => {
     return (
         <div style={{ ...styles, minHeight: minHeight }} className={`${classes ? classes : ""} slideshow d-flex align-items-center`} >
             <TransitionGroup>
-                <CSSTransition key={images.current[currImage].id} timeout={auto ? autoTransitionLength : transitionLength} classNames="fade" unmountOnExit>
+                <CSSTransition key={images.current[currImage].id} timeout={auto ? autoTransitionLength : transitionLength} classNames="fade">
                     {prepImage()}
                 </CSSTransition>
             </TransitionGroup>

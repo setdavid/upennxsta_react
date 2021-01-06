@@ -14,7 +14,6 @@ import slideshow2 from "./../../img/group_meeting1.jpg";
 import slideshow3 from "./../../img/group_picture3.jpg";
 import slideshow4 from "./../../img/group_meeting2.jpg";
 
-
 import whoWeAreImg from "./../../img/group_picture1.jpg";
 import upennImg from "./../../img/upenn-symbol.png";
 import staImg from "./../../img/sta-symbol-trans.png";
