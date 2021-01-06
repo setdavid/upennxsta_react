@@ -17,6 +17,7 @@ const Router = () => {
 
     useEffect(() => {
         dispatch(closeSlider());
+        window.scrollTo({ top: 0, behavior: "smooth" });
     }, [location]);
 
     return (

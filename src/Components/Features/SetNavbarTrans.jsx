@@ -22,6 +22,7 @@ const SetNavbarTrans = (props) => {
     };
 
     useEffect(() => {
+        handleScroll();
         window.addEventListener("scroll", handleScroll);
         return unmount;
     }, []);

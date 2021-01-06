@@ -16,7 +16,7 @@ export const fillNavbar = () => ({
 });
 
 const initialState = {
-    transparent: true
+    transparent: false
 };
 
 const reducer = (state = initialState, action) => {
