@@ -12,21 +12,37 @@ import { scrollTo } from "../Features/tools";
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 import { RiArrowRightSLine } from "react-icons/ri";
 
-import slideshow1 from "./../../img/group_picture2.jpg";
-import slideshow2 from "./../../img/group_meeting1.jpg";
-import slideshow3 from "./../../img/group_picture3.jpg";
-import slideshow4 from "./../../img/group_meeting2.jpg";
+// import slideshow1 from "./../../img/group_picture2.jpg";
+// import slideshow2 from "./../../img/group_meeting1.jpg";
+// import slideshow3 from "./../../img/group_picture3.jpg";
+// import slideshow4 from "./../../img/group_meeting2.jpg";
 
-import whoWeAreImg from "./../../img/group_picture1.jpg";
-import upennImg from "./../../img/upenn-symbol.png";
-import staImg from "./../../img/sta-symbol-trans.png";
-import middleSchoolersImg from "./../../img/middle-schoolers.JPG";
-// import highSchoolersImg from "./../../img/high-shcoolers.jpg";
-import collegeStudentsImg from "./../../img/college-students.jpg";
-import parentsImg from "./../../img/parents1.jpg";
-import educatorsImg from "./../../img/educators1.JPG";
-import communityImg from "./../../img/park_group1.jpg";
-import currentProjectsImg from "./../../img/wall_art1.jpg";
+// import whoWeAreImg from "./../../img/group_picture1.jpg";
+// import upennImg from "./../../img/upenn-symbol.png";
+// import staImg from "./../../img/sta-symbol-trans.png";
+// import middleSchoolersImg from "./../../img/middle-schoolers.JPG";
+// // import highSchoolersImg from "./../../img/high-shcoolers.jpg";
+// import collegeStudentsImg from "./../../img/college-students.jpg";
+// import parentsImg from "./../../img/parents1.jpg";
+// import educatorsImg from "./../../img/educators1.JPG";
+// import communityImg from "./../../img/park_group1.jpg";
+// import currentProjectsImg from "./../../img/wall_art1.jpg";
+
+const slideshow1 = "img/group_picture2.jpg";
+const slideshow2 = "img/group_meeting1.jpg";
+const slideshow3 = "img/group_picture3.jpg";
+const slideshow4 = "img/group_meeting2.jpg";
+
+const whoWeAreImg = "img/group_picture1.jpg";
+const upennImg = "img/upenn-symbol.png";
+const staImg = "img/sta-symbol-trans.png";
+const middleSchoolersImg = "img/middle-schoolers.JPG";
+// const highSchoolersImg = "./../../img/high-shcoolers.jpg";
+const collegeStudentsImg = "img/college-students.jpg";
+const parentsImg = "img/parents1.jpg";
+const educatorsImg = "img/educators1.JPG";
+const communityImg = "img/park_group1.jpg";
+const currentProjectsImg = "img/wall_art1.jpg";
 
 const WeAreCards = (props) => {
     const { text, url } = props;
@@ -43,12 +59,7 @@ const Home = (props) => {
 
     return (
         <React.Fragment>
-            {/* <TextOverImage text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" isJumbotron={true}>
-                    <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" />
-                    <Slideshow urls={[whoWeAreImg, parentsImg]} minHeight="100vh" />
-                </TextOverImage> */}
             <Jumbotron text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" height="100vh" >
-                {/* <ResponsiveImage url={communityImg} minHeight="100vh" backgroundSize="cover" /> */}
                 <Slideshow urls={[slideshow1, slideshow2, slideshow3, slideshow4]} minHeight="100vh" auto />
                 <FadePassNavbar classes="scroll-learn-more fadePassNavbar bobbing-anim">
                     <div style={{ cursor: "pointer" }} onClick={() => scrollTo("#container-1")}>

@@ -26,7 +26,7 @@ const Jumbotron = (props) => {
     return (
         <div style={{ ...finalCSS, ...styles }} className={`${classes ? classes : ""} fixed-background jumbotron`}>
             <SetNavbarTrans>
-                <TextOverImage text={text} subtext={subtext} isJumbotron={true} fadePassNavbar>
+                <TextOverImage styles={{ overflowY: "scroll" }} text={text} subtext={subtext} isJumbotron={true} fadePassNavbar>
                     {children}
                 </TextOverImage>
             </SetNavbarTrans>

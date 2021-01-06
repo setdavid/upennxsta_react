@@ -51,10 +51,6 @@
     justify-content: center;
 }
 
-#we-are-2.we-are>div, #we-are-3.we-are>div {
-    padding-top: 30px;
-}
-
 /********** Conatiner 3 **********/
 
 #container-3>.row>div {
