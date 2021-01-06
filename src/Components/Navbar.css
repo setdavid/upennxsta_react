@@ -32,7 +32,7 @@
 .navbar-brand-container {
     color: inherit;
     transition-property: color;
-    transition-duration: 0.5s;
+    transition-duration: 0.25s;
 }
 
 .navbar-brand, .navbar-brand:hover {
@@ -52,23 +52,13 @@
     font-size: 1rem;
     font-weight: 600;
     transition-property: color;
-    transition-duration: 0.5s;
-}
-
-.navTo-group>div>a {
-    transition-property: font-size;
-    transition-duration: 0.2s;
-}
-
-.navTo-group>div>a:hover {
-    cursor: pointer;
-    /* font-size: 1.2rem; */
+    transition-duration: 0.25s;
 }
 
 .navbar .navbar-toggler {
     color: inherit;
-    transition-property: color;
-    transition-duration: 0.5s;
+    transition-property: color, opacity;
+    transition-duration: 0.25s;
 }
 
 body .navbar-transparent {

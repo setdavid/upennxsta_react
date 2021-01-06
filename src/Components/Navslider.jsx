@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { handleSliderToggle } from "./Navbar";
 import { defaultLocation } from "./Router";
 
-import { GiHamburgerMenu } from "react-icons/gi";
+import { BsXSquare } from "react-icons/bs";
 
 const Navslider = () => {
     const dispatch = useDispatch();
@@ -20,10 +20,20 @@ const Navslider = () => {
         opacity: "0"
     };
 
+    const bodyStyle = document.body.style;
+
+    if (navsliderOpened) {
+        bodyStyle.overflowY = "hidden";
+        // bodyStyle.left = "-100%";
+    } else {
+        bodyStyle.overflowY = "visible";
+        // bodyStyle.left = "0";
+    }
+
     return (
         <div style={navsliderOpened ? openedCSS : closedCSS} id="nav-slider" className="nav-slider d-flex flex-column">
             <div className="nav-slider-item">
-                <GiHamburgerMenu size="2rem" style={{ cursor: "pointer", color: "white" }} className="navbar-toggler d-block"
+                <BsXSquare size="2rem" style={{ cursor: "pointer", color: "white" }} className="navbar-toggler d-block"
                     onClick={() => handleSliderToggle(navsliderOpened, dispatch)} />
             </div>
             <div className="nav-slider-item">

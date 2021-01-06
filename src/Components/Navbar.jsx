@@ -62,7 +62,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                        <GiHamburgerMenu size="2rem" style={{ cursor: "pointer" }} className="navbar-toggler d-block d-md-none"
+                        <GiHamburgerMenu size="2rem" style={{ cursor: "pointer", opacity: navsliderOpened ? "0" : "1" }} className="navbar-toggler d-block d-md-none"
                             onClick={() => handleSliderToggle(navsliderOpened, dispatch)} />
                     </div>
                 </div>
