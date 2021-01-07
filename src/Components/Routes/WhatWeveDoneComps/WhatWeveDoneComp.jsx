@@ -18,14 +18,14 @@ const WhatWeveDoneComp = (props) => {
     }, []);
 
     const handleClick = () => {
-        if (!opened) {
+        if (id && !opened) {
             scrollTo(`#${id}`);
         }
         setOpened(!opened);
     };
 
     return (
-        <div id={id} className="wwdc">
+        <div id={id ? id : ""} className="wwdc">
             <div style={{ backgroundColor: backgroundColor }} className="row wwdc-title-row">
                 <div className="col-12 wwdc-title">
                     <div className="h3">{title}</div>
