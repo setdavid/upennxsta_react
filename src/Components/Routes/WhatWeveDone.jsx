@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { jsonPostingsToComps } from "../Features/tools";
 import WhatWeveDoneConference from "./WhatWeveDoneComps/WhatWeveDoneConference";
 
 import conferencePostings from "../../json-postings/conferences-postings/conference-postings.json";
+import ResponsiveImage from "../Features/ResponsiveImage";
+import Jumbotron from "../Features/Jumbotron";
 
 const WhatWeveDone = (props) => {
     console.log(props);
@@ -13,9 +15,13 @@ const WhatWeveDone = (props) => {
 
     return (
         <React.Fragment>
-            <div style={{ height: "1000vh" }}>WhatWeveDone us hellow</div>
-            <div className="container">
-                {jsonPostingsToComps(conferencePostings, WhatWeveDoneConference)}
+            <Jumbotron text="WHAT WE'VE DONE" subtext="An overview of our works over the years" height="85vh" >
+                <ResponsiveImage url="img/community.jpg" minHeight="85vh" backgroundSize="cover" />
+            </Jumbotron>
+            <div className="container-fluid">
+                <div className="container">
+                    {jsonPostingsToComps(conferencePostings, WhatWeveDoneConference)}
+                </div>
             </div>
         </React.Fragment>
     );

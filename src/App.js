@@ -21,6 +21,9 @@ import "./Components/Features/RoundedButton.css"
 //Route components CSS
 import "./Components/Routes/Home.css";
 
+//Route components
+import "./Components/Routes/WhatWeveDoneComps/WhatWeveDoneComp.css";
+
 import Navbar from "./Components/Navbar";
 import Navslider from "./Components/Navslider";
 import MainContent from "./Components/MainContent";
