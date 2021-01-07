@@ -1,6 +1,5 @@
 .wwdc {
     margin-bottom: 1rem;
-    transition: height 3s;
 }
 
 .wwdc-title-row {
@@ -17,6 +16,12 @@
     z-index: 5;
     box-shadow: inset 0px 2px 4px rgb(200, 200, 200), inset 0px -2px 4px rgb(200, 200, 200);
     text-indent: 48px;
+    overflow: hidden;
+}
+
+.wwdc-content>.col-12 {
+    transition-property: height;
+    transition-duration: 1s;
 }
 
 .wwdc-read-more {

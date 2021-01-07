@@ -8,6 +8,7 @@ export const scrollTo = (id) => {
             let targetLocation = elem.getBoundingClientRect().top -
                 document.querySelector("#main-content").getBoundingClientRect().top -
                 navbarHeight;
+            console.log(`${id}: ${elem.getBoundingClientRect().top}`);
             window.scrollTo({
                 top: targetLocation,
                 left: 0,
@@ -23,7 +24,6 @@ export const jsonPostingsToComps = (jsonPostings, Component) => {
 
         return <Component {...posting} />
     }));
-
 
     return postings;
 };

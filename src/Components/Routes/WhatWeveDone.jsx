@@ -19,8 +19,17 @@ const WhatWeveDone = (props) => {
                 <ResponsiveImage url="img/community.jpg" minHeight="85vh" backgroundSize="cover" />
             </Jumbotron>
             <div className="container-fluid">
-                <div className="container">
-                    {jsonPostingsToComps(conferencePostings, WhatWeveDoneConference)}
+                <div style={{ height: "1000vh" }} className="container">
+                    <div className="row">
+                        <div className="col-12 h1 text-center">
+                            CONFERENCES
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12">
+                            {jsonPostingsToComps(conferencePostings, WhatWeveDoneConference)}
+                        </div>
+                    </div>
                 </div>
             </div>
         </React.Fragment>
