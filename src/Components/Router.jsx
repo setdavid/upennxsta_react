@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Switch, Route, Redirect, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 
 import { closeSlider } from "../redux/ducks/navslider";
 

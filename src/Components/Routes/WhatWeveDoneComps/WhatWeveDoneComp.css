@@ -20,7 +20,7 @@
 }
 
 .wwdc-content>.col-12 {
-    transition-property: height;
+    transition-property: max-height, height, min-height;
     transition-duration: 1s;
 }
 

@@ -7,7 +7,7 @@ import { scrollTo } from "../../Features/tools";
 const WhatWeveDoneComp = (props) => {
     const { id, title, subtitle, date, text, images, backgroundColor } = props;
 
-    const transDuration = 500;
+    const transDuration = 1000;
     const contentRef = useRef();
     const contentHeight = useRef(0);
     const [opened, setOpened] = useState(false);
@@ -18,14 +18,14 @@ const WhatWeveDoneComp = (props) => {
     }, []);
 
     const handleClick = () => {
-        if (id && !opened) {
-            scrollTo(`#${id}`);
-        }
+        // if (id && !opened) {
+        scrollTo(`#${id}`);
+        // }
         setOpened(!opened);
     };
 
     let paragraphCount = 0;
-    const incrParagraphCount = () => { 
+    const incrParagraphCount = () => {
         const i = paragraphCount;
         paragraphCount += 1;
         return i;
@@ -33,39 +33,43 @@ const WhatWeveDoneComp = (props) => {
 
     return (
         <div id={id ? id : ""} className="wwdc">
-            <div style={{ backgroundColor: backgroundColor }} className="row wwdc-title-row">
-                <div className="col-12 wwdc-title">
-                    <div className="h3">{title}</div>
-                    <div className="h6">{subtitle}</div>
-                </div>
-            </div>
-            <div className="row off-white-background wwdc-content">
-                <div style={{ transitionDuration: `${transDuration}ms`, height: opened ? contentHeight.current : "0" }} className="col-12 pb-0">
-                    <div ref={contentRef}>
-                        <div className="row pad-top-1p5rem">
-                            <div style={{ transitionDuration: `${transDuration}ms`, transitionDelay: `${opened ? transDuration : 0}ms`, left: opened ? "0" : "-100%" }} className="col-12 wwdc-paragraphs">
-                                {text.map(paragraph => (
-                                    <p key={incrParagraphCount()}>
-                                        {paragraph}
-                                    </p>
-                                ))}
-                            </div>
+            <div className="row">
+                <div className="col-12">
+                    <div style={{ backgroundColor: backgroundColor }} className="row wwdc-title-row">
+                        <div className="col-12 wwdc-title">
+                            <div className="h3">{title}</div>
+                            <div className="h6">{subtitle}</div>
                         </div>
-                        <div className="row d-flex justify-content-center">
-                            <div style={{ transitionDuration: `${transDuration}ms`, transitionDelay: `${opened ? transDuration : 0}ms`, left: opened ? "0" : "100%" }} className="col-12 col-md-6 wwdc-slideshow">
-                                {images && images.length > 1 ? (<Slideshow urls={images} minHeight="350px" />) : (<ResponsiveImage url={images[0]} minHeight="350px" backgroundSize="cover" />)}
+                    </div>
+                    <div className="row off-white-background wwdc-content">
+                        <div style={{ transitionDuration: `${transDuration}ms`, maxHeight: opened ? `${2 * contentHeight.current}px` : "0" }} className="col-12 pb-0">
+                            <div ref={contentRef}>
+                                <div className="row pad-top-1p5rem">
+                                    <div style={{ transitionDuration: `${transDuration}ms`, left: opened ? "0" : "-100%" }} className="col-12 wwdc-paragraphs">
+                                        {text.map(paragraph => (
+                                            <p key={incrParagraphCount()}>
+                                                {paragraph}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="row d-flex justify-content-center">
+                                    <div style={{ transitionDuration: `${transDuration}ms`, left: opened ? "0" : "100%" }} className="col-12 col-md-6 wwdc-slideshow">
+                                        {images && images.length > 1 ? (<Slideshow urls={images} minHeight="350px" />) : (<ResponsiveImage url={images[0]} minHeight="350px" backgroundSize="cover" />)}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className="row">
-                <div onClick={handleClick} style={{ backgroundColor: backgroundColor }} className="col-12 wwdc-read-more">
-                    <h5>
-                        {opened ? "Collapse" : "Read More"}
-                    </h5>
-                    <div style={{ transitionDuration: `${transDuration}ms`, transform: opened ? "rotate(180deg)" : "" }} className="wwdc-chevron">
-                        <BsChevronCompactDown color="white" size="3rem" />
+                    <div className="row">
+                        <div onClick={handleClick} style={{ backgroundColor: backgroundColor }} className="col-12 wwdc-read-more">
+                            <h5>
+                                {opened ? "Collapse" : "Read More"}
+                            </h5>
+                            <div style={{ transitionDuration: `${transDuration}ms`, transform: opened ? "rotate(180deg)" : "" }} className="wwdc-chevron">
+                                <BsChevronCompactDown color="white" size="3rem" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
