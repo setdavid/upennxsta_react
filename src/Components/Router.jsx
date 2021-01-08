@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route, Redirect, useLocation } from "react-router-dom";
 
 import { closeSlider } from "../redux/ducks/navslider";
 
@@ -26,6 +26,8 @@ const Router = () => {
             <Route exact path={`${defaultLocation}/about-us`} component={AboutUs} />
             <Route exact path={`${defaultLocation}/what-weve-done`} component={WhatWeveDone} />
             <Route exact path={`${defaultLocation}/recent-updates`} component={RecentUpdates} />
+            <Redirect to={location}/>
+            {/* <Route component={RecentUpdates} /> */}
         </Switch>
     );
 }

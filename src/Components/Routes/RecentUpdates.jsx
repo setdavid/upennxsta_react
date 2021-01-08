@@ -5,7 +5,7 @@ const RecentUpdates = (props) => {
 
     return (
         <React.Fragment>
-            <div style={{ height: "1000vh" }}>RecentUpdates us hellow</div>
+            <div style={{ fontSize: "25vh",height: "1000vh" }}>RecentUpdates us hellow</div>
         </React.Fragment>
     );
 }
