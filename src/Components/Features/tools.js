@@ -19,10 +19,17 @@ export const scrollTo = (id) => {
 };
 
 export const jsonPostingsToComps = (jsonPostings, Component) => {
+    let paragraphCount = 0;
+    const incrParagraphCount = () => {
+        const i = paragraphCount;
+        paragraphCount += 1;
+        return i;
+    };
+
     const postings = (jsonPostings.map(posting => {
         console.log(posting.images);
 
-        return <Component {...posting} />
+        return <Component key={incrParagraphCount()} {...posting} />
     }));
 
     return postings;

@@ -24,6 +24,13 @@ const WhatWeveDoneComp = (props) => {
         setOpened(!opened);
     };
 
+    let paragraphCount = 0;
+    const incrParagraphCount = () => { 
+        const i = paragraphCount;
+        paragraphCount += 1;
+        return i;
+    };
+
     return (
         <div id={id ? id : ""} className="wwdc">
             <div style={{ backgroundColor: backgroundColor }} className="row wwdc-title-row">
@@ -36,16 +43,16 @@ const WhatWeveDoneComp = (props) => {
                 <div style={{ transitionDuration: `${transDuration}ms`, height: opened ? contentHeight.current : "0" }} className="col-12 pb-0">
                     <div ref={contentRef}>
                         <div className="row pad-top-1p5rem">
-                            <div className="col-12">
+                            <div style={{ transitionDuration: `${transDuration}ms`, transitionDelay: `${opened ? transDuration : 0}ms`, left: opened ? "0" : "-100%" }} className="col-12 wwdc-paragraphs">
                                 {text.map(paragraph => (
-                                    <p>
+                                    <p key={incrParagraphCount()}>
                                         {paragraph}
                                     </p>
                                 ))}
                             </div>
                         </div>
                         <div className="row d-flex justify-content-center">
-                            <div className="col-12 col-md-6">
+                            <div style={{ transitionDuration: `${transDuration}ms`, transitionDelay: `${opened ? transDuration : 0}ms`, left: opened ? "0" : "100%" }} className="col-12 col-md-6 wwdc-slideshow">
                                 {images && images.length > 1 ? (<Slideshow urls={images} minHeight="350px" />) : (<ResponsiveImage url={images[0]} minHeight="350px" backgroundSize="cover" />)}
                             </div>
                         </div>

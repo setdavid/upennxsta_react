@@ -26,8 +26,6 @@ const Router = () => {
             <Route exact path={`${defaultLocation}/about-us`} component={AboutUs} />
             <Route exact path={`${defaultLocation}/what-weve-done`} component={WhatWeveDone} />
             <Route exact path={`${defaultLocation}/recent-updates`} component={RecentUpdates} />
-            <Redirect to={location}/>
-            {/* <Route component={RecentUpdates} /> */}
         </Switch>
     );
 }

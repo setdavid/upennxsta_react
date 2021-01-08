@@ -24,6 +24,11 @@
     transition-duration: 1s;
 }
 
+.wwdc-slideshow, .wwdc-paragraphs {
+    transition-property: left;
+    transition-duration: 1s;
+}
+
 .wwdc-read-more {
     display: flex;
     flex-direction: column;
