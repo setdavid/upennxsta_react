@@ -37,8 +37,8 @@ const WhatWeveDoneComp = (props) => {
                 <div className="col-12">
                     <div style={{ backgroundColor: backgroundColor }} className="row wwdc-title-row">
                         <div className="col-12 wwdc-title">
-                            <div className="h3">{title}</div>
-                            <div className="h6">{subtitle}</div>
+                            <div className="h5">{title}</div>
+                            <div className="p mb-0">{subtitle}</div>
                         </div>
                     </div>
                     <div className="row off-white-background wwdc-content">
@@ -54,7 +54,7 @@ const WhatWeveDoneComp = (props) => {
                                     </div>
                                 </div>
                                 <div className="row d-flex justify-content-center">
-                                    <div style={{ transitionDuration: `${transDuration}ms`, left: opened ? "0" : "100%" }} className="col-12 col-md-6 wwdc-slideshow">
+                                    <div style={{ transitionDuration: `${transDuration}ms`, left: opened ? "0" : "100%" }} className="col-12 col-md-10 wwdc-slideshow">
                                         {images && images.length > 1 ? (<Slideshow urls={images} minHeight="350px" />) : (<ResponsiveImage url={images[0]} minHeight="350px" backgroundSize="cover" />)}
                                     </div>
                                 </div>
@@ -63,11 +63,11 @@ const WhatWeveDoneComp = (props) => {
                     </div>
                     <div className="row">
                         <div onClick={handleClick} style={{ backgroundColor: backgroundColor }} className="col-12 wwdc-read-more">
-                            <h5>
+                            <h6>
                                 {opened ? "Collapse" : "Read More"}
-                            </h5>
+                            </h6>
                             <div style={{ transitionDuration: `${transDuration}ms`, transform: opened ? "rotate(180deg)" : "" }} className="wwdc-chevron">
-                                <BsChevronCompactDown color="white" size="3rem" />
+                                <BsChevronCompactDown color="white" size="2rem" />
                             </div>
                         </div>
                     </div>

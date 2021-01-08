@@ -21,14 +21,17 @@ const WhatWeveDone = (props) => {
             <div className="container-fluid">
                 <div style={{ height: "1000vh" }} className="container">
                     <div className="row">
-                        <div className="col-12 h1 text-center">
-                            CONFERENCES
+                        <div className="col-12 col-lg-4">
+                            <div style={{ borderBottom: "3px solid var(--text-color)" }} className=" h1 text-center">
+                                CONFERENCES
+                            </div>
+                        </div>
+                        <div className="col-12 col-lg-8">
+                            {jsonPostingsToComps(conferencePostings, WhatWeveDoneConference)}
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
-                            {jsonPostingsToComps(conferencePostings, WhatWeveDoneConference)}
-                        </div>
+
                     </div>
                 </div>
             </div>
