@@ -1,17 +1,28 @@
 import React from "react";
 import { jsonPostingsToComps } from "../Features/tools";
 import WhatWeveDoneConference from "./WhatWeveDoneComps/WhatWeveDoneConference";
+import WhatWeveDonePublication from "./WhatWeveDoneComps/WhatWeveDonePublication";
 
-import conferencePostings from "../../json-postings/conferences-postings/conference-postings.json";
+import conferencePostings from "../../json-postings/conference-postings.json";
+import publicationPostings from "../../json-postings/publication-postings.json";
 import ResponsiveImage from "../Features/ResponsiveImage";
 import Jumbotron from "../Features/Jumbotron";
 
 const WhatWeveDone = (props) => {
-    console.log(props);
 
-    // useEffect(() => {
-    //     jsonPostingsToComps(conferencePostings,);
-    // }, []);
+    const SideBorder = (props) => {
+        const { backgroundColor, left } = props;
+        let margin = {
+            marginLeft: "10px"
+        };
+
+        if (!left) {
+            margin = {
+                marginRight: "10px"
+            };
+        }
+        return (<div style={{ ...margin, height: "5rem", width: "10px", backgroundColor: backgroundColor }} className="d-none d-lg-block" />);
+    }
 
     return (
         <React.Fragment>
@@ -19,19 +30,28 @@ const WhatWeveDone = (props) => {
                 <ResponsiveImage url="img/community.jpg" minHeight="85vh" backgroundSize="cover" />
             </Jumbotron>
             <div className="container-fluid">
-                <div style={{ height: "1000vh" }} className="container">
+                <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-4">
-                            <div style={{ borderBottom: "3px solid var(--text-color)" }} className=" h1 text-center">
-                                CONFERENCES
+                            <div className=" h1 text-center d-flex justify-content-center align-items-center">
+                                CONFERENCES <SideBorder backgroundColor="var(--theme-color-1)" left />
                             </div>
                         </div>
                         <div className="col-12 col-lg-8">
                             {jsonPostingsToComps(conferencePostings, WhatWeveDoneConference)}
                         </div>
                     </div>
+                </div>
+                <div style={{ height: "1000vh" }} className="container">
                     <div className="row">
-
+                        <div className="col-12 col-lg-8 order-2 order-lg-1">
+                            {jsonPostingsToComps(publicationPostings, WhatWeveDonePublication)}
+                        </div>
+                        <div className="col-12 col-lg-4 order-1 order-lg-2">
+                            <div className=" h1 text-center d-flex justify-content-center align-items-center">
+                                <SideBorder backgroundColor="var(--theme-color-2)" /> PUBLICATIONS
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
