@@ -2,9 +2,12 @@ import React from "react";
 import { jsonPostingsToComps } from "../Features/tools";
 import WhatWeveDoneConference from "./WhatWeveDoneComps/WhatWeveDoneConference";
 import WhatWeveDonePublication from "./WhatWeveDoneComps/WhatWeveDonePublication";
+import WhatWeveDoneOther from "./WhatWeveDoneComps/WhatWeveDoneOther";
 
 import conferencePostings from "../../json-postings/conference-postings.json";
 import publicationPostings from "../../json-postings/publication-postings.json";
+import otherWorkPostings from "../../json-postings/other-work-postings.json";
+
 import ResponsiveImage from "../Features/ResponsiveImage";
 import Jumbotron from "../Features/Jumbotron";
 
@@ -42,7 +45,7 @@ const WhatWeveDone = (props) => {
                         </div>
                     </div>
                 </div>
-                <div style={{ height: "1000vh" }} className="container">
+                <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-8 order-2 order-lg-1">
                             {jsonPostingsToComps(publicationPostings, WhatWeveDonePublication)}
@@ -55,6 +58,18 @@ const WhatWeveDone = (props) => {
                     </div>
                 </div>
             </div>
+            <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-lg-4">
+                            <div className=" h1 text-center d-flex justify-content-center align-items-center">
+                                OTHER WORKS <SideBorder backgroundColor="black" left />
+                            </div>
+                        </div>
+                        <div className="col-12 col-lg-8">
+                            {jsonPostingsToComps(otherWorkPostings, WhatWeveDoneOther)}
+                        </div>
+                    </div>
+                </div>
         </React.Fragment>
     );
 }
