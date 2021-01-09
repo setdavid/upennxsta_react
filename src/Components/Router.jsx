@@ -9,7 +9,9 @@ import AboutUs from "./Routes/AboutUs";
 import WhatWeveDone from "./Routes/WhatWeveDone";
 import RecentUpdates from "./Routes/RecentUpdates";
 
-export const defaultLocation = "/upennxsta_react";
+// defaultLocation previously used for Browser Router but not necessary for Hash Router
+// export const defaultLocation = "/upennxsta_react";
+export const defaultLocation = "";
 
 const Router = () => {
     const dispatch = useDispatch();
