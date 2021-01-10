@@ -18,6 +18,10 @@ export const scrollTo = (id) => {
     }
 };
 
+export const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 export const jsonPostingsToComps = (jsonPostings, Component) => {
     let paragraphCount = 0;
     const incrParagraphCount = () => {

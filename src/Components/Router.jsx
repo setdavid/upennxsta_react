@@ -8,6 +8,7 @@ import Home from "./Routes/Home";
 import AboutUs from "./Routes/AboutUs";
 import WhatWeveDone from "./Routes/WhatWeveDone";
 import RecentUpdates from "./Routes/RecentUpdates";
+import { scrollToTop } from "./Features/tools";
 
 // defaultLocation previously used for Browser Router but not necessary for Hash Router
 // export const defaultLocation = "/upennxsta_react";
@@ -19,7 +20,7 @@ const Router = () => {
 
     useEffect(() => {
         dispatch(closeSlider());
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        scrollToTop();
     }, [location]);
 
     return (

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { openSlider, closeSlider } from "./../redux/ducks/navslider";
 import { Link } from "react-router-dom";
 import { defaultLocation } from "./Router";
+import { scrollToTop } from "./Features/tools";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -17,7 +18,6 @@ export const openSliderToggle = (dispatch) => {
 };
 
 export const handleSliderToggle = (navsliderOpened, dispatch) => {
-    console.log(navsliderOpened);
     return navsliderOpened ? closeSliderToggle(dispatch) : openSliderToggle(dispatch);
 };
 
@@ -47,18 +47,18 @@ const Navbar = () => {
                 <div className="row navbar-row">
                     <div className="navbar-col col-12 d-flex justify-content-between align-items-center">
                         <div className="navbar-brand-container d-flex align-items-center">
-                            <Link to={`${defaultLocation}/`} className="navbar-brand h1">UPENN&nbsp;&times;&nbsp;STA</Link>
+                            <Link onClick={scrollToTop} to={`${defaultLocation}/`} className="navbar-brand h1">UPENN&nbsp;&times;&nbsp;STA</Link>
                         </div>
                         <div className="d-none d-md-block">
                             <div className="navTo-group d-flex align-items-center">
                                 <div>
-                                    <Link to={`${defaultLocation}/about-us`}>About Us</Link>
+                                    <Link onClick={scrollToTop} to={`${defaultLocation}/about-us`}>About Us</Link>
                                 </div>
                                 <div>
-                                    <Link to={`${defaultLocation}/what-weve-done`}>What We've Done</Link>
+                                    <Link onClick={scrollToTop} to={`${defaultLocation}/what-weve-done`}>What We've Done</Link>
                                 </div>
                                 <div>
-                                    <Link to={`${defaultLocation}/recent-updates`}>Recent Updates</Link>
+                                    <Link onClick={scrollToTop} to={`${defaultLocation}/recent-updates`}>Recent Updates</Link>
                                 </div>
                             </div>
                         </div>

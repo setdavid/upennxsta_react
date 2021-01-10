@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { handleSliderToggle } from "./Navbar";
 import { defaultLocation } from "./Router";
+import { scrollToTop } from "./Features/tools";
 
 import { BsXSquare } from "react-icons/bs";
+import { closeSlider } from "../redux/ducks/navslider";
 
 const Navslider = () => {
     const dispatch = useDispatch();
@@ -30,6 +32,11 @@ const Navslider = () => {
         // bodyStyle.left = "0";
     }
 
+    const closeAndScroll = () => {
+        dispatch(closeSlider());
+        scrollToTop();
+    };
+
     return (
         <div style={navsliderOpened ? openedCSS : closedCSS} id="nav-slider" className="nav-slider d-flex flex-column">
             <div className="nav-slider-item">
@@ -37,16 +44,16 @@ const Navslider = () => {
                     onClick={() => handleSliderToggle(navsliderOpened, dispatch)} />
             </div>
             <div className="nav-slider-item">
-                <Link style={{ fontWeight: 500, fontSize: "1.5rem" }} to={`${defaultLocation}/`}>UPENN&nbsp;&times;&nbsp;STA</Link>
+                <Link onClick={closeAndScroll} style={{ fontWeight: 500, fontSize: "1.5rem" }} to={`${defaultLocation}/`}>UPENN&nbsp;&times;&nbsp;STA</Link>
             </div>
             <div className="nav-slider-item">
-                <Link to={`${defaultLocation}/about-us`}>About Us</Link>
+                <Link onClick={closeAndScroll} to={`${defaultLocation}/about-us`}>About Us</Link>
             </div>
             <div className="nav-slider-item">
-                <Link to={`${defaultLocation}/what-weve-done`}>What We've Done</Link>
+                <Link onClick={closeAndScroll} to={`${defaultLocation}/what-weve-done`}>What We've Done</Link>
             </div>
             <div className="nav-slider-item">
-                <Link to={`${defaultLocation}/recent-updates`}>Recent Updates</Link>
+                <Link onClick={closeAndScroll} to={`${defaultLocation}/recent-updates`}>Recent Updates</Link>
             </div>
         </div>
     );
