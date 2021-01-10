@@ -70,7 +70,6 @@ const WhatWeveDone = (props) => {
                     </div>
                 </div>
             </div>
-
         </React.Fragment>
     );
 }

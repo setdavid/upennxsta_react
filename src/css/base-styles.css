@@ -99,6 +99,30 @@ p, .p {
     padding-top: 3rem !important;
 }
 
+.pad-bot-1p5rem {
+    padding-bottom: 1.5rem !important;
+}
+
+.pad-bot-3rem {
+    padding-bottom: 3rem !important;
+}
+
+.mar-top-1p5rem {
+    margin-top: 1.5rem !important;
+}
+
+.mar-top-3rem {
+    margin-top: 3rem !important;
+}
+
+.mar-bot-1p5rem {
+    margin-bottom: 1.5rem !important;
+}
+
+.mar-bot-3rem {
+    margin-bottom: 3rem !important;
+}
+
 #main-content .container, #main-content .container-fluid {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
