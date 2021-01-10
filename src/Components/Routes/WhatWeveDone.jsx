@@ -57,8 +57,7 @@ const WhatWeveDone = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="container">
+                <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-4">
                             <div className=" h1 text-center d-flex justify-content-center align-items-center">
@@ -70,6 +69,8 @@ const WhatWeveDone = (props) => {
                         </div>
                     </div>
                 </div>
+            </div>
+
         </React.Fragment>
     );
 }

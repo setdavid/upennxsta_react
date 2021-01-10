@@ -199,11 +199,32 @@ const Home = (props) => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12 col-md-6">
-                            <ResponsiveImage url={currentProjectsImg} minHeight="300px" backgroundSize="cover" roundedCorners />
-                        </div>
-                        <div className="col-12 col-md-6">
+                        {/* <div className="col-12 col-md-6">
+                            
+                        </div> */}
+                        <div className="col-12 ">
+                            <ResponsiveImage url={currentProjectsImg} minHeight="300px" backgroundSize="cover" roundedCorners float="left" />
                             <h4>Pushing the Community's "12 Demands"</h4>
+                            <p>After the creation of the community's <a>"12 Demands"</a>, we compressed the 12
+                    items into three specific topics that our research group can feasibly pursue: </p>
+                            <ul>
+                                <li>AP Classes</li>
+                                <li>AP Classes</li>
+                                <li>AP Classes</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fuga harum, ratione repudiandae,
+                            dolores nulla accusantium beatae exercitationem ut autem consectetur alias nesciunt numquam odit
+                    recusandae necessitatibus similique nobis reiciendis.</p>
+                            <p>After the creation of the community's <a>"12 Demands"</a>, we compressed the 12
+                    items into three specific topics that our research group can feasibly pursue: </p>
+                            <ul>
+                                <li>AP Classes</li>
+                                <li>AP Classes</li>
+                                <li>AP Classes</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fuga harum, ratione repudiandae,
+                            dolores nulla accusantium beatae exercitationem ut autem consectetur alias nesciunt numquam odit
+                    recusandae necessitatibus similique nobis reiciendis.</p>
                             <p>After the creation of the community's <a>"12 Demands"</a>, we compressed the 12
                     items into three specific topics that our research group can feasibly pursue: </p>
                             <ul>

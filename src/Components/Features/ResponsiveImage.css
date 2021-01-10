@@ -6,3 +6,31 @@
     background-repeat: no-repeat;
     z-index: -1;
 }
+
+.responsive-image-float {
+    max-width: 50%;
+    min-width: 50%;
+}
+
+.float-left-margin, .float-right-margin {
+    margin-bottom: 1rem;
+}
+
+.float-left-margin {
+    margin-right: 1rem;
+}
+
+.float-right-margin {
+    margin-left: 1rem;
+}
+
+@media (max-width: 767px) {
+    .responsive-image-float {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .float-left-margin, .float-right-margin {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
