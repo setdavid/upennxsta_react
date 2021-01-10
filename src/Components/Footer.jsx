@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { defaultLocation } from "./Router";
 
-import { AiOutlineCopyright } from "react-icons/ai";
-
 const Footer = () => {
     return (
         <div id="footer" className="container-fluid">
@@ -28,7 +26,7 @@ const Footer = () => {
                 </div>
                 <div className="row">
                     <div style={{ fontSize: "0.75rem" }} className="col-12 d-flex justify-content-center align-items-center">
-                        <AiOutlineCopyright /> &nbsp; UPennXSTA
+                        &copy; UPennXSTA
                     </div>
                 </div>
             </div>

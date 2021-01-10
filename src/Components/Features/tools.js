@@ -27,8 +27,6 @@ export const jsonPostingsToComps = (jsonPostings, Component) => {
     };
 
     const postings = (jsonPostings.map(posting => {
-        console.log(posting.images);
-
         return <Component key={incrParagraphCount()} {...posting} />
     }));
 

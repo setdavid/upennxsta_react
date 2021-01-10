@@ -9,6 +9,9 @@ import ColoredCard from "../Features/ColoredCard";
 import RoundedButton from "../Features/RoundedButton";
 import { scrollTo } from "../Features/tools";
 
+import RecentUpdatesComp from "./RecentUpdatesComps/RecentUpdatesComp";
+import recentUpdatesPostings from "../../json-postings/recent-updates-postings.json";
+
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 import { RiArrowRightSLine } from "react-icons/ri";
 
@@ -203,38 +206,7 @@ const Home = (props) => {
                             
                         </div> */}
                         <div className="col-12 ">
-                            <ResponsiveImage url={currentProjectsImg} minHeight="300px" backgroundSize="cover" roundedCorners float="left" />
-                            <h4>Pushing the Community's "12 Demands"</h4>
-                            <p>After the creation of the community's <a>"12 Demands"</a>, we compressed the 12
-                    items into three specific topics that our research group can feasibly pursue: </p>
-                            <ul>
-                                <li>AP Classes</li>
-                                <li>AP Classes</li>
-                                <li>AP Classes</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fuga harum, ratione repudiandae,
-                            dolores nulla accusantium beatae exercitationem ut autem consectetur alias nesciunt numquam odit
-                    recusandae necessitatibus similique nobis reiciendis.</p>
-                            <p>After the creation of the community's <a>"12 Demands"</a>, we compressed the 12
-                    items into three specific topics that our research group can feasibly pursue: </p>
-                            <ul>
-                                <li>AP Classes</li>
-                                <li>AP Classes</li>
-                                <li>AP Classes</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fuga harum, ratione repudiandae,
-                            dolores nulla accusantium beatae exercitationem ut autem consectetur alias nesciunt numquam odit
-                    recusandae necessitatibus similique nobis reiciendis.</p>
-                            <p>After the creation of the community's <a>"12 Demands"</a>, we compressed the 12
-                    items into three specific topics that our research group can feasibly pursue: </p>
-                            <ul>
-                                <li>AP Classes</li>
-                                <li>AP Classes</li>
-                                <li>AP Classes</li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fuga harum, ratione repudiandae,
-                            dolores nulla accusantium beatae exercitationem ut autem consectetur alias nesciunt numquam odit
-                    recusandae necessitatibus similique nobis reiciendis.</p>
+                            <RecentUpdatesComp {...recentUpdatesPostings[0]} noHr />
                         </div>
                     </div>
                 </div>

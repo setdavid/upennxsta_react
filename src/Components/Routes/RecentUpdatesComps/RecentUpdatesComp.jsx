@@ -3,7 +3,7 @@ import ResponsiveImage from "../../Features/ResponsiveImage";
 import { AiOutlineClockCircle } from "react-icons/ai";
 
 const RecentPostingsComp = (props) => {
-    const { id, title, subtitle, date, text, images } = props;
+    const { id, title, subtitle, date, text, images, noHr } = props;
 
     let paragraphCount = 0;
     const incrParagraphCount = () => {
@@ -14,8 +14,8 @@ const RecentPostingsComp = (props) => {
 
     return (
         <div id={id ? id : ""} className="ruc pb-0">
-            <hr />
-            <div className="row mar-top-1p5rem">
+            {noHr ? "" : <hr className="mar-bot-1p5rem" />}
+            <div className="row">
                 <div className="col-12 pb-0">
                     <div className="row">
                         <div className="col-12 pad-bot-1p5rem">
@@ -25,8 +25,8 @@ const RecentPostingsComp = (props) => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
-                            {images ? (<ResponsiveImage url={images[0]} minHeight="350px" backgroundSize="contain" float="right" />) : ""}
+                        <div className="col-12 pad-bot-1p5rem">
+                            {images ? (<ResponsiveImage url={images[0]} minHeight="300px" backgroundSize="contain" float="right" />) : ""}
                             {text.map(paragraph => (
                                 <p key={incrParagraphCount()}>
                                     {paragraph}
