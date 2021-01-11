@@ -53,11 +53,13 @@ const WhatWeveDoneComp = (props) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="row d-flex justify-content-center">
-                                    <div style={{ transitionDuration: `${transDuration}ms`, left: opened ? "0" : "100%" }} className="col-12 col-md-10 wwdc-slideshow">
-                                        {images && images.length > 1 ? (<Slideshow urls={images} minHeight="350px" />) : (<ResponsiveImage url={images[0]} minHeight="350px" backgroundSize="cover" />)}
+                                {images && images.length > 0 ?
+                                    <div className="row d-flex justify-content-center">
+                                        <div style={{ transitionDuration: `${transDuration}ms`, left: opened ? "0" : "100%" }} className="col-12 col-md-10 wwdc-slideshow">
+                                            {images.length > 1 ? (<Slideshow urls={images} minHeight="350px" />) : (<ResponsiveImage url={images[0]} minHeight="350px" backgroundSize="cover" />)}
+                                        </div>
                                     </div>
-                                </div>
+                                    : ""}
                             </div>
                         </div>
                     </div>

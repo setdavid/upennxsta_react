@@ -26,7 +26,7 @@ const RecentPostingsComp = (props) => {
                     </div>
                     <div className="row">
                         <div className="col-12 pad-bot-1p5rem">
-                            {images ? (<ResponsiveImage url={images[0]} minHeight="300px" backgroundSize="contain" float="right" />) : ""}
+                            {images && images.length > 0 ? (<ResponsiveImage url={images[0]} minHeight="300px" backgroundSize="contain" float="right" />) : ""}
                             {text.map(paragraph => (
                                 <p key={incrParagraphCount()}>
                                     {paragraph}
