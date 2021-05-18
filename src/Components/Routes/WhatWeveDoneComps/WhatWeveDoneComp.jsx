@@ -18,9 +18,10 @@ const WhatWeveDoneComp = (props) => {
     }, []);
 
     const handleClick = () => {
-        // if (id && !opened) {
-        scrollTo(`#${id}`);
+        // if (!opened) {
+            scrollTo(`#${id}`);
         // }
+
         setOpened(!opened);
     };
 

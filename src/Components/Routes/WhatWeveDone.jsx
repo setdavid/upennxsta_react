@@ -34,6 +34,17 @@ const WhatWeveDone = (props) => {
             </Jumbotron>
             <div className="container-fluid">
                 <div className="container">
+
+                    <div className="row">
+                        <div className="col-12 col-lg-4">
+                            {/* <div dangerouslySetInnerHTML={{ __html: sheetsData[0].Text }}></div> */}
+                            <div style={{
+                                minHeight: "85vh",
+                                backgroundImage: "url(https://drive.google.com/uc?id=1sda9VgxPE-HmcccXfuY1Kav1ST87l3WK)",
+                                backgroundSize: "cover"}}></div>
+                        </div>
+                    </div>
+
                     <div className="row">
                         <div className="col-12 col-lg-4">
                             <div className=" h1 text-center d-flex justify-content-center align-items-center">
