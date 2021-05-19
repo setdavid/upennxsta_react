@@ -5,7 +5,7 @@ import ResponsiveImage from "../../Features/ResponsiveImage";
 import { scrollTo } from "../../Features/tools";
 
 const WhatWeveDoneComp = (props) => {
-    const { id, title, subtitle, date, text, images, backgroundColor } = props;
+    const { id, title, subtitle, text, images, backgroundColor } = props;
 
     const transDuration = 1000;
     const contentRef = useRef();
@@ -23,13 +23,6 @@ const WhatWeveDoneComp = (props) => {
         // }
 
         setOpened(!opened);
-    };
-
-    let paragraphCount = 0;
-    const incrParagraphCount = () => {
-        const i = paragraphCount;
-        paragraphCount += 1;
-        return i;
     };
 
     return (

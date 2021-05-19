@@ -11,8 +11,8 @@ import RecentUpdates from "./Routes/RecentUpdates";
 import { scrollToTop } from "./Features/tools";
 
 // defaultLocation previously used for Browser Router but not necessary for Hash Router
-// export const defaultLocation = "/upennxsta_react";
-export const defaultLocation = "";
+export const defaultLocation = "/upennxsta_react";
+// export const defaultLocation = "";
 
 const Router = () => {
     const dispatch = useDispatch();

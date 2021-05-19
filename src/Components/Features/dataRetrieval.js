@@ -35,7 +35,7 @@ export const sheetDataToComp = (sheetData, Component, keyName) => {
 
     const comps = (sheetData.map(posting => {
         idIndex++;
-        return <Component key={keyName + "-" + idIndex} {...posting }  />
+        return <Component key={idIndex} id={keyName + "-" + idIndex} {...posting }  />
     }));
 
     return comps;
