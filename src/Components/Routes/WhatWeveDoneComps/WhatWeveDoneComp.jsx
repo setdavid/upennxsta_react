@@ -39,8 +39,7 @@ const WhatWeveDoneComp = (props) => {
                         <div style={{ transitionDuration: `${transDuration}ms`, maxHeight: opened ? `${2 * contentHeight.current}px` : "0" }} className="col-12 pb-0">
                             <div ref={contentRef}>
                                 <div className="row pad-top-1p5rem">
-                                    <div style={{ transitionDuration: `${transDuration}ms`, left: opened ? "0" : "-100%" }} className="col-12 wwdc-paragraphs">
-                                        {text}
+                                    <div style={{ transitionDuration: `${transDuration}ms`, left: opened ? "0" : "-100%" }} className="col-12 wwdc-paragraphs" dangerouslySetInnerHTML={{__html: text}}>
                                     </div>
                                 </div>
                                 {images && images.length > 0 ?
