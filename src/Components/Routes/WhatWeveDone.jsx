@@ -1,6 +1,6 @@
 import React from "react";
 
-import {sheetData, sheetDataToComp} from "./../Features/dataRetrieval";
+import { sheetData, sheetDataToComp } from "./../Features/dataRetrieval";
 import WWDComp from "./WWDComp";
 
 import { jsonPostingsToComps } from "../Features/tools";
@@ -70,7 +70,7 @@ const WhatWeveDone = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-8 order-2 order-lg-1">
-                            {jsonPostingsToComps(publicationPostings, WWDPublication)}
+                            {sheetDataToComp(sheetData[1], WWDPublication, "publ")}
                         </div>
                         <div className="col-12 col-lg-4 order-1 order-lg-2">
                             <div className=" h1 text-center d-flex justify-content-center align-items-center">
@@ -87,7 +87,7 @@ const WhatWeveDone = (props) => {
                             </div>
                         </div>
                         <div className="col-12 col-lg-8">
-                            {jsonPostingsToComps(otherWorkPostings, WWDOther)}
+                            {sheetDataToComp(sheetData[2], WWDOther, "other")}
                         </div>
                     </div>
                 </div>

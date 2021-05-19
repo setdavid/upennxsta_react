@@ -4,7 +4,7 @@ import { BsChevronCompactDown } from "react-icons/bs";
 import ResponsiveImage from "./../Features/ResponsiveImage";
 import { scrollTo } from "./../Features/tools";
 
-const WhatWeveDoneComp = (props) => {
+const WWDComp = (props) => {
     const { id, title, subtitle, text, images, backgroundColor } = props;
 
     const transDuration = 1000;
@@ -68,4 +68,4 @@ const WhatWeveDoneComp = (props) => {
     );
 }
 
-export default WhatWeveDoneComp;
+export default WWDComp;
