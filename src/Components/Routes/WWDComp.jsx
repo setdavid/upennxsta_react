@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
-import Slideshow from "../../Features/Slideshow";
+import Slideshow from "./../Features/Slideshow";
 import { BsChevronCompactDown } from "react-icons/bs";
-import ResponsiveImage from "../../Features/ResponsiveImage";
-import { scrollTo } from "../../Features/tools";
+import ResponsiveImage from "./../Features/ResponsiveImage";
+import { scrollTo } from "./../Features/tools";
 
 const WhatWeveDoneComp = (props) => {
     const { id, title, subtitle, text, images, backgroundColor } = props;

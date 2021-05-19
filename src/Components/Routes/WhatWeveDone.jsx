@@ -1,11 +1,12 @@
 import React from "react";
 
 import {sheetData, sheetDataToComp} from "./../Features/dataRetrieval";
+import WWDComp from "./WWDComp";
 
 import { jsonPostingsToComps } from "../Features/tools";
-import WhatWeveDoneConference from "./WhatWeveDoneComps/WhatWeveDoneConference";
-import WhatWeveDonePublication from "./WhatWeveDoneComps/WhatWeveDonePublication";
-import WhatWeveDoneOther from "./WhatWeveDoneComps/WhatWeveDoneOther";
+// import WhatWeveDoneConference from "./WhatWeveDoneComps/WhatWeveDoneConference";
+// import WhatWeveDonePublication from "./WhatWeveDoneComps/WhatWeveDonePublication";
+// import WhatWeveDoneOther from "./WhatWeveDoneComps/WhatWeveDoneOther";
 
 import conferencePostings from "../../json-postings/conference-postings.json";
 import publicationPostings from "../../json-postings/publication-postings.json";
@@ -15,6 +16,24 @@ import ResponsiveImage from "../Features/ResponsiveImage";
 import Jumbotron from "../Features/Jumbotron";
 
 const WhatWeveDone = (props) => {
+
+    const WWDConference = (props) => {
+        return (
+            <WWDComp {...props} backgroundColor="var(--theme-color-1)" />
+        );
+    }
+
+    const WWDOther = (props) => {
+        return (
+            <WWDComp {...props} backgroundColor="black" />
+        );
+    }
+
+    const WWDPublication = (props) => {
+        return (
+            <WWDComp {...props} backgroundColor="var(--theme-color-2)" />
+        );
+    }
 
     const SideBorder = (props) => {
         const { backgroundColor, left } = props;
@@ -44,14 +63,14 @@ const WhatWeveDone = (props) => {
                             </div>
                         </div>
                         <div className="col-12 col-lg-8">
-                            {sheetDataToComp(sheetData[0], WhatWeveDoneConference, "conf")}
+                            {sheetDataToComp(sheetData[0], WWDConference, "conf")}
                         </div>
                     </div>
                 </div>
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-8 order-2 order-lg-1">
-                            {jsonPostingsToComps(publicationPostings, WhatWeveDonePublication)}
+                            {jsonPostingsToComps(publicationPostings, WWDPublication)}
                         </div>
                         <div className="col-12 col-lg-4 order-1 order-lg-2">
                             <div className=" h1 text-center d-flex justify-content-center align-items-center">
@@ -68,7 +87,7 @@ const WhatWeveDone = (props) => {
                             </div>
                         </div>
                         <div className="col-12 col-lg-8">
-                            {jsonPostingsToComps(otherWorkPostings, WhatWeveDoneOther)}
+                            {jsonPostingsToComps(otherWorkPostings, WWDOther)}
                         </div>
                     </div>
                 </div>
