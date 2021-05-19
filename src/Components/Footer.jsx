@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { defaultLocation } from "./Router";
+// import { defaultLocation } from "./Router";
 
 const Footer = () => {
     return (
@@ -9,9 +9,12 @@ const Footer = () => {
                 <div className="row">
                     <div className="footer-section col-12 col-md-4 d-flex-column justify-content-start">
                         <h5>Quick Links</h5>
-                        <div><Link to={`${defaultLocation}/about-us`}>About Us</Link></div>
+                        {/* <div><Link to={`${defaultLocation}/about-us`}>About Us</Link></div>
                         <div><Link to={`${defaultLocation}/what-weve-done`}>What We've Done</Link></div>
-                        <div><Link to={`${defaultLocation}/recent-updates`}>Recent Updates</Link></div>
+                        <div><Link to={`${defaultLocation}/recent-updates`}>Recent Updates</Link></div> */}
+                        <div><Link to={`/about-us`}>About Us</Link></div>
+                        <div><Link to={`/what-weve-done`}>What We've Done</Link></div>
+                        <div><Link to={`/recent-updates`}>Recent Updates</Link></div>
                     </div>
                     <div className="footer-section col-12 col-md-4 d-flex-column justify-content-start">
                         <h5>Contact Us</h5>

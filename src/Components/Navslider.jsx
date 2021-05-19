@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { handleSliderToggle } from "./Navbar";
-import { defaultLocation } from "./Router";
+// import { defaultLocation } from "./Router";
 import { scrollToTop } from "./Features/tools";
 
 import { BsXSquare } from "react-icons/bs";
@@ -43,7 +43,7 @@ const Navslider = () => {
                 <BsXSquare size="2rem" style={{ cursor: "pointer", color: "white" }} className="navbar-toggler d-block"
                     onClick={() => handleSliderToggle(navsliderOpened, dispatch)} />
             </div>
-            <div className="nav-slider-item">
+            {/* <div className="nav-slider-item">
                 <Link onClick={closeAndScroll} style={{ fontWeight: 500, fontSize: "1.5rem" }} to={`${defaultLocation}/`}>UPENN&nbsp;&times;&nbsp;STA</Link>
             </div>
             <div className="nav-slider-item">
@@ -54,6 +54,18 @@ const Navslider = () => {
             </div>
             <div className="nav-slider-item">
                 <Link onClick={closeAndScroll} to={`${defaultLocation}/recent-updates`}>Recent Updates</Link>
+            </div> */}
+            <div className="nav-slider-item">
+                <Link onClick={closeAndScroll} style={{ fontWeight: 500, fontSize: "1.5rem" }} to={`/`}>UPENN&nbsp;&times;&nbsp;STA</Link>
+            </div>
+            <div className="nav-slider-item">
+                <Link onClick={closeAndScroll} to={`/about-us`}>About Us</Link>
+            </div>
+            <div className="nav-slider-item">
+                <Link onClick={closeAndScroll} to={`/what-weve-done`}>What We've Done</Link>
+            </div>
+            <div className="nav-slider-item">
+                <Link onClick={closeAndScroll} to={`/recent-updates`}>Recent Updates</Link>
             </div>
         </div>
     );

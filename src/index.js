@@ -10,7 +10,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/upennxsta_react">
       <Provider store={store}>
         <App />
       </Provider>

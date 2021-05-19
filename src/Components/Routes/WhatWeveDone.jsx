@@ -58,7 +58,7 @@ const WhatWeveDone = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-4">
-                            <div className=" h1 text-center d-flex justify-content-center align-items-center">
+                            <div id="conf" className=" h1 text-center d-flex justify-content-center align-items-center">
                                 CONFERENCES <SideBorder backgroundColor="var(--theme-color-1)" left />
                             </div>
                         </div>

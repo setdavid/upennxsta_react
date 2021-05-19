@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+// import {defaultLocation} from "../Router"
 
 import ResponsiveImage from "../Features/ResponsiveImage";
 import TextOverImage from "../Features/TextOverImage";
@@ -187,7 +189,8 @@ const Home = (props) => {
                                 <p>Our group has presented various research projects at several conferences.
                                 </p>
                                 <RoundedButton>
-                                    Learn more&nbsp;<RiArrowRightSLine size="1.5rem" />
+                                    <Link onClick={scrollTo("#conf")} to={"/what-weve-done"}>Learn more&nbsp;<RiArrowRightSLine size="1.5rem" /></Link>
+                                    {/* <Link onClick={scrollTo("#conf")} to={`${defaultLocation}/what-weve-done`}>Learn more&nbsp;<RiArrowRightSLine size="1.5rem" /></Link> */}
                                 </RoundedButton>
                             </ColoredCard>
                         </div>
