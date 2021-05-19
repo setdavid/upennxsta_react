@@ -58,7 +58,7 @@ const WhatWeveDone = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-4">
-                            <div id="conf" className=" h1 text-center d-flex justify-content-center align-items-center">
+                            <div id="conferences" className=" h1 text-center d-flex justify-content-center align-items-center">
                                 CONFERENCES <SideBorder backgroundColor="var(--theme-color-1)" left />
                             </div>
                         </div>
@@ -73,7 +73,7 @@ const WhatWeveDone = (props) => {
                             {sheetDataToComp(sheetData[1], WWDPublication, "publ")}
                         </div>
                         <div className="col-12 col-lg-4 order-1 order-lg-2">
-                            <div className=" h1 text-center d-flex justify-content-center align-items-center">
+                            <div id="publications" className=" h1 text-center d-flex justify-content-center align-items-center">
                                 <SideBorder backgroundColor="var(--theme-color-2)" /> PUBLICATIONS
                             </div>
                         </div>
@@ -82,7 +82,7 @@ const WhatWeveDone = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-lg-4">
-                            <div className=" h1 text-center d-flex justify-content-center align-items-center">
+                            <div id="other-works" className=" h1 text-center d-flex justify-content-center align-items-center">
                                 OTHER WORKS <SideBorder backgroundColor="black" left />
                             </div>
                         </div>

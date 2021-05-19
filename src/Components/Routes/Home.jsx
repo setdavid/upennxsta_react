@@ -189,7 +189,7 @@ const Home = (props) => {
                                 <p>Our group has presented various research projects at several conferences.
                                 </p>
                                 <RoundedButton>
-                                    <Link onClick={scrollTo("#conf")} to={"/what-weve-done"}>Learn more&nbsp;<RiArrowRightSLine size="1.5rem" /></Link>
+                                    <Link to={{pathname: "/what-weve-done", hash: "conferences"}}>Learn more&nbsp;<RiArrowRightSLine size="1.5rem" /></Link>
                                     {/* <Link onClick={scrollTo("#conf")} to={`${defaultLocation}/what-weve-done`}>Learn more&nbsp;<RiArrowRightSLine size="1.5rem" /></Link> */}
                                 </RoundedButton>
                             </ColoredCard>
