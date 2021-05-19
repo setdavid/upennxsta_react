@@ -2,8 +2,8 @@ import React from "react";
 import Tabletop from "tabletop";
 
 const DATA_LINKS = ["1m1OPqUlB0hkNJHgV7YlH_7fuICKgPBAb75wUX-R_gk0",
-        "1m1OPqUlB0hkNJHgV7YlH_7fuICKgPBAb75wUX-R_gk0",
-        "1m1OPqUlB0hkNJHgV7YlH_7fuICKgPBAb75wUX-R_gk0"];
+    "1m1OPqUlB0hkNJHgV7YlH_7fuICKgPBAb75wUX-R_gk0",
+    "1m1OPqUlB0hkNJHgV7YlH_7fuICKgPBAb75wUX-R_gk0"];
 
 export let sheetData = new Array(DATA_LINKS.length);
 
@@ -22,6 +22,7 @@ const getSheetData = (dataLinks, sheetData, i, callback) => {
         }).then(d => {
             // console.log(d);
             sheetData[i] = d;
+            sheetImgsToImgArr(d);
             getSheetData(dataLinks, sheetData, i + 1, callback);
         });
     } else {
@@ -30,12 +31,20 @@ const getSheetData = (dataLinks, sheetData, i, callback) => {
     }
 }
 
+const sheetImgsToImgArr = (sheet) => {
+    sheet.forEach((row) => {
+        if (row.images.length != 0) {
+            const imagesString = row.images;
+            row.images = imagesString.split(";");
+        }
+    });
+}
+
 export const sheetDataToComp = (sheetData, Component, keyName) => {
     let idIndex = -1;
-
-    const comps = (sheetData.map(posting => {
+    const comps = (sheetData.map(row => {
         idIndex++;
-        return <Component key={idIndex} id={keyName + "-" + idIndex} {...posting }  />
+        return <Component key={idIndex} id={keyName + "-" + idIndex} {...row} />
     }));
 
     return comps;
