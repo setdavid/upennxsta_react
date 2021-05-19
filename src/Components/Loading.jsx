@@ -1,7 +1,8 @@
 import React from "react";
 import { navbarHeight } from "./Navbar";
+import { scrollToTop } from "./Features/tools";
 
-const MainContent = () => {
+const Loading = () => {
     return (
         <div className="container-fluid">
             <div className="container" style={{ textAlign: "center", fontSize: "100px" }}>
@@ -15,4 +16,4 @@ const MainContent = () => {
     );
 }
 
-export default MainContent;
+export default Loading;

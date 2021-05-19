@@ -1,4 +1,7 @@
 import React from "react";
+
+import {sheetData, sheetDataToComp} from "./../Features/dataRetrieval";
+
 import { jsonPostingsToComps } from "../Features/tools";
 import WhatWeveDoneConference from "./WhatWeveDoneComps/WhatWeveDoneConference";
 import WhatWeveDonePublication from "./WhatWeveDoneComps/WhatWeveDonePublication";
@@ -37,7 +40,7 @@ const WhatWeveDone = (props) => {
 
                     <div className="row">
                         <div className="col-12 col-lg-4">
-                            {/* <div dangerouslySetInnerHTML={{ __html: sheetsData[0].Text }}></div> */}
+                            {/* <div dangerouslySetInnerHTML={{ __html: sheetData[0].Text }}></div> */}
                             <div style={{
                                 minHeight: "85vh",
                                 backgroundImage: "url(https://drive.google.com/uc?id=1sda9VgxPE-HmcccXfuY1Kav1ST87l3WK)",
@@ -52,7 +55,7 @@ const WhatWeveDone = (props) => {
                             </div>
                         </div>
                         <div className="col-12 col-lg-8">
-                            {jsonPostingsToComps(conferencePostings, WhatWeveDoneConference)}
+                            {sheetDataToComp(sheetData[0], WhatWeveDoneConference, "conf")}
                         </div>
                     </div>
                 </div>

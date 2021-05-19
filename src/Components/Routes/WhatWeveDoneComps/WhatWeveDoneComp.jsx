@@ -47,11 +47,7 @@ const WhatWeveDoneComp = (props) => {
                             <div ref={contentRef}>
                                 <div className="row pad-top-1p5rem">
                                     <div style={{ transitionDuration: `${transDuration}ms`, left: opened ? "0" : "-100%" }} className="col-12 wwdc-paragraphs">
-                                        {text.map(paragraph => (
-                                            <p key={incrParagraphCount()}>
-                                                {paragraph}
-                                            </p>
-                                        ))}
+                                        {text}
                                     </div>
                                 </div>
                                 {images && images.length > 0 ?

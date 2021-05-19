@@ -1,4 +1,8 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { dataLoaded } from "./redux/ducks/dataLoad";
+import { retrieveData } from "./Components/Features/dataRetrieval";
+import Loading from "./Components/Loading";
 
 //Essential CSS
 import "./css/bootstrap-grid.min.css";
@@ -30,13 +34,23 @@ import MainContent from "./Components/MainContent";
 import Footer from "./Components/Footer";
 
 function App() {
+  const dispatch = useDispatch();
+  const dataHasLoaded = useSelector(state => state.dataLoad.dataLoaded);
+
+  console.log("not yet finished!: " + dataHasLoaded)
+  retrieveData(() => {
+    dispatch(dataLoaded());
+    console.log("finished!: " + dataHasLoaded);
+  });
+
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar />
+        {dataHasLoaded ? <React.Fragment><Navbar /><Navslider /><MainContent /><Footer /></React.Fragment> : <Loading />}
+        {/* <Navbar />
         <Navslider />
         <MainContent />
-        <Footer />
+        <Footer /> */}
       </header>
     </div>
   );
