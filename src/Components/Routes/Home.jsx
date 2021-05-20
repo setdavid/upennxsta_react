@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { sheetData } from "../Features/dataRetrieval";
 // import {defaultLocation} from "../Router"
 
 import ResponsiveImage from "../Features/ResponsiveImage";
@@ -11,7 +12,7 @@ import ColoredCard from "../Features/ColoredCard";
 import RoundedButton from "../Features/RoundedButton";
 import { scrollTo } from "../Features/tools";
 
-import RecentUpdatesComp from "./RecentUpdatesComps/RecentUpdatesComp";
+import RUComp from "./RUComp";
 import recentUpdatesPostings from "../../json-postings/recent-updates-postings.json";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
@@ -152,45 +153,52 @@ const Home = (props) => {
                 <div id="container-3" className="container">
                     <div className="row">
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
-                            <ColoredCard roundedCorners >
-                                <FaUsers size="4rem" />
-                                <br />
-                                <h4>Learn more about us</h4>
-                                <p>Our group started as a way to teach students about using research to answer
-                                questions that interested them. However, through the years, our focus has gradually shifted.
+                            <ColoredCard roundedCorners classes="d-flex flex-column justify-content-between">
+                                <div>
+                                    <FaUsers size="4rem" />
+                                    <br />
+                                    <h4>Learn more about us</h4>
+                                    <p>Our group started as a way to teach students about using research to answer
+                                    questions that interested them. However, through the years, our focus has gradually shifted.
                         {/* <!-- towards
                         researching educational equity as a response to the hopes of the members
                         of the Saint Thomas Aquinas community. -->
                         <!-- Many community members are immigrant families with hopes that their children receive good
                         educational experiences as students of color. --> */}
-                                </p>
+                                    </p>
+                                </div>
                                 <RoundedButton>
                                     Learn more&nbsp;<RiArrowRightSLine size="1.5rem" />
                                 </RoundedButton>
                             </ColoredCard>
                         </div>
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
-                            <ColoredCard roundedCorners>
-                                <FaBook size="4rem" />
-                                <br />
-                                <h4>Publications</h4>
-                                <p>Many members of our group have published pieces in academic journals.
+                            <ColoredCard roundedCorners classes="d-flex flex-column justify-content-between">
+                                <div>
+                                    <FaChalkboardTeacher size="4rem" />
+                                    <br />
+                                    <h4>Conferences</h4>
+                                    <p>Our group has presented various research projects at several conferences.
                                 </p>
+                                </div>
                                 <RoundedButton>
-                                    Learn more&nbsp;<RiArrowRightSLine size="1.5rem" />
-                                </RoundedButton>
-                            </ColoredCard>
-                        </div>
-                        <div className="col-12 col-md-4 d-flex align-items-stretch">
-                            <ColoredCard roundedCorners>
-                                <FaChalkboardTeacher size="4rem" />
-                                <br />
-                                <h4>Conferences</h4>
-                                <p>Our group has presented various research projects at several conferences.
-                                </p>
-                                <RoundedButton>
-                                    <Link to={{pathname: "/what-weve-done", hash: "conferences"}}>Learn more&nbsp;<RiArrowRightSLine size="1.5rem" /></Link>
+                                    <Link to={{ pathname: "/what-weve-done", hash: "conferences" }}>Learn more&nbsp;</Link>
+                                    <RiArrowRightSLine size="1.5rem" />
                                     {/* <Link onClick={scrollTo("#conf")} to={`${defaultLocation}/what-weve-done`}>Learn more&nbsp;<RiArrowRightSLine size="1.5rem" /></Link> */}
+                                </RoundedButton>
+                            </ColoredCard>
+                        </div>
+                        <div className="col-12 col-md-4 d-flex align-items-stretch">
+                            <ColoredCard roundedCorners classes="d-flex flex-column justify-content-between">
+                                <div>
+                                    <FaBook size="4rem" />
+                                    <br />
+                                    <h4>Publications</h4>
+                                    <p>Many members of our group have published pieces in academic journals.
+                                </p>
+                                </div>
+                                <RoundedButton>
+                                    Learn more&nbsp;<RiArrowRightSLine size="1.5rem" />
                                 </RoundedButton>
                             </ColoredCard>
                         </div>
@@ -209,7 +217,9 @@ const Home = (props) => {
                             
                         </div> */}
                         <div className="col-12 ">
-                            <RecentUpdatesComp {...recentUpdatesPostings[0]} noHr />
+                            <RUComp {...sheetData[3][0]} text="" noHr />
+                            {/* <RUComp {...recentUpdatesPostings[0]} noHr /> */}
+                            <div></div>
                         </div>
                     </div>
                 </div>

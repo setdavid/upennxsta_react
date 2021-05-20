@@ -1,7 +1,8 @@
 import React from "react";
-import { jsonPostingsToComps } from "../Features/tools";
-import recentUpdatesPostings from "../../json-postings/recent-updates-postings.json";
-import RecentUpdatesComp from "./RecentUpdatesComps/RecentUpdatesComp";
+// import { jsonPostingsToComps } from "../Features/tools";
+// import recentUpdatesPostings from "../../json-postings/recent-updates-postings.json";
+import { sheetData, sheetDataToComp } from "../Features/dataRetrieval";
+import RUComp from "./RUComp";
 
 import ResponsiveImage from "../Features/ResponsiveImage";
 import Jumbotron from "../Features/Jumbotron";
@@ -15,7 +16,8 @@ const RecentUpdates = (props) => {
             <div className="container-fluid">
                 <div className="container">
                     <div className="row">
-                        {jsonPostingsToComps(recentUpdatesPostings, RecentUpdatesComp)}
+                        {sheetDataToComp(sheetData[3], RUComp, "ru")}
+                        {/* {jsonPostingsToComps(recentUpdatesPostings, RUComp)} */}
                     </div>
                 </div>
             </div>

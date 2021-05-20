@@ -1,9 +1,11 @@
 import React from "react";
 import Tabletop from "tabletop";
 
+//[0: wwdConferences, 1: wwdPublications, 2: wwdOthers, 3: recentUpdates]
 const DATA_LINKS = ["1m1OPqUlB0hkNJHgV7YlH_7fuICKgPBAb75wUX-R_gk0",
     "1ZN7dcgboL7HMCYf_e0PtCOzKOH566y8dF8kaHvt330s",
-    "1VJZMvqzQNqxfa2Ud49ruTx-2lidEJts-DC4wge2mFzI"];
+    "1VJZMvqzQNqxfa2Ud49ruTx-2lidEJts-DC4wge2mFzI",
+    "1SfnXN6scMUBBJkGZNu7w35FBtDLzL-4OI5MZ34-LBiI"];
 
 export let sheetData = new Array(DATA_LINKS.length);
 

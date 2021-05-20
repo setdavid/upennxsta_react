@@ -1,8 +1,8 @@
 import React from "react";
-import ResponsiveImage from "../../Features/ResponsiveImage";
+import ResponsiveImage from "../Features/ResponsiveImage";
 import { AiOutlineClockCircle } from "react-icons/ai";
 
-const RecentPostingsComp = (props) => {
+const RUComp = (props) => {
     const { id, title, subtitle, date, text, images, noHr } = props;
 
     let paragraphCount = 0;
@@ -27,11 +27,8 @@ const RecentPostingsComp = (props) => {
                     <div className="row">
                         <div className="col-12 pad-bot-1p5rem">
                             {images && images.length > 0 ? (<ResponsiveImage url={images[0]} minHeight="300px" backgroundSize="contain" float="right" />) : ""}
-                            {text.map(paragraph => (
-                                <p key={incrParagraphCount()}>
-                                    {paragraph}
-                                </p>
-                            ))}
+                            {/* <React.Fragment dangerouslySetInnerHTML={{__html: text}}></React.Fragment> */}
+                            <div dangerouslySetInnerHTML={{__html: text}} style={{textIndent: "48px"}}></div>
                         </div>
                     </div>
                 </div>
@@ -40,4 +37,4 @@ const RecentPostingsComp = (props) => {
     );
 }
 
-export default RecentPostingsComp;
+export default RUComp;
