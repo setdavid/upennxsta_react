@@ -209,7 +209,7 @@ const Home = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 text-center">
-                            <h1>Current Project</h1>
+                            <h1>Most Recent Update</h1>
                         </div>
                     </div>
                     <div className="row">
@@ -217,9 +217,12 @@ const Home = (props) => {
                             
                         </div> */}
                         <div className="col-12 ">
-                            <RUComp {...sheetData[3][0]} text="" noHr />
+                            <RUComp {...sheetData[3][0]} noHr />
                             {/* <RUComp {...recentUpdatesPostings[0]} noHr /> */}
-                            <div></div>
+                            <RoundedButton id="rb-past-updates" styles={{backgroundColor: "black"}}>
+                                <Link to="/recent-updates">Past updates &nbsp;</Link>
+                                <RiArrowRightSLine size="1.5rem" />
+                            </RoundedButton>
                         </div>
                     </div>
                 </div>

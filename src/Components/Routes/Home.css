@@ -56,3 +56,10 @@
 #container-3>.row>div {
     text-align: center;
 }
+
+@media (min-width: 576px) {
+    #rb-past-updates {
+        width: 25%;
+        float: right;
+    }
+}

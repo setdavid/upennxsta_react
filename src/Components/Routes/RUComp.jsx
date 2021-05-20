@@ -27,7 +27,6 @@ const RUComp = (props) => {
                     <div className="row">
                         <div className="col-12 pad-bot-1p5rem">
                             {images && images.length > 0 ? (<ResponsiveImage url={images[0]} minHeight="300px" backgroundSize="contain" float="right" />) : ""}
-                            {/* <React.Fragment dangerouslySetInnerHTML={{__html: text}}></React.Fragment> */}
                             <div dangerouslySetInnerHTML={{__html: text}} style={{textIndent: "48px"}}></div>
                         </div>
                     </div>
