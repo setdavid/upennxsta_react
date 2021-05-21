@@ -28,7 +28,7 @@ const getSheetData = (dataLinks, sheetData, i, callback) => {
             getSheetData(dataLinks, sheetData, i + 1, callback);
         });
     } else {
-        console.log("on index: " + i);
+        console.log("done_data_retrieval");
         callback();
     }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { dataLoaded } from "./redux/ducks/dataLoad";
 import { retrieveData } from "./Components/Features/dataRetrieval";
@@ -35,11 +35,15 @@ function App() {
   const dispatch = useDispatch();
   const dataHasLoaded = useSelector(state => state.dataLoad.dataLoaded);
 
-  console.log("not yet finished!: " + dataHasLoaded)
-  retrieveData(() => {
-    dispatch(dataLoaded());
-    console.log("finished!: " + dataHasLoaded);
-  });
+  // retrieveData(() => {
+  //   dispatch(dataLoaded());
+  // });
+
+  useEffect(() => {
+    retrieveData(() => {
+      dispatch(dataLoaded());
+    });
+  }, []);
 
   return (
     <div className="App">
