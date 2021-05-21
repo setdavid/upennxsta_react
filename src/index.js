@@ -6,11 +6,12 @@ import reportWebVitals from './reportWebVitals';
 
 import { Provider } from "react-redux";
 import store from "./redux/configureStore";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename="/upennxsta_react/">
+    {/* <Router basename="/upennxsta_react/"> */}
+    <Router>
       <Provider store={store}>
         <App />
       </Provider>
