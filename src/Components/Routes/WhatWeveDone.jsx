@@ -3,14 +3,14 @@ import React from "react";
 import { sheetData, sheetDataToComp } from "./../Features/dataRetrieval";
 import WWDComp from "./WWDComp";
 
-import { jsonPostingsToComps } from "../Features/tools";
+// import { jsonPostingsToComps } from "../Features/tools";
 // import WhatWeveDoneConference from "./WhatWeveDoneComps/WhatWeveDoneConference";
 // import WhatWeveDonePublication from "./WhatWeveDoneComps/WhatWeveDonePublication";
 // import WhatWeveDoneOther from "./WhatWeveDoneComps/WhatWeveDoneOther";
 
-import conferencePostings from "../../json-postings/conference-postings.json";
-import publicationPostings from "../../json-postings/publication-postings.json";
-import otherWorkPostings from "../../json-postings/other-work-postings.json";
+// import conferencePostings from "../../json-postings/conference-postings.json";
+// import publicationPostings from "../../json-postings/publication-postings.json";
+// import otherWorkPostings from "../../json-postings/other-work-postings.json";
 
 import ResponsiveImage from "../Features/ResponsiveImage";
 import Jumbotron from "../Features/Jumbotron";

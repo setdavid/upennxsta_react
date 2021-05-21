@@ -13,7 +13,7 @@ import RoundedButton from "../Features/RoundedButton";
 import { scrollTo } from "../Features/tools";
 
 import RUComp from "./RUComp";
-import recentUpdatesPostings from "../../json-postings/recent-updates-postings.json";
+// import recentUpdatesPostings from "../../json-postings/recent-updates-postings.json";
 
 import { FaAngleDoubleDown, FaTimes, FaUsers, FaBook, FaChalkboardTeacher } from 'react-icons/fa';
 import { RiArrowRightSLine } from "react-icons/ri";
@@ -48,7 +48,6 @@ const collegeStudentsImg = "img/college-students.jpg";
 const parentsImg = "img/parents1.jpg";
 const educatorsImg = "img/educators1.JPG";
 const communityImg = "img/park_group1.jpg";
-const currentProjectsImg = "img/wall_art1.jpg";
 
 const WeAreCards = (props) => {
     const { text, url } = props;

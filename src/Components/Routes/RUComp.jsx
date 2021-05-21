@@ -5,12 +5,12 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 const RUComp = (props) => {
     const { id, title, subtitle, date, text, images, noHr } = props;
 
-    let paragraphCount = 0;
-    const incrParagraphCount = () => {
-        const i = paragraphCount;
-        paragraphCount += 1;
-        return i;
-    };
+    // let paragraphCount = 0;
+    // const incrParagraphCount = () => {
+    //     const i = paragraphCount;
+    //     paragraphCount += 1;
+    //     return i;
+    // };
 
     return (
         <div id={id ? id : ""} className="ruc pb-0">

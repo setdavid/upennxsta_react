@@ -35,7 +35,7 @@ const getSheetData = (dataLinks, sheetData, i, callback) => {
 
 const sheetImgsToImgArr = (sheet) => {
     sheet.forEach((row) => {
-        if (row.images.length != 0) {
+        if (row.images.length !== 0) {
             const imagesString = row.images;
             row.images = imagesString.split(";");
         }

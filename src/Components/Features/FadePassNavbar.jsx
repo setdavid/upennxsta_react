@@ -28,7 +28,7 @@ const FadePassNavbar = (props) => {
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return (() => window.removeEventListener("scroll", handleScroll));
-    }, [elemRef.current]);
+    }, [elemRef]);
 
     return (
         <div className={`${classes ? classes : ""}`} ref={elemRef} style={{ width: "100%", zIndex: "1000", transition: "opacity 0.01s", opacity: `${opacity}`, ...styles }}>

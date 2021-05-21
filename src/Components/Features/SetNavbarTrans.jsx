@@ -27,7 +27,7 @@ const SetNavbarTrans = (props) => {
         handleScroll();
         window.addEventListener("scroll", handleScroll);
         return unmount;
-    }, [elemRef.current]);
+    }, [elemRef]);
 
     const unmount = () => {
         console.log("setNavbarTrans unmount");
