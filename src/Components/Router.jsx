@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Switch, Route, useLocation } from "react-router-dom";
 
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
 import { closeSlider } from "../redux/ducks/navslider";
 
 import Home from "./Routes/Home";
@@ -34,6 +36,36 @@ const Router = () => {
             <Route exact path={`/what-weve-done`} component={WhatWeveDone} />
             <Route exact path={`/recent-updates`} component={RecentUpdates} />
         </Switch>
+
+        // <TransitionGroup>
+        //     <CSSTransition key={location.key} classNames="fade" timeout={5000} in>
+        //         <Switch location={location}>
+        //             {/* <Route exact path={`${defaultLocation}/`} component={Home} />
+        //     <Route exact path={`${defaultLocation}/about-us`} component={AboutUs} />
+        //     <Route exact path={`${defaultLocation}/what-weve-done`} component={WhatWeveDone} />
+        //     <Route exact path={`${defaultLocation}/recent-updates`} component={RecentUpdates} /> */}
+        //             <Route exact path={`/`} component={Home} />
+        //             <Route exact path={`/about-us`} component={AboutUs} />
+        //             <Route exact path={`/what-weve-done`} component={WhatWeveDone} />
+        //             <Route exact path={`/recent-updates`} component={RecentUpdates} />
+        //         </Switch>
+        //     </CSSTransition>
+        // </TransitionGroup>
+        // <Switch location={location}>
+        //     {/* <Route exact path={`${defaultLocation}/`} component={Home} />
+        //     <Route exact path={`${defaultLocation}/about-us`} component={AboutUs} />
+        //     <Route exact path={`${defaultLocation}/what-weve-done`} component={WhatWeveDone} />
+        //     <Route exact path={`${defaultLocation}/recent-updates`} component={RecentUpdates} /> */}
+        //     <Route exact path={`/`}>
+        //         <CSSTransition key={location.key} classNames="slide" timeout={1000}>
+        //             <Home/>
+        //         </CSSTransition>
+        //     </Route>
+
+        //     <Route exact path={`/about-us`} component={AboutUs} />
+        //     <Route exact path={`/what-weve-done`} component={WhatWeveDone} />
+        //     <Route exact path={`/recent-updates`} component={RecentUpdates} />
+        // </Switch>
     );
 }
 
