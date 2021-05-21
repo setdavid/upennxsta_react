@@ -10,14 +10,16 @@ const SetNavbarTrans = (props) => {
     const dispatch = useDispatch();
 
     const handleScroll = () => {
-        const rect = elemRef.current.getBoundingClientRect();
-        const top = rect.top;
-        const bottom = rect.bottom;
+        if (elemRef.current != null) {
+            const rect = elemRef.current.getBoundingClientRect();
+            const top = rect.top;
+            const bottom = rect.bottom;
 
-        if (top <= navbarHeight && bottom >= navbarHeight) {
-            dispatch(transparentizeNavbar());
-        } else {
-            dispatch(fillNavbar());
+            if (top <= navbarHeight && bottom >= navbarHeight) {
+                dispatch(transparentizeNavbar());
+            } else {
+                dispatch(fillNavbar());
+            }
         }
     };
 
@@ -25,7 +27,7 @@ const SetNavbarTrans = (props) => {
         handleScroll();
         window.addEventListener("scroll", handleScroll);
         return unmount;
-    }, []);
+    }, [elemRef.current]);
 
     const unmount = () => {
         console.log("setNavbarTrans unmount");
