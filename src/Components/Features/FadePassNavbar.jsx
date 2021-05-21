@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { navbarHeight } from "../Navbar";
+import { NAVBAR_HEIGHT } from "../Navbar";
 
 const FadePassNavbar = (props) => {
     const { styles, classes, children } = props;
@@ -9,7 +9,7 @@ const FadePassNavbar = (props) => {
 
     const handleScroll = () => {
         if (elemRef.current != null) {
-            const boundary = 1.0 * navbarHeight;
+            const boundary = 1.0 * NAVBAR_HEIGHT;
             const rect = elemRef.current.getBoundingClientRect();
             const height = rect.height;
             const top = rect.top;

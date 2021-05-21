@@ -1,5 +1,5 @@
 import React from "react";
-import { navbarHeight } from "../Navbar";
+import { NAVBAR_HEIGHT } from "../Navbar";
 
 export const scrollTo = (id) => {
     if (id && id != null) {
@@ -7,7 +7,7 @@ export const scrollTo = (id) => {
         if (elem != null) {
             let targetLocation = elem.getBoundingClientRect().top -
                 document.querySelector("#main-content").getBoundingClientRect().top -
-                navbarHeight;
+                NAVBAR_HEIGHT;
             console.log(`${id}: ${elem.getBoundingClientRect().top}`);
             window.scrollTo({
                 top: targetLocation,

@@ -1,6 +1,6 @@
 import React from "react";
 import TextOverImage from "./TextOverImage";
-import { navbarHeight } from "../Navbar";
+import { NAVBAR_HEIGHT } from "../Navbar";
 import { addMarginTop } from "../MainContent";
 import SetNavbarTrans from "./SetNavbarTrans";
 
@@ -13,8 +13,8 @@ const Jumbotron = (props) => {
     };
 
     const addMarginTopCSS = {
-        minHeight: `calc(${height} - ${navbarHeight}px)`,
-        height: `calc(${height} - ${navbarHeight}px)`
+        minHeight: `calc(${height} - ${NAVBAR_HEIGHT}px)`,
+        height: `calc(${height} - ${NAVBAR_HEIGHT}px)`
     };
 
     let finalCSS = { ...jumbotronCSS };

@@ -1,12 +1,12 @@
 import React from "react";
 import Router from "./Router";
-import { navbarHeight } from "./Navbar";
+import { NAVBAR_HEIGHT } from "./Navbar";
 
 export const addMarginTop = false;
 
 const MainContent = () => {
     return (
-        <div style={addMarginTop ? { marginTop: navbarHeight } : {}} id="main-content" >
+        <div style={addMarginTop ? { marginTop: NAVBAR_HEIGHT } : {}} id="main-content" >
             {/* <Loading/> */}
             {/* { dataHasLoaded ? <Router/> : <Loading/>} */}
             <Router />

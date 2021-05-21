@@ -10,6 +10,7 @@ import Home from "./Routes/Home";
 import AboutUs from "./Routes/AboutUs";
 import WhatWeveDone from "./Routes/WhatWeveDone";
 import RecentUpdates from "./Routes/RecentUpdates";
+import PageNotFound from "./Routes/PageNotFound";
 import { scrollToTop } from "./Features/tools";
 
 // defaultLocation previously used for Browser Router but not necessary for Hash Router
@@ -32,9 +33,10 @@ const Router = () => {
             <Route exact path={`${defaultLocation}/what-weve-done`} component={WhatWeveDone} />
             <Route exact path={`${defaultLocation}/recent-updates`} component={RecentUpdates} /> */}
             <Route exact path={`/`} component={Home} />
-            <Route exact path={`/about-us`} component={AboutUs} />
-            <Route exact path={`/what-weve-done`} component={WhatWeveDone} />
-            <Route exact path={`/recent-updates`} component={RecentUpdates} />
+            <Route path={`/about-us`} component={AboutUs} />
+            <Route path={`/what-weve-done`} component={WhatWeveDone} />
+            <Route path={`/recent-updates`} component={RecentUpdates} />
+            <Route path={""} component={PageNotFound} />
         </Switch>
 
         // <TransitionGroup>

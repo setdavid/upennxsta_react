@@ -7,7 +7,7 @@ import { scrollToTop } from "./Features/tools";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
-export const navbarHeight = 82;
+export const NAVBAR_HEIGHT = 82;
 
 export const closeSliderToggle = (dispatch) => {
     return dispatch(closeSlider());
@@ -33,8 +33,8 @@ const Navbar = () => {
     };
 
     let finalCSS = {
-        minHeight: navbarHeight,
-        height: navbarHeight
+        minHeight: NAVBAR_HEIGHT,
+        height: NAVBAR_HEIGHT
     };
 
     if (transparent) {

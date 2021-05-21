@@ -1,13 +1,13 @@
 import React from "react";
-import { NAVBAR_HEIGHT } from "./Navbar";
+import { NAVBAR_HEIGHT } from "../Navbar";
 
-const Loading = () => {
+const PageNotFound = () => {
     return (
         <div className="container-fluid">
             <div className="container" style={{ textAlign: "center", fontSize: "100px" }}>
                 <div className="row">
                     <div style={{ marginTop: NAVBAR_HEIGHT }} className="col-12">
-                        LOADING!
+                        PAGE NOT FOUND!
                     </div>
                 </div>
             </div>
@@ -15,4 +15,4 @@ const Loading = () => {
     );
 }
 
-export default Loading;
+export default PageNotFound;

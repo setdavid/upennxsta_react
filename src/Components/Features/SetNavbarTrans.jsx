@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { transparentizeNavbar, fillNavbar } from "./../../redux/ducks/navbar";
-import { navbarHeight } from "../Navbar";
+import { NAVBAR_HEIGHT } from "../Navbar";
 
 const SetNavbarTrans = (props) => {
     const { styles, classes, children } = props;
@@ -15,7 +15,7 @@ const SetNavbarTrans = (props) => {
             const top = rect.top;
             const bottom = rect.bottom;
 
-            if (top <= navbarHeight && bottom >= navbarHeight) {
+            if (top <= NAVBAR_HEIGHT && bottom >= NAVBAR_HEIGHT) {
                 dispatch(transparentizeNavbar());
             } else {
                 dispatch(fillNavbar());
