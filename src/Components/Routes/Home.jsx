@@ -181,11 +181,15 @@ const Home = (props) => {
                                     <p>Our group has presented various research projects at several conferences.
                                 </p>
                                 </div>
-                                <RoundedButton>
-                                    <Link to={{ pathname: "/what-weve-done", hash: "conferences" }}>Learn more&nbsp;</Link>
-                                    <RiArrowRightSLine size="1.5rem" />
-                                    {/* <Link onClick={scrollTo("#conf")} to={`${defaultLocation}/what-weve-done`}>Learn more&nbsp;<RiArrowRightSLine size="1.5rem" /></Link> */}
-                                </RoundedButton>
+
+                                <Link to={{ pathname: "/what-weve-done", hash: "conferences" }}>
+                                    <RoundedButton>
+                                        Learn more&nbsp;
+                                        <RiArrowRightSLine size="1.5rem" />
+                                    </RoundedButton>
+                                </Link>
+                                {/* <Link onClick={scrollTo("#conf")} to={`${defaultLocation}/what-weve-done`}>Learn more&nbsp;<RiArrowRightSLine size="1.5rem" /></Link> */}
+
                             </ColoredCard>
                         </div>
                         <div className="col-12 col-md-4 d-flex align-items-stretch">
@@ -219,10 +223,12 @@ const Home = (props) => {
                         <div className="col-12 ">
                             <RUComp {...sheetData[3][0]} noHr />
                             {/* <RUComp {...recentUpdatesPostings[0]} noHr /> */}
-                            <RoundedButton id="rb-past-updates" styles={{backgroundColor: "black"}}>
-                                <Link to="/recent-updates">Past updates &nbsp;</Link>
+                            <Link to="/recent-updates">
+                                <RoundedButton id="rb-past-updates" styles={{ backgroundColor: "black" }}>
+                                    Past updates &nbsp;
                                 <RiArrowRightSLine size="1.5rem" />
-                            </RoundedButton>
+                                </RoundedButton>
+                            </Link>
                         </div>
                     </div>
                 </div>
