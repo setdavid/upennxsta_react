@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { dataLoaded } from "./redux/ducks/dataLoad";
 import { retrieveData } from "./Components/Features/dataRetrieval";
-import Loading from "./Components/Loading";
+import Loading, { LOADING_ANIM_DURATION } from "./Components/Loading";
 
 //Essential CSS
 import "./css/bootstrap-grid.min.css";
@@ -32,6 +32,7 @@ import MainContent from "./Components/MainContent";
 import Footer from "./Components/Footer";
 
 function App() {
+  let [showLoading, setShowLoading] = useState(true);
   const dispatch = useDispatch();
   const dataHasLoaded = useSelector(state => state.dataLoad.dataLoaded);
 
@@ -42,13 +43,18 @@ function App() {
   useEffect(() => {
     retrieveData(() => {
       dispatch(dataLoaded());
+      window.setTimeout(() => {
+        setShowLoading(false);
+      }, LOADING_ANIM_DURATION);
     });
   }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        {dataHasLoaded ? <React.Fragment><Navbar /><Navslider /><MainContent /><Footer /></React.Fragment> : <Loading />}
+        {showLoading ? <Loading /> : <React.Fragment><Navbar /><Navslider /><MainContent /><Footer /></React.Fragment>}
+        {/* {dataHasLoaded ? <React.Fragment><Navbar /><Navslider /><MainContent /><Footer /></React.Fragment> : <Loading />} */}
+        {/* <Loading /> */}
         {/* <Navbar />
         <Navslider />
         <MainContent />

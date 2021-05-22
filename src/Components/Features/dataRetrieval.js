@@ -12,7 +12,6 @@ export let sheetData = new Array(DATA_LINKS.length);
 export const retrieveData = (callback) => {
     getSheetData(DATA_LINKS, sheetData, 0, callback);
 
-    console.log("here is the data");
     console.log(sheetData);
 }
 
