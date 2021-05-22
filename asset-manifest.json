@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/upennxsta_react/static/css/main.16dc164a.chunk.css",
-    "main.js": "/upennxsta_react/static/js/main.f5b94ab8.chunk.js",
-    "main.js.map": "/upennxsta_react/static/js/main.f5b94ab8.chunk.js.map",
+    "main.js": "/upennxsta_react/static/js/main.eef600b4.chunk.js",
+    "main.js.map": "/upennxsta_react/static/js/main.eef600b4.chunk.js.map",
     "runtime-main.js": "/upennxsta_react/static/js/runtime-main.5c795f04.js",
     "runtime-main.js.map": "/upennxsta_react/static/js/runtime-main.5c795f04.js.map",
     "static/js/2.03163b82.chunk.js": "/upennxsta_react/static/js/2.03163b82.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5c795f04.js",
     "static/js/2.03163b82.chunk.js",
     "static/css/main.16dc164a.chunk.css",
-    "static/js/main.f5b94ab8.chunk.js"
+    "static/js/main.eef600b4.chunk.js"
   ]
 }
