@@ -13,15 +13,11 @@ const LinkTransition = (props) => {
     const location = useLocation();
     const dispatch = useDispatch();
 
-    const test = useSelector(state => state.linkTransition["/about-us"]);
-
     const linkTo = (path) => {
         scrollToTop();
         dispatch(closeSlider());
 
         if (path != null && path != "" && location.pathname != path) {
-            console.log("history.push at work first: " + test);
-
             dispatch(setPathIn(location.pathname, false));
 
             window.setTimeout(() => {
@@ -37,8 +33,6 @@ const LinkTransition = (props) => {
     // }, [location]);
 
     const parentDivStyle = {
-        margin: "0",
-        padding: "0",
         cursor: "pointer"
     };
 

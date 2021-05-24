@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import LinkTransition from "./LinkTransition";
 // import { defaultLocation } from "./Router";
 
 const Footer = () => {
@@ -12,9 +13,12 @@ const Footer = () => {
                         {/* <div><Link to={`${defaultLocation}/about-us`}>About Us</Link></div>
                         <div><Link to={`${defaultLocation}/what-weve-done`}>What We've Done</Link></div>
                         <div><Link to={`${defaultLocation}/recent-updates`}>Recent Updates</Link></div> */}
-                        <div><Link to={`/about-us`}>About Us</Link></div>
+                        {/* <div><Link to={`/about-us`}>About Us</Link></div>
                         <div><Link to={`/what-weve-done`}>What We've Done</Link></div>
-                        <div><Link to={`/recent-updates`}>Recent Updates</Link></div>
+                        <div><Link to={`/recent-updates`}>Recent Updates</Link></div> */}
+                        <div><LinkTransition path="/about-us">About Us</LinkTransition></div>
+                        <div><LinkTransition path="/what-weve-done">What We've Done</LinkTransition></div>
+                        <div><LinkTransition path="/recent-updates">Recent Updates</LinkTransition></div>
                     </div>
                     <div className="footer-section col-12 col-md-4 d-flex-column justify-content-start">
                         <h5>Contact Us</h5>

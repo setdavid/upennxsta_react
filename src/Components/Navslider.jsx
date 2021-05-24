@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LinkTransition from "./LinkTransition";
 import { useSelector, useDispatch } from "react-redux";
 import { handleSliderToggle } from "./Navbar";
 // import { defaultLocation } from "./Router";
@@ -56,16 +57,20 @@ const Navslider = () => {
                 <Link onClick={closeAndScroll} to={`${defaultLocation}/recent-updates`}>Recent Updates</Link>
             </div> */}
             <div className="nav-slider-item">
-                <Link onClick={closeAndScroll} style={{ fontWeight: 500, fontSize: "1.5rem" }} to={`/`}>UPENN&nbsp;&times;&nbsp;STA</Link>
+                {/* <Link onClick={closeAndScroll} style={{ fontWeight: 500, fontSize: "1.5rem" }} to={`/`}>UPENN&nbsp;&times;&nbsp;STA</Link> */}
+                <LinkTransition styles={{ fontWeight: 500, fontSize: "1.5rem" }} path="/">UPENN&nbsp;&times;&nbsp;STA</LinkTransition>
             </div>
             <div className="nav-slider-item">
-                <Link onClick={closeAndScroll} to={`/about-us`}>About Us</Link>
+                {/* <Link onClick={closeAndScroll} to={`/about-us`}>About Us</Link> */}
+                <LinkTransition path="/about-us">About Us</LinkTransition>
             </div>
             <div className="nav-slider-item">
-                <Link onClick={closeAndScroll} to={`/what-weve-done`}>What We've Done</Link>
+                {/* <Link onClick={closeAndScroll} to={`/what-weve-done`}>What We've Done</Link> */}
+                <LinkTransition path="/what-weve-done">What We've Done</LinkTransition>
             </div>
             <div className="nav-slider-item">
-                <Link onClick={closeAndScroll} to={`/recent-updates`}>Recent Updates</Link>
+                {/* <Link onClick={closeAndScroll} to={`/recent-updates`}>Recent Updates</Link> */}
+                <LinkTransition path="/recent-updates">Recent Updates</LinkTransition>
             </div>
         </div>
     );
