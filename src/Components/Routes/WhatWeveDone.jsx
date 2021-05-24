@@ -3,6 +3,11 @@ import React from "react";
 import { sheetData, sheetDataToComp } from "./../Features/dataRetrieval";
 import WWDComp from "./WWDComp";
 
+import { CSSTransition } from "react-transition-group";
+import { useSelector } from "react-redux";
+
+import { ROUTE_TRANSITION_DURATION } from "../LinkTransition";
+
 // import { jsonPostingsToComps } from "../Features/tools";
 // import WhatWeveDoneConference from "./WhatWeveDoneComps/WhatWeveDoneConference";
 // import WhatWeveDonePublication from "./WhatWeveDoneComps/WhatWeveDonePublication";
@@ -49,50 +54,54 @@ const WhatWeveDone = (props) => {
         return (<div style={{ ...margin, height: "5rem", width: "10px", backgroundColor: backgroundColor }} className="d-none d-lg-block" />);
     }
 
+    const WWDIn = useSelector(state => state.linkTransition["/what-weve-done"]);
+
     return (
-        <React.Fragment>
-            <Jumbotron text="WHAT WE'VE DONE" subtext="An overview of our works over the years" height="85vh" >
-                <ResponsiveImage url="img/community.jpg" minHeight="85vh" backgroundSize="cover" />
-            </Jumbotron>
-            <div className="container-fluid">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-lg-4">
-                            <div id="conferences" className=" h1 text-center d-flex justify-content-center align-items-center">
-                                CONFERENCES <SideBorder backgroundColor="var(--theme-color-1)" left />
+        <CSSTransition key="what-weve-done" classNames="fade" timeout={ROUTE_TRANSITION_DURATION} in={WWDIn}>
+            <div>
+                <Jumbotron text="WHAT WE'VE DONE" subtext="An overview of our works over the years" height="85vh" >
+                    <ResponsiveImage url="img/community.jpg" minHeight="85vh" backgroundSize="cover" />
+                </Jumbotron>
+                <div className="container-fluid">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-lg-4">
+                                <div id="conferences" className=" h1 text-center d-flex justify-content-center align-items-center">
+                                    CONFERENCES <SideBorder backgroundColor="var(--theme-color-1)" left />
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-12 col-lg-8">
-                            {sheetDataToComp(sheetData[0], WWDConference, "conf")}
-                        </div>
-                    </div>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-lg-8 order-2 order-lg-1">
-                            {sheetDataToComp(sheetData[1], WWDPublication, "publ")}
-                        </div>
-                        <div className="col-12 col-lg-4 order-1 order-lg-2">
-                            <div id="publications" className=" h1 text-center d-flex justify-content-center align-items-center">
-                                <SideBorder backgroundColor="var(--theme-color-2)" /> PUBLICATIONS
+                            <div className="col-12 col-lg-8">
+                                {sheetDataToComp(sheetData[0], WWDConference, "conf")}
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 col-lg-4">
-                            <div id="other-works" className=" h1 text-center d-flex justify-content-center align-items-center">
-                                OTHER WORKS <SideBorder backgroundColor="black" left />
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-lg-8 order-2 order-lg-1">
+                                {sheetDataToComp(sheetData[1], WWDPublication, "publ")}
+                            </div>
+                            <div className="col-12 col-lg-4 order-1 order-lg-2">
+                                <div id="publications" className=" h1 text-center d-flex justify-content-center align-items-center">
+                                    <SideBorder backgroundColor="var(--theme-color-2)" /> PUBLICATIONS
+                            </div>
                             </div>
                         </div>
-                        <div className="col-12 col-lg-8">
-                            {sheetDataToComp(sheetData[2], WWDOther, "other")}
+                    </div>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-lg-4">
+                                <div id="other-works" className=" h1 text-center d-flex justify-content-center align-items-center">
+                                    OTHER WORKS <SideBorder backgroundColor="black" left />
+                                </div>
+                            </div>
+                            <div className="col-12 col-lg-8">
+                                {sheetDataToComp(sheetData[2], WWDOther, "other")}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </React.Fragment>
+        </CSSTransition>
     );
 }
 

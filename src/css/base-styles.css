@@ -333,6 +333,26 @@ div.fade-in-show {
     transform: scale(1, 1);
 }
 
+/********** CSS Transitions **********/
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity;
+}
+
 /********** Media Queries **********/
 
 /********** Extra Large devices only **********/

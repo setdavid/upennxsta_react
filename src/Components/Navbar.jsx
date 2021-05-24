@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { scrollToTop } from "./Features/tools";
 
 import { GiHamburgerMenu } from "react-icons/gi";
+import LinkTransition from "./LinkTransition";
 
 export const NAVBAR_HEIGHT = 82;
 
@@ -63,18 +64,22 @@ const Navbar = () => {
                             </div>
                         </div> */}
                         <div className="navbar-brand-container d-flex align-items-center">
-                            <Link onClick={scrollToTop} to={`/`} className="navbar-brand h1">UPENN&nbsp;&times;&nbsp;STA</Link>
+                            <LinkTransition classes="navbar-brand h1" path="/">UPENN&nbsp;&times;&nbsp;STA</LinkTransition>
+                            {/* <Link onClick={scrollToTop} to={`/`} className="navbar-brand h1">UPENN&nbsp;&times;&nbsp;STA</Link> */}
                         </div>
                         <div className="d-none d-md-block">
                             <div className="navTo-group d-flex align-items-center">
                                 <div>
-                                    <Link onClick={scrollToTop} to={`/about-us`}>About Us</Link>
+                                    <LinkTransition path="/about-us">About Us</LinkTransition>
+                                    {/* <Link onClick={scrollToTop} to={`/about-us`}>About Us</Link> */}
                                 </div>
                                 <div>
-                                    <Link onClick={scrollToTop} to={`/what-weve-done`}>What We've Done</Link>
+                                    <LinkTransition path="/what-weve-done">What We've Done</LinkTransition>
+                                    {/* <Link onClick={scrollToTop} to={`/what-weve-done`}>What We've Done</Link> */}
                                 </div>
                                 <div>
-                                    <Link onClick={scrollToTop} to={`/recent-updates`}>Recent Updates</Link>
+                                    <LinkTransition path="/recent-updates">Recent Updates</LinkTransition>
+                                    {/* <Link onClick={scrollToTop} to={`/recent-updates`}>Recent Updates</Link> */}
                                 </div>
                             </div>
                         </div>
