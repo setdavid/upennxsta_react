@@ -10,7 +10,7 @@ import Jumbotron from "../Features/Jumbotron";
 const RecentUpdates = (props) => {
     return (
         <React.Fragment>
-            <Jumbotron text="RECENT UPDATES" subtext="Read about our most recent projects" height="85vh" >
+            <Jumbotron text="RECENT UPDATES" subtext="Updates of our works" height="85vh" >
                 <ResponsiveImage url="img/wall_art1.jpg" minHeight="85vh" backgroundSize="cover" />
             </Jumbotron>
             <div className="container-fluid">

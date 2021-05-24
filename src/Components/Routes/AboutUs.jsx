@@ -13,7 +13,7 @@ const AboutUs = (props) => {
 
     return (
         <React.Fragment>
-            <Jumbotron text="ABOUT US" subtext="Read about our most recent projects" height="85vh" >
+            <Jumbotron text="ABOUT US" subtext="A summary of the development of our group over the years" height="85vh" >
                 <ResponsiveImage url="img/wall_art1.jpg" minHeight="85vh" backgroundSize="cover" />
             </Jumbotron>
             <div className="container-fluid">
