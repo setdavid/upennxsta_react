@@ -1,12 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { sheetData } from "../Features/dataRetrieval";
 
 import ResponsiveImage from "../Features/ResponsiveImage";
-import Slideshow from "../Features/Slideshow";
 import Jumbotron from "../Features/Jumbotron";
-import FadePassNavbar from "../Features/FadePassNavbar";
-import { scrollTo } from "../Features/tools";
 
 const AboutUs = (props) => {
     console.log(props);
