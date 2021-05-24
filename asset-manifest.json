@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/upennxsta_react/static/css/main.16dc164a.chunk.css",
-    "main.js": "/upennxsta_react/static/js/main.eef600b4.chunk.js",
-    "main.js.map": "/upennxsta_react/static/js/main.eef600b4.chunk.js.map",
+    "main.css": "/upennxsta_react/static/css/main.54f245d2.chunk.css",
+    "main.js": "/upennxsta_react/static/js/main.328d5ed4.chunk.js",
+    "main.js.map": "/upennxsta_react/static/js/main.328d5ed4.chunk.js.map",
     "runtime-main.js": "/upennxsta_react/static/js/runtime-main.5c795f04.js",
     "runtime-main.js.map": "/upennxsta_react/static/js/runtime-main.5c795f04.js.map",
-    "static/js/2.03163b82.chunk.js": "/upennxsta_react/static/js/2.03163b82.chunk.js",
-    "static/js/2.03163b82.chunk.js.map": "/upennxsta_react/static/js/2.03163b82.chunk.js.map",
+    "static/js/2.08544884.chunk.js": "/upennxsta_react/static/js/2.08544884.chunk.js",
+    "static/js/2.08544884.chunk.js.map": "/upennxsta_react/static/js/2.08544884.chunk.js.map",
     "static/js/3.705da313.chunk.js": "/upennxsta_react/static/js/3.705da313.chunk.js",
     "static/js/3.705da313.chunk.js.map": "/upennxsta_react/static/js/3.705da313.chunk.js.map",
     "index.html": "/upennxsta_react/index.html",
-    "static/css/main.16dc164a.chunk.css.map": "/upennxsta_react/static/css/main.16dc164a.chunk.css.map",
-    "static/js/2.03163b82.chunk.js.LICENSE.txt": "/upennxsta_react/static/js/2.03163b82.chunk.js.LICENSE.txt"
+    "static/css/main.54f245d2.chunk.css.map": "/upennxsta_react/static/css/main.54f245d2.chunk.css.map",
+    "static/js/2.08544884.chunk.js.LICENSE.txt": "/upennxsta_react/static/js/2.08544884.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5c795f04.js",
-    "static/js/2.03163b82.chunk.js",
-    "static/css/main.16dc164a.chunk.css",
-    "static/js/main.eef600b4.chunk.js"
+    "static/js/2.08544884.chunk.js",
+    "static/css/main.54f245d2.chunk.css",
+    "static/js/main.328d5ed4.chunk.js"
   ]
 }
