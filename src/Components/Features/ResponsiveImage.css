@@ -13,15 +13,16 @@
 }
 
 .float-left-margin, .float-right-margin {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .float-left-margin {
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 
 .float-right-margin {
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 @media (max-width: 767px) {
