@@ -6,6 +6,7 @@ import { CSSTransition } from "react-transition-group";
 import { useSelector } from "react-redux";
 
 import { ROUTE_TRANSITION_DURATION, TRANSITION_TYPE } from "../LinkTransition";
+import LinkTransition from "../LinkTransition";
 
 
 import ResponsiveImage from "../Features/ResponsiveImage";
@@ -187,13 +188,18 @@ const Home = (props) => {
                                             <p>Our group has presented various research projects at several conferences.
                                 </p>
                                         </div>
-
-                                        <Link to={{ pathname: "/what-weve-done", hash: "conferences" }}>
+                                        <LinkTransition path="/what-weve-done">
                                             <RoundedButton>
                                                 Learn more&nbsp;
                                         <RiArrowRightSLine size="1.5rem" />
                                             </RoundedButton>
-                                        </Link>
+                                        </LinkTransition>
+                                        {/* <Link to={{ pathname: "/what-weve-done", hash: "conferences" }}>
+                                            <RoundedButton>
+                                                Learn more&nbsp;
+                                        <RiArrowRightSLine size="1.5rem" />
+                                            </RoundedButton>
+                                        </Link> */}
                                         {/* <Link onClick={scrollTo("#conf")} to={`${defaultLocation}/what-weve-done`}>Learn more&nbsp;<RiArrowRightSLine size="1.5rem" /></Link> */}
 
                                     </ColoredCard>
@@ -224,17 +230,22 @@ const Home = (props) => {
                             </div>
                             <div className="row">
                                 {/* <div className="col-12 col-md-6">
-                            
                         </div> */}
                                 <div className="col-12 ">
                                     <RUComp {...sheetData[3][0]} noHr />
                                     {/* <RUComp {...recentUpdatesPostings[0]} noHr /> */}
-                                    <Link to="/recent-updates">
+                                    {/* <Link to="/recent-updates">
                                         <RoundedButton id="rb-past-updates" styles={{ backgroundColor: "black" }}>
                                             Past updates &nbsp;
                                 <RiArrowRightSLine size="1.5rem" />
                                         </RoundedButton>
-                                    </Link>
+                                    </Link> */}
+                                    <LinkTransition path="/what-weve-done">
+                                        <RoundedButton id="rb-past-updates" styles={{ backgroundColor: "black" }}>
+                                            Past updates &nbsp;
+                                <RiArrowRightSLine size="1.5rem" />
+                                        </RoundedButton>
+                                    </LinkTransition>
                                 </div>
                             </div>
                         </div>

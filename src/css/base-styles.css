@@ -375,6 +375,28 @@ div.fade-in-show {
     transition: opacity 250ms, transform 250ms;
 }
 
+.ascend-enter {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.ascend-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 250ms, transform 250ms;
+}
+
+.ascend-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.ascend-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 250ms, transform 250ms;
+}
+
 /********** Media Queries **********/
 
 /********** Extra Large devices only **********/

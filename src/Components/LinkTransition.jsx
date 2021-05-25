@@ -6,7 +6,7 @@ import { scrollToTop } from "./Features/tools";
 import { closeSlider } from "../redux/ducks/navslider";
 
 export const ROUTE_TRANSITION_DURATION = 250;
-export const TRANSITION_TYPE = "slide";
+export const TRANSITION_TYPE = "ascend";
 
 const LinkTransition = (props) => {
     const { children, styles, classes, id, path } = props;
