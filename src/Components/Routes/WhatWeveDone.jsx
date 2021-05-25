@@ -6,7 +6,7 @@ import WWDComp from "./WWDComp";
 import { CSSTransition } from "react-transition-group";
 import { useSelector } from "react-redux";
 
-import { ROUTE_TRANSITION_DURATION } from "../LinkTransition";
+import { ROUTE_TRANSITION_DURATION, TRANSITION_TYPE } from "../LinkTransition";
 
 // import { jsonPostingsToComps } from "../Features/tools";
 // import WhatWeveDoneConference from "./WhatWeveDoneComps/WhatWeveDoneConference";
@@ -57,7 +57,7 @@ const WhatWeveDone = (props) => {
     const WWDIn = useSelector(state => state.linkTransition["/what-weve-done"]);
 
     return (
-        <CSSTransition key="what-weve-done" classNames="fade" timeout={ROUTE_TRANSITION_DURATION} in={WWDIn}>
+        <CSSTransition key="what-weve-done" classNames={TRANSITION_TYPE} className={TRANSITION_TYPE + "-enter"} timeout={ROUTE_TRANSITION_DURATION} in={WWDIn}>
             <div>
                 <Jumbotron text="WHAT WE'VE DONE" subtext="An overview of our works over the years" height="85vh" >
                     <ResponsiveImage url="img/community.jpg" minHeight="85vh" backgroundSize="cover" />

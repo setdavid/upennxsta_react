@@ -5,7 +5,7 @@ import Jumbotron from "../Features/Jumbotron";
 import { CSSTransition} from "react-transition-group";
 import { useSelector } from "react-redux";
 
-import { ROUTE_TRANSITION_DURATION } from "../LinkTransition";
+import { ROUTE_TRANSITION_DURATION, TRANSITION_TYPE } from "../LinkTransition";
 
 const AboutUs = (props) => {
     const { children, key } = props;
@@ -13,7 +13,7 @@ const AboutUs = (props) => {
     const aboutUsIn = useSelector(state => state.linkTransition["/about-us"]);
 
     return (
-        <CSSTransition key="about-us" classNames="fade" timeout={ROUTE_TRANSITION_DURATION} in={aboutUsIn}>
+        <CSSTransition key="about-us" classNames={TRANSITION_TYPE} className={TRANSITION_TYPE + "-enter"} timeout={ROUTE_TRANSITION_DURATION} in={aboutUsIn}>
             <div>
                 <Jumbotron text="ABOUT US" subtext="A summary of the development of our group over the years" height="85vh" >
                     <ResponsiveImage url="img/wall_art1.jpg" minHeight="85vh" backgroundSize="cover" />

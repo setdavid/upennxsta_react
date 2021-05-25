@@ -5,7 +5,7 @@ import { sheetData } from "../Features/dataRetrieval";
 import { CSSTransition } from "react-transition-group";
 import { useSelector } from "react-redux";
 
-import { ROUTE_TRANSITION_DURATION } from "../LinkTransition";
+import { ROUTE_TRANSITION_DURATION, TRANSITION_TYPE } from "../LinkTransition";
 
 
 import ResponsiveImage from "../Features/ResponsiveImage";
@@ -68,7 +68,7 @@ const Home = (props) => {
     const homeIn = useSelector(state => state.linkTransition["/"]);
 
     return (
-        <CSSTransition key="home" classNames="fade" timeout={ROUTE_TRANSITION_DURATION} in={homeIn}>
+        <CSSTransition key="home" classNames={TRANSITION_TYPE} className={TRANSITION_TYPE + "-enter"} timeout={ROUTE_TRANSITION_DURATION} in={homeIn}>
             <div>
                 <React.Fragment>
                     <Jumbotron text="COMMUNITY POWERED" subtext="A community based research group centered in Philadelphia" height="100vh" >
