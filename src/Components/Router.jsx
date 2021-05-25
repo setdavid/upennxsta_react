@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { Switch, Route, useLocation } from "react-router-dom";
-
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { useDispatch, useSelector } from "react-redux";
+import { Switch, Route, useLocation, useHistory } from "react-router-dom";
 
 import { closeSlider } from "../redux/ducks/navslider";
 
@@ -12,6 +10,7 @@ import WhatWeveDone from "./Routes/WhatWeveDone";
 import RecentUpdates from "./Routes/RecentUpdates";
 import PageNotFound from "./Routes/PageNotFound";
 import { scrollToTop } from "./Features/tools";
+import { setPathIn } from "../redux/ducks/linkTransition";
 
 // defaultLocation previously used for Browser Router but not necessary for Hash Router
 // export const defaultLocation = "/upennxsta_react";
@@ -20,12 +19,43 @@ import { scrollToTop } from "./Features/tools";
 const Router = () => {
     const dispatch = useDispatch();
     const location = useLocation();
+    const history = useHistory();
+    const linkTranStates = useSelector(state => state.linkTransition);
 
     useEffect(() => {
         dispatch(closeSlider());
         scrollToTop();
+
         console.log(location);
+        console.log(history);
+
+        let count = 0;
+        let currRoute = null;
+        for (const prop in linkTranStates) {
+            if (linkTranStates[prop]) {
+                count++;
+                currRoute = prop;
+            }
+        }
+
+        console.log(count);
+
+        if (count === 1 && currRoute !== location.pathname) {
+            dispatch(setPathIn(currRoute, false));
+        } else if (count > 1) {
+            console.log("halp currRoute: " + currRoute + " vs " + location.pathname);
+            for (const prop in linkTranStates) {
+                if (linkTranStates[prop]) {
+                    dispatch(setPathIn(prop, false));
+                }
+            }
+        }
+
+        dispatch(setPathIn(location.pathname, true));
+
     }, [location]);
+
+    console.log(linkTranStates);
 
     return (
         <Switch>
