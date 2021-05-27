@@ -20,7 +20,8 @@ html {
     text-align: left;
     color: var(--text-color);
     position: relative;
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+    /* scroll-behavior: smooth; */
 }
 
 body {

@@ -24,7 +24,7 @@ const Router = () => {
 
     useEffect(() => {
         dispatch(closeSlider());
-        scrollToTop();
+        scrollToTop(false);
 
         console.log(location);
         console.log(history);

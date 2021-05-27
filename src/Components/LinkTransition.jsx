@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
 import { useHistory, useLocation } from "react-router";
 import { setPathIn } from "../redux/ducks/linkTransition";
 import { scrollToTop } from "./Features/tools";
@@ -15,16 +15,20 @@ const LinkTransition = (props) => {
     const dispatch = useDispatch();
 
     const linkTo = (path) => {
-        scrollToTop();
         dispatch(closeSlider());
 
-        if (path != null && path != "" && location.pathname != path) {
+        if (path !== null && path !== "" && location.pathname !== path) {
             dispatch(setPathIn(location.pathname, false));
 
             window.setTimeout(() => {
                 history.push(path);
                 // dispatch(setPathIn(path, true));
+
+                scrollToTop(false);
             }, ROUTE_TRANSITION_DURATION);
+
+        } else {
+            scrollToTop(true);
 
         }
     }

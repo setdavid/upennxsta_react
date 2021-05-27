@@ -18,8 +18,8 @@ export const scrollTo = (id) => {
     }
 };
 
-export const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+export const scrollToTop = (smooth) => {
+    window.scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" });
 };
 
 export const jsonPostingsToComps = (jsonPostings, Component) => {

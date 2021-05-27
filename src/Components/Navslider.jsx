@@ -33,10 +33,10 @@ const Navslider = () => {
         // bodyStyle.left = "0";
     }
 
-    const closeAndScroll = () => {
-        dispatch(closeSlider());
-        scrollToTop();
-    };
+    // const closeAndScroll = () => {
+    //     dispatch(closeSlider());
+    //     scrollToTop();
+    // };
 
     return (
         <div style={navsliderOpened ? openedCSS : closedCSS} id="nav-slider" className="nav-slider d-flex flex-column">
