@@ -1,6 +1,6 @@
 import React from "react";
 
-import { sheetData, sheetDataToComp } from "./../Features/dataRetrieval";
+import { sheetDataObj, sheetDataToComp } from "./../Features/dataRetrieval";
 import WWDComp from "./WWDComp";
 
 import { CSSTransition } from "react-transition-group";
@@ -71,14 +71,14 @@ const WhatWeveDone = (props) => {
                                 </div>
                             </div>
                             <div className="col-12 col-lg-8">
-                                {sheetDataToComp(sheetData[0], WWDConference, "conf")}
+                                {sheetDataToComp(sheetDataObj.WWD_Conferences, WWDConference, "conf")}
                             </div>
                         </div>
                     </div>
                     <div className="container">
                         <div className="row">
                             <div className="col-12 col-lg-8 order-2 order-lg-1">
-                                {sheetDataToComp(sheetData[1], WWDPublication, "publ")}
+                                {sheetDataToComp(sheetDataObj.WWD_Publications, WWDPublication, "publ")}
                             </div>
                             <div className="col-12 col-lg-4 order-1 order-lg-2">
                                 <div id="publications" className=" h1 text-center d-flex justify-content-center align-items-center">
@@ -95,7 +95,7 @@ const WhatWeveDone = (props) => {
                                 </div>
                             </div>
                             <div className="col-12 col-lg-8">
-                                {sheetDataToComp(sheetData[2], WWDOther, "other")}
+                                {sheetDataToComp(sheetDataObj.WWD_Other_Works, WWDOther, "other")}
                             </div>
                         </div>
                     </div>

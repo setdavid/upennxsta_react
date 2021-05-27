@@ -1,7 +1,7 @@
 import React from "react";
 // import { jsonPostingsToComps } from "../Features/tools";
 // import recentUpdatesPostings from "../../json-postings/recent-updates-postings.json";
-import { sheetData, sheetDataToComp } from "../Features/dataRetrieval";
+import { sheetDataObj, sheetDataToComp } from "../Features/dataRetrieval";
 import RUComp from "./RUComp";
 import { CSSTransition } from "react-transition-group";
 import { useSelector } from "react-redux";
@@ -23,7 +23,7 @@ const RecentUpdates = (props) => {
                 <div className="container-fluid">
                     <div className="container">
                         <div className="row">
-                            {sheetDataToComp(sheetData[3], RUComp, "ru")}
+                            {sheetDataToComp(sheetDataObj.Recent_Updates, RUComp, "ru")}
                             {/* {jsonPostingsToComps(recentUpdatesPostings, RUComp)} */}
                         </div>
                     </div>

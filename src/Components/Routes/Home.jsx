@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { sheetData } from "../Features/dataRetrieval";
+import { sheetDataObj } from "../Features/dataRetrieval";
 // import {defaultLocation} from "../Router"
 import { CSSTransition } from "react-transition-group";
 import { useSelector } from "react-redux";
@@ -232,7 +232,7 @@ const Home = (props) => {
                                 {/* <div className="col-12 col-md-6">
                         </div> */}
                                 <div className="col-12 ">
-                                    <RUComp {...sheetData[3][0]} noHr />
+                                    <RUComp {...sheetDataObj.Recent_Updates[0]} noHr />
                                     {/* <RUComp {...recentUpdatesPostings[0]} noHr /> */}
                                     {/* <Link to="/recent-updates">
                                         <RoundedButton id="rb-past-updates" styles={{ backgroundColor: "black" }}>
@@ -240,7 +240,7 @@ const Home = (props) => {
                                 <RiArrowRightSLine size="1.5rem" />
                                         </RoundedButton>
                                     </Link> */}
-                                    <LinkTransition path="/what-weve-done">
+                                    <LinkTransition path="/recent-updates">
                                         <RoundedButton id="rb-past-updates" styles={{ backgroundColor: "black" }}>
                                             Past updates &nbsp;
                                 <RiArrowRightSLine size="1.5rem" />
