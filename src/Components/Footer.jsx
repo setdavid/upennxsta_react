@@ -2,6 +2,7 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import LinkTransition from "./LinkTransition";
 // import { defaultLocation } from "./Router";
+import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -9,19 +10,19 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="footer-section col-12 col-md-4 d-flex-column justify-content-start">
-                        <h5>Quick Links</h5>
                         {/* <div><Link to={`${defaultLocation}/about-us`}>About Us</Link></div>
                         <div><Link to={`${defaultLocation}/what-weve-done`}>What We've Done</Link></div>
                         <div><Link to={`${defaultLocation}/recent-updates`}>Recent Updates</Link></div> */}
                         {/* <div><Link to={`/about-us`}>About Us</Link></div>
                         <div><Link to={`/what-weve-done`}>What We've Done</Link></div>
                         <div><Link to={`/recent-updates`}>Recent Updates</Link></div> */}
-                        <div><LinkTransition path="/about-us">About Us</LinkTransition></div>
-                        <div><LinkTransition path="/what-weve-done">What We've Done</LinkTransition></div>
-                        <div><LinkTransition path="/recent-updates">Recent Updates</LinkTransition></div>
+                        <h5><LinkTransition path="/about-us">About Us</LinkTransition></h5>
+                        <h5><LinkTransition path="/what-weve-done">What We've Done</LinkTransition></h5>
+                        <h5><LinkTransition path="/recent-updates">Recent Updates</LinkTransition></h5>
                     </div>
                     <div className="footer-section col-12 col-md-4 d-flex-column justify-content-start">
-                        <h5>Contact Us</h5>
+                        {/* <h5>Contact Us</h5> */}
+                        <a href="https://www.instagram.com/pennteam.yg/" target="blank"><FaInstagram size="2rem"/></a>
                         <div>sainthomas@sas.upenn.edu</div>
                     </div>
                     <div className="footer-section col-12 col-md-4 d-flex-column justify-content-start">

@@ -19,7 +19,8 @@ export const scrollTo = (id) => {
 };
 
 export const scrollToTop = (smooth) => {
-    window.scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" });
 };
 
 export const jsonPostingsToComps = (jsonPostings, Component) => {
